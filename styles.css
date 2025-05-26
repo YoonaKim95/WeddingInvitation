@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,7 @@
     background-color: #FFFFFF;
     color: #444444;
     line-height: 1.6;
+    text-align: center;
   }
   
   h1, h2 {
@@ -17,11 +19,21 @@
     margin-bottom: 10px;
   }
   
+  .hero, .countdown, .invitation, .gallery, .video, .map, .map-links, .rsvp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1, h2, p, form, .map-links a {
+    text-align: center;
+  }
+  
   .hero {
     background: linear-gradient(to bottom, #FADADD 0%, #FFFFFF 100%);
     color: #444;
     padding: 80px 20px 50px;
-    text-align: center;
   }
   
   .hero h1 {
@@ -38,7 +50,6 @@
     background-color: #FADADD;
     color: #444;
     padding: 40px 20px;
-    text-align: center;
   }
   
   #timer {
@@ -49,7 +60,6 @@
   
   .invitation, .gallery, .rsvp, .video, .map, .map-links {
     padding: 50px 20px;
-    text-align: center;
   }
   
   .invitation h2, .gallery h2, .rsvp h2, .video h2, .map h2, .map-links h2 {
@@ -123,4 +133,3 @@
       width: 40%;
     }
   }
-  
