@@ -18,7 +18,7 @@
     margin-bottom: 10px;
   }
   
-  .hero, .countdown, .invitation, .gallery, .video, .map, .map-links, .rsvp, .account {
+  .hero, .countdown, .invitation, .gallery, .video, .map, .map-links, .rsvp, .account, .music-player {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,34 +72,62 @@
   }
   
   .gallery img {
-    width: 80%;
-    max-width: 300px;
-    border-radius: 15px;
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    object-fit: cover;
     margin: 0 auto;
   }
   
-  form input, form select, form button {
+  .directions p {
+    font-size: 0.95em;
+    margin: 5px 0;
+  }
+  
+  .map-links a img {
+    width: 40px;
+    height: 40px;
+    margin: 5px 10px;
+  }
+  
+  .account-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .account-card {
+    background-color: #FADADD;
+    padding: 15px 20px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 350px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  
+  .account-card p {
+    margin: 5px 0;
+    font-size: 1.1em;
+  }
+  
+  .account-card .role {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #D4AF37;
+  }
+  
+  .music-player audio {
     width: 80%;
     max-width: 300px;
-    margin: 12px auto;
-    padding: 14px 18px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
   }
   
-  form button {
-    background-color: #FADADD;
-    border: none;
-    color: #444;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  form button:hover {
-    background-color: #f4c6d0;
+  .music-player h2 {
+    color: #D4AF37;
+    font-size: 1.8em;
+    margin-bottom: 20px;
   }
   
   footer {
@@ -109,52 +137,12 @@
     font-size: 14px;
   }
   
-  .map-links a {
-    display: inline-block;
-    margin: 8px 12px;
-    padding: 12px 18px;
-    background-color: #FADADD;
-    color: #444;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .map-links a:hover {
-    background-color: #f4c6d0;
-  }
-  
-  .account-item {
-    margin: 12px 0;
-  }
-  
-  .account-item button {
-    padding: 12px 22px;
-    background-color: #FADADD;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .account-item button:hover {
-    background-color: #f4c6d0;
-  }
-  
-  .account-info {
-    display: none;
-    margin-top: 12px;
-    font-size: 1.1em;
-    color: #555;
-  }
-  
   @media (min-width: 768px) {
     .hero h1 {
       font-size: 3.5em;
     }
     .gallery img {
-      width: 40%;
+      width: 60%;
     }
     .invitation p {
       font-size: 1.4em;

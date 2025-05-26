@@ -3,17 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>We are getting married! 💍</title>
+  <title>우리 결혼합니다 💍</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="your-music.mp3" type="audio/mp3">
-    브라우저가 오디오 태그를 지원하지 않습니다.
-  </audio>
-
   <header class="hero">
     <h1>안병진 💗 김윤아</h1>
     <p class="date">2025년 10월 18일 토요일 오후 1시</p>
@@ -54,31 +49,52 @@
 
   <section class="map">
     <h2>오시는 길</h2>
-    <p>서울대학교 연구공원 웨딩홀, 서울특별시 관악구 관악로 1</p>
-    <p>주차: 웨딩홀 지하 주차장 (무료 주차 가능)</p>
+    <img src="simplified-map.png" alt="서울대 연구공원 웨딩홀 약도" style="width:90%; max-width:400px; border-radius:12px; margin-top:20px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+    <div class="directions">
+      <p>주소: 서울시 관악구 관악로 1, 서울대학교 연구공원 본관</p>
+      <p>연락처: 02-878-0465</p>
+      <p><strong>지하철</strong>: 2호선 낙성대역 ④번 출구 → GS칼텍스 옆 관악02번 마을버스 승차 → 서울대 후문 하차 → 검은색 유리건물</p>
+      <p><strong>버스</strong>: 간선 461, 641 / 지선 5413, 5524, 5528 (하차 후 관악02번 이용)</p>
+      <p><strong>승용차</strong>: 남부순환로 → 낙성대 방향 → 서울대 후문 방향 약 1.6km 직진 → 후문 직전 좌회전 → 샛길 100m 진입, 검은색 유리건물</p>
+      <p style="font-size:0.9em; color:#777; margin-top:10px;">※ 서울대 정·후문 통과 차량은 통행료 2,000원이 부과됩니다.</p>
+    </div>
   </section>
 
   <section class="map-links">
     <h2>길찾기 바로가기</h2>
-    <a href="tmap://search?name=서울대학교 연구공원 웨딩홀" target="_blank">T Map</a>
-    <a href="kakaomap://search?q=서울대학교 연구공원 웨딩홀" target="_blank">카카오맵</a>
-    <a href="https://map.naver.com/p/search/서울대학교 연구공원 웨딩홀" target="_blank">네이버 지도</a>
+    <a href="tmap://search?name=서울대학교 연구공원 웨딩홀" target="_blank">
+      <img src="tmap-icon.png" alt="T Map" style="width:40px; height:40px;">
+    </a>
+    <a href="kakaomap://search?q=서울대학교 연구공원 웨딩홀" target="_blank">
+      <img src="kakaomap-icon.png" alt="카카오맵" style="width:40px; height:40px;">
+    </a>
+    <a href="https://map.naver.com/p/search/서울대학교 연구공원 웨딩홀" target="_blank">
+      <img src="navermap-icon.png" alt="네이버 지도" style="width:40px; height:40px;">
+    </a>
   </section>
 
   <section class="account">
     <h2>마음 전하시는 곳</h2>
-    <div class="account-item">
-      <button onclick="toggleAccount('groom')">신랑</button>
-      <div id="groom" class="account-info">
-        안병진 - (국민은행) 9999-999-9999
+    <div class="account-cards">
+      <div class="account-card">
+        <p class="role">신랑</p>
+        <p class="name">안병진</p>
+        <p class="bank">국민은행 9999-999-9999</p>
+      </div>
+      <div class="account-card">
+        <p class="role">신부</p>
+        <p class="name">김윤아</p>
+        <p class="bank">신한은행 8888-888-8888</p>
       </div>
     </div>
-    <div class="account-item">
-      <button onclick="toggleAccount('bride')">신부</button>
-      <div id="bride" class="account-info">
-        김윤아 - (신한은행) 8888-888-8888
-      </div>
-    </div>
+  </section>
+
+  <section class="music-player">
+    <h2>배경 음악</h2>
+    <audio controls>
+      <source src="your-music.mp3" type="audio/mp3">
+      브라우저가 오디오 태그를 지원하지 않습니다.
+    </audio>
   </section>
 
   <footer>
@@ -111,11 +127,6 @@
         el: ".swiper-pagination",
       },
     });
-
-    function toggleAccount(id) {
-      const element = document.getElementById(id);
-      element.style.display = element.style.display === 'block' ? 'none' : 'block';
-    }
   </script>
 </body>
 </html>
