@@ -6,13 +6,29 @@
   <title>우리 결혼합니다 💍</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
+  <audio autoplay loop>
+    <source src="your-music.mp3" type="audio/mp3">
+    브라우저가 오디오 태그를 지원하지 않습니다.
+  </audio>
+
   <header class="hero">
     <h1>김윤아 💗 안병진</h1>
     <p class="date">2025년 10월 18일 토요일 오후 1시</p>
     <p class="venue">서울대학교 연구공원 웨딩홀</p>
   </header>
+
+  <section class="countdown">
+    <h2>우리의 결혼식까지</h2>
+    <div id="timer">
+      <span id="days">00</span>일
+      <span id="hours">00</span>시간
+      <span id="minutes">00</span>분
+      <span id="seconds">00</span>초
+    </div>
+  </section>
 
   <section class="invitation">
     <h2>초대의 말씀</h2>
@@ -21,27 +37,66 @@
 
   <section class="gallery">
     <h2>우리의 이야기</h2>
-    <div class="images">
-      <img src="photo1.jpg" alt="우리의 사진">
-      <img src="photo2.jpg" alt="우리의 사진">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="photo1.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="photo2.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="photo3.jpg" alt=""></div>
+      </div>
+      <div class="swiper-pagination"></div>
     </div>
   </section>
 
-  <section class="rsvp">
-    <h2>참석 여부</h2>
-    <form>
-      <input type="text" placeholder="이름">
-      <input type="text" placeholder="전화번호">
-      <select>
-        <option>참석</option>
-        <option>불참</option>
-      </select>
-      <button type="submit">전송</button>
-    </form>
+  <section class="video">
+    <h2>우리의 식전 영상</h2>
+    <iframe width="100%" height="215" src="https://www.youtube.com/embed/영상ID" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section class="map">
+    <h2>오시는 길</h2>
+    <p>서울대학교 연구공원 웨딩홀, 서울특별시 관악구 관악로 1</p>
+    <p>주차: 웨딩홀 지하 주차장 (무료 주차 가능)</p>
+  </section>
+
+  <section class="map-links">
+    <h2>길찾기 바로가기</h2>
+    <a href="tmap://search?name=서울대학교 연구공원 웨딩홀" target="_blank">T Map</a>
+    <a href="kakaomap://search?q=서울대학교 연구공원 웨딩홀" target="_blank">카카오맵</a>
+    <a href="https://map.naver.com/p/search/서울대학교 연구공원 웨딩홀" target="_blank">네이버 지도</a>
   </section>
 
   <footer>
     <p>김윤아 & 안병진의 결혼식에 초대합니다.</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // 카운트다운 타이머
+    const weddingDate = new Date("2025-10-18T13:00:00").getTime();
+    const timer = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+      if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("timer").innerHTML = "오늘은 결혼식 날입니다!";
+      }
+    }, 1000);
+
+    // Swiper 슬라이드
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
 </body>
 </html>
