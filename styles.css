@@ -63,10 +63,32 @@
   .hero-image {
     width: 90%;
     max-width: 250px;
+    text-align: center;
+
     height: auto;
     margin: 25px auto;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Parent Line */
+.parents-line {
+    display: block;
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+  }
+  
+  .parents-line .relation {
+    font-weight: normal;
+    font-size: 0.95em;
+    color: #999;
+  }
+  
+  /* Strong */
+  strong {
+    color: #000000;
+    font-weight: bold;
   }
   
   /* Countdown */
