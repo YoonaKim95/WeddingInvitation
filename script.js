@@ -76,6 +76,7 @@ toggleBtn.addEventListener('click', () => {
   toggleBtn.textContent = mapImageContainer.classList.contains('open') ? '닫기' : '약도 확인하기';
 });
 
+
 // Music Toggle
 function toggleMusic() {
   const audio = document.getElementById('bg-music');
