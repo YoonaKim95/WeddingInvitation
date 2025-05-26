@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>우리 결혼합니다 💍</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-</head>
+  <head>
+    <!-- Open Graph 메타태그: 카카오톡 미리보기용 -->
+    <meta property="og:title" content="안병진 💗 김윤아 결혼합니다">
+    <meta property="og:description" content="2025년 10월 18일 토요일 오후 1시, 서울대학교 연구공원 웨딩홀">
+    <meta property="og:image" content="https://yoona95.github.io/WeddingInvitation/thumbnail.png">
+    <meta property="og:url" content="https://yoonakim95.github.io/WeddingInvitation/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+  
+    <!-- 기존 HTML meta 및 CSS 링크는 이 아래에 위치 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>우리 결혼합니다 💍</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  </head>
+  
+
+
 <body>
   <audio id="bg-music" src="music.mp3" autoplay loop preload="auto" style="display: none;"></audio>
   <button id="music-toggle">
@@ -47,9 +59,10 @@
     <h2>우리의 이야기</h2>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="photo1.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="photo2.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="photo3.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="thumbnail.png" alt=""></div>
+        <div class="swiper-slide"><img src="thumbnail.png" alt=""></div>
+        <div class="swiper-slide"><img src="thumbnail.png" alt=""></div>
+        <div class="swiper-slide"><img src="thumbnail.png" alt=""></div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -91,18 +104,22 @@
     <div class="account-cards">
       <div class="account-card">
         <button class="account-toggle" data-target="groom">
-          <span class="label">👨‍💼 신랑 안병진</span>
+          <span class="label">👨‍💼 신랑측 👨‍💼</span>
         </button>
         <div class="account-info" id="groom">
-          <p>(국민은행) 9999-999-9999</p>
+          <p>안창모 국민은행 9999-999-9999</p>
+          <p>지영주 국민은행 9999-999-9999</p>
+          <p>안병진 국민은행 9999-999-9999</p>
         </div>
       </div>
       <div class="account-card">
         <button class="account-toggle" data-target="bride">
-          <span class="label">👰‍♀️ 신부 김윤아</span>
+          <span class="label">👰‍♀️ 신부측 👰‍♀️</span>
         </button>
         <div class="account-info" id="bride">
-          <p>(신한은행) 8888-888-8888</p>
+          <p>김태인 국민은행 9999-999-9999</p>
+          <p>고가연 국민은행 9999-999-9999</p>
+          <p>김윤아 국민은행 9999-999-9999</p>
         </div>
       </div>
     </div>
