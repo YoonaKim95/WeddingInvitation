@@ -49,6 +49,60 @@ for (let d = 1; d <= 31; d++) {
   grid.appendChild(day);
 }
 
+
+// 갤러리 이미지 배열 (파일명 1~30.jpg로 가정)
+const imageList = Array.from({ length: 30 }, (_, i) => `gallery/${i+1}.jpg`);
+
+const galleryContainer = document.getElementById('gallery-thumbnails');
+const loadMoreBtn = document.getElementById('load-more');
+let currentIndex = 0;
+
+// 처음 9장 로드
+function loadThumbnails() {
+  const nextImages = imageList.slice(currentIndex, currentIndex + 9);
+  nextImages.forEach((src, index) => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = `사진 ${currentIndex + index + 1}`;
+    img.dataset.index = currentIndex + index;
+    galleryContainer.appendChild(img);
+  });
+  currentIndex += 9;
+  if (currentIndex >= imageList.length) loadMoreBtn.style.display = 'none';
+}
+
+loadThumbnails();
+
+loadMoreBtn.addEventListener('click', loadThumbnails);
+
+// 라이트박스
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+let currentLightboxIndex = 0;
+
+galleryContainer.addEventListener('click', (e) => {
+  if (e.target.tagName === 'IMG') {
+    currentLightboxIndex = Number(e.target.dataset.index);
+    lightboxImage.src = imageList[currentLightboxIndex];
+    lightbox.style.display = 'flex';
+  }
+});
+
+document.getElementById('close-lightbox').addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+document.getElementById('prev').addEventListener('click', () => {
+  currentLightboxIndex = (currentLightboxIndex - 1 + imageList.length) % imageList.length;
+  lightboxImage.src = imageList[currentLightboxIndex];
+});
+
+document.getElementById('next').addEventListener('click', () => {
+  currentLightboxIndex = (currentLightboxIndex + 1) % imageList.length;
+  lightboxImage.src = imageList[currentLightboxIndex];
+});
+
+
 // KakaoMap 생성
 window.onload = function() {
     const container = document.getElementById('kakao-map');

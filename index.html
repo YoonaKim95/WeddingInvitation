@@ -75,14 +75,17 @@
 
   <section class="gallery">
     <h2>우리의 순간</h2>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="thumbnail.png" alt=""></div>
-        <div class="swiper-slide"><img src="thumbnail.png" alt=""></div>
-        <div class="swiper-slide"><img src="thumbnail.png" alt=""></div>
-        <div class="swiper-slide"><img src="thumbnail.png" alt=""></div>
-      </div>
-      <div class="swiper-pagination"></div>
+    <div class="gallery-thumbnails" id="gallery-thumbnails">
+      <!-- JS에서 30장 이미지 추가 -->
+    </div>
+    <button id="load-more" class="load-more">더보기</button>
+  
+    <!-- 라이트박스 뷰어 -->
+    <div id="lightbox" class="lightbox">
+      <span id="close-lightbox" class="close-btn">&times;</span>
+      <img id="lightbox-image" src="" alt="">
+      <button id="prev" class="nav-btn">&#10094;</button>
+      <button id="next" class="nav-btn">&#10095;</button>
     </div>
   </section>
 
