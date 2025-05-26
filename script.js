@@ -67,24 +67,13 @@ window.onload = function() {
   };
 
 
-  // 약도 모달 열기/닫기
-const openMapBtn = document.getElementById('open-map-modal');
-const closeMapBtn = document.getElementById('close-map-modal');
-const mapModal = document.getElementById('map-modal');
+// 약도 토글 버튼 기능
+const toggleBtn = document.getElementById('toggle-map-image');
+const mapImageContainer = document.getElementById('map-image-container');
 
-openMapBtn.addEventListener('click', () => {
-  mapModal.style.display = 'flex';
-});
-
-closeMapBtn.addEventListener('click', () => {
-  mapModal.style.display = 'none';
-});
-
-// 모달 바깥 클릭 시 닫기
-mapModal.addEventListener('click', (e) => {
-  if (e.target === mapModal) {
-    mapModal.style.display = 'none';
-  }
+toggleBtn.addEventListener('click', () => {
+  mapImageContainer.classList.toggle('open');
+  toggleBtn.textContent = mapImageContainer.classList.contains('open') ? '닫기' : '약도 확인하기';
 });
 
 // Music Toggle

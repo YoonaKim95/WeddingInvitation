@@ -171,7 +171,7 @@
     font-weight: bold;
     font-size: 1em;
   }
-
+  
   .map-container {
     width: 90%;
     max-width: 500px;
@@ -186,52 +186,36 @@
       height: 250px;
     }
   }
+  .map-image-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  .map-image-container.open {
+    max-height: 500px; /* 최대 높이 지정 (반응형으로 충분한 높이) */
+  }
+  
+  .map-image {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px auto;
+    display: block;
+  }
+  
   .map-button {
-  background-color: #f4c6d0;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  margin: 20px 0;
-  font-size: 1.1em;
-}
-
-.map-modal {
-  display: none; /* 기본은 숨김 */
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0,0,0,0.6);
-  z-index: 999;
-  justify-content: center;
-  align-items: center;
-}
-
-.map-modal-content {
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  max-width: 90%;
-  max-height: 90%;
-  text-align: center;
-}
-
-.map-modal-content img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.map-close-btn {
-  margin-top: 15px;
-  background: #f4c6d0;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
+    background-color: #f4c6d0;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 20px 0;
+    font-size: 1.1em;
+  }
+  
   .account-cards {
     display: flex;
     flex-direction: column;
