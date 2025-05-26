@@ -1,6 +1,4 @@
-/* styles.css */
-
-/* Reset and base */
+/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,58 +8,70 @@
   body {
     font-family: 'Noto Sans KR', sans-serif;
     background-color: #FFFFFF;
-    color: #444444;
-    text-align: center;
+    color: #333333;
     line-height: 1.6;
   }
   
-  h1, h2 {
+  h1, h2, h3 {
     font-family: 'Playfair Display', serif;
+    color: #333333;
     font-weight: 700;
-    margin-bottom: 10px;
-  }
-
-.hero-image {
-  width: 90%;
-  max-width: 250px;
-  height: auto;
-  margin: 20px auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-@media (min-width: 768px) {
-  .hero-image {
-    width: 100%;
-    max-width: 220px; /* PC에서 너무 커지지 않게 고정 */
-  }
-}
-  .hero, .countdown, .invitation, .gallery, .video, .map, .map-links, .account, .parents {
-    padding: 60px 20px;
-    border-bottom: 1px solid #f4c6d0;
   }
   
+  h1 {
+    font-size: 2.8em;
+  }
+  
+  h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  strong, .highlight {
+    color: #7a4c5b;
+    font-weight: bold;
+  }
+  
+  /* Layout Sections */
+  .hero, .countdown, .invitation, .gallery, .video, .map-links, .footer, .header {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .parents-info, .directions-guide, .notice-list, .account-info {
+    text-align: left;
+  }
+  
+  /* Hero Section */
   .hero {
     background: linear-gradient(to bottom, #FADADD 0%, #FFFFFF 100%);
   }
   
-  .hero h1 {
-    font-size: 2.8em;
+  .hero-image {
+    width: 90%;
+    max-width: 250px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
   
-  .hero .date, .hero .venue {
-    font-size: 1.2em;
-  }
-  
+  /* Countdown */
   #timer {
     font-size: 1.6em;
-    margin-top: 15px;
     display: flex;
     gap: 10px;
     justify-content: center;
+    margin-top: 15px;
   }
-
+  
+  /* Calendar */
   .calendar {
     width: 300px;
     background: #fff;
@@ -80,43 +90,22 @@
     margin-bottom: 10px;
   }
   
-  .calendar-header .month {
-    font-size: 1.4em;
-    font-weight: bold;
-  }
-  
-  .calendar-header .time {
-    font-size: 1em;
-  }
-  
-  .calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-  }
-  
-  .day-name {
+  .day-name, .day {
     text-align: center;
-    font-weight: bold;
-    color: #a7a7a7;
-  }
-  
-  .day {
-    text-align: center;
-    padding: 10px 0;
-    border-radius: 50%;
-    transition: background-color 0.3s;
   }
   
   .day.sat, .day.sun {
-    color: #d16d85;
+    color: #7a4c5b;
   }
   
   .day.today {
-    background-color: #a2677b;
+    background-color: #7a4c5b;
     color: white;
+    border-radius: 50%;
+    padding: 5px;
   }
   
+  /* Gallery */
   .gallery-thumbnails {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -135,149 +124,29 @@
     transform: scale(1.05);
   }
   
-  .load-more {
+  .load-more, .show-less, .map-button, .footer-btn, .close-invitation-btn {
     background-color: #f4c6d0;
     color: white;
     border: none;
     padding: 12px 20px;
     border-radius: 8px;
     cursor: pointer;
-    margin: 20px auto;
-    display: block;
-    font-size: 1.1em;
-  }
-  
-  .show-less {
-    background-color: #f4c6d0;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.95em;
+    font-size: 1em;
     font-weight: bold;
-    margin: 10px auto;
-    display: block;
-  }
-
-  .notice {
-    padding: 40px 20px;
-    border-bottom: 1px solid #f4c6d0;
-    background-color: #fffafc;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
   
-  .notice h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4em;
-    margin-bottom: 20px;
-    color: #7a4c5b;
+  .load-more:hover, .show-less:hover, .map-button:hover, .footer-btn:hover, .close-invitation-btn:hover {
+    background-color: #e9b8c6;
   }
   
-  .notice-list {
-    list-style: none;
-    padding-left: 0;
-    text-align: left;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .notice-list li {
-    margin-bottom: 15px;
-    font-size: 1.05em;
-    line-height: 1.5;
-  }
-  
-  .notice-list li strong {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    background-color: #f4c6d0;
-    color: white;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 35px;
-    font-weight: bold;
-    margin-right: 10px;
-    font-size: 0.95em;
-  }
-  
-  /* 라이트박스 스타일 */
-  .lightbox {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    flex-direction: column;
-  }
-  
-  .lightbox img {
-    max-width: 90%;
-    max-height: 80%;
-    border-radius: 8px;
-  }
-
-     
-  .nav-btn {
-    position: absolute;
-    top: 50%;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2em;
-    cursor: pointer;
-    user-select: none;
-  }
-  
-  #prev { left: 20px; }
-  #next { right: 20px; }
-  
-  .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2em;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .gallery .swiper {
-    width: 90%;
-    padding: 40px 0;
-  }
-  
-  .gallery img {
-    width: 90%;
-    max-width: 350px;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-    margin: 0 auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
+  /* Directions */
   .directions-guide {
-    padding: 40px 20px;
     background-color: #fffafc;
     border-radius: 12px;
     max-width: 600px;
     margin: 40px auto;
-    text-align: left;  /* ✅ 왼쪽 정렬 */
-  }
-  
-  .directions-guide h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4em;
-    margin-bottom: 20px;
-    color: #7a4c5b;
-    text-align: center;  /* 🔸 제목(h2)은 가운데 정렬 유지 (선택사항) */
-  }
-  
-  .guide-item {
-    text-align: left;  /* ✅ 개별 항목도 왼쪽 정렬 */
-    margin-bottom: 20px;
+    padding: 40px 20px;
   }
   
   .guide-header {
@@ -287,16 +156,6 @@
     font-weight: bold;
     font-size: 1.1em;
     margin-bottom: 10px;
-  }
-  
-  .guide-list {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .guide-list li {
-    margin-bottom: 10px;
-    line-height: 1.5;
   }
   
   .guide-divider {
@@ -305,39 +164,10 @@
     margin: 20px 0;
   }
   
-  .copy-address {
+  .copy-address, .copy-account {
     cursor: pointer;
     color: #7a4c5b;
     font-weight: bold;
-    text-decoration: underline;
-  }
-  
-  
-  .guide-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: bold;
-    font-size: 1.1em;
-    margin-bottom: 10px;
-  }
-  
-
-  
-  .copy-address:hover {
-    text-decoration: underline;
-  }
-  
-
-  .copy-address {
-    cursor: pointer;
-    color: #7a4c5b;
-    font-weight: bold;
-    display: inline-block;
-    position: relative;
-  }
-  
-  .copy-address:hover {
     text-decoration: underline;
   }
   
@@ -355,6 +185,16 @@
     z-index: 9999;
   }
   
+  /* Map */
+  .map-container {
+    width: 90%;
+    max-width: 500px;
+    height: 300px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
   .map-icons {
     display: flex;
     justify-content: center;
@@ -366,48 +206,6 @@
     height: 40px;
   }
   
-  .map-image {
-    width: 90%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  
-  .parents-info p {
-    margin: 10px 0;
-  }
-  
-  .parents-info .parents-line {
-    display: inline-block;
-    font-size: 1.5em;
-    font-weight: 400;
-  }
-  
-  .parents-info .relation {
-    font-size: 0.7em;
-    font-weight: normal;
-  }
-  
-  .parents-info strong {
-    font-weight: bold;
-    font-size: 1em;
-  }
-  
-  .map-container {
-    width: 90%;
-    max-width: 500px;
-    height: 300px;
-    margin: 20px auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  
-  @media (max-width: 768px) {
-    .map-container {
-      height: 250px;
-    }
-  }
   .map-image-container {
     max-height: 0;
     overflow: hidden;
@@ -415,29 +213,17 @@
   }
   
   .map-image-container.open {
-    max-height: 500px; /* 최대 높이 지정 (반응형으로 충분한 높이) */
+    max-height: 500px;
   }
   
   .map-image {
     width: 90%;
     max-width: 500px;
-    height: auto;
     border-radius: 12px;
     margin: 20px auto;
-    display: block;
   }
   
-  .map-button {
-    background-color: #f4c6d0;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin: 20px 0;
-    font-size: 1.1em;
-  }
-  
+  /* Account */
   .account-cards {
     display: flex;
     flex-direction: column;
@@ -454,10 +240,6 @@
     padding: 18px 20px;
   }
   
-  .account-toggle {
-    justify-content: space-between;
-  }
-  
   .account-toggle .arrow {
     font-size: 1em;
     transition: transform 0.3s;
@@ -467,55 +249,68 @@
     transform: rotate(180deg);
   }
   
-  .copy-account {
-    color: #7a4c5b;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .copy-account:hover {
-    text-decoration: underline;
-  }
-    
   .account-info {
     display: none;
     margin-top: 12px;
     font-size: 1.1em;
   }
-
-  .kakao-btn {
-    background-color: #ffdaef; /* 카카오 노란색 */
-    color: #787878c9; /* 카카오톡 로고 컬러 */
-    border: none;
+  
+  /* Footer */
+  footer {
+    background: #f7f7f7;
+    color: #777;
+    padding: 30px;
+    font-size: 0.95em;
+  }
+  
+  .footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: column;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80%;
     border-radius: 8px;
-    padding: 12px 20px;
-    font-size: 1.1em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
   
-  .kakao-btn:hover {
-    background-color: #ffdaef;
-  }
-  
-  .kakao-share {
-    padding: 40px 0;
-  }
-  
-  .kakao-share h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4em;
-    margin-bottom: 10px;
-  }
-  
-  .kakao-share img {
-    width: 45px;
-    height: auto;
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
     cursor: pointer;
   }
   
+  #prev { left: 20px; }
+  #next { right: 20px; }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Music Toggle */
   #music-toggle {
     position: fixed;
     top: 20px;
@@ -529,74 +324,5 @@
   #music-toggle img {
     width: 40px;
     height: 40px;
-  }
-  
-  footer {
-    background: #f7f7f7;
-    color: #777;
-    padding: 30px;
-    font-size: 14px;
-  }
-  
-  .footer-btn {
-    background-color: #f4c6d0;
-    color: white;
-    border: none;
-    padding: 8px 12px; /* 패딩 줄이기 */
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.95em; /* 글씨 크기 줄이기 */
-    font-weight: bold;
-    transition: background-color 0.3s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    flex: 1 1 auto;
-    max-width: 160px; /* 최대 너비 제한 */
-    text-align: center;
-  }
-  
-  .footer-btn:hover {
-    background-color: #e9b8c6;
-  }
-  
-  .footer-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 12px; /* 버튼 사이 간격 */
-    flex-wrap: wrap; /* 필요 시 줄바꿈 */
-  }
-  
-  .invitation-modal {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0,0,0,0.7);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-  
-  .invitation-modal-content {
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    max-width: 90%;
-    max-height: 90%;
-    text-align: center;
-  }
-  
-  .invitation-modal-content img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .close-invitation-btn {
-    margin-top: 15px;
-    background: #f4c6d0;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
   }
   
