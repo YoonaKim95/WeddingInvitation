@@ -86,10 +86,29 @@
     margin: 5px 0;
   }
   
+  .map-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+  }
+  
+  .map-links h2 {
+    color: #D4AF37;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  
+  .map-links .map-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
   .map-links a img {
     width: 40px;
     height: 40px;
-    margin: 5px 10px;
+    margin: 5px 0;
   }
   
   .account-cards {
