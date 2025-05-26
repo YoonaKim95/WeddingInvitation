@@ -182,3 +182,23 @@ document.getElementById('kakaotalk-sharing-btn').addEventListener('click', funct
     ],
   });
 });
+
+
+// 종이청첩장 모달
+const openInvitationBtn = document.getElementById('open-invitation');
+const closeInvitationBtn = document.getElementById('close-invitation');
+const invitationModal = document.getElementById('invitation-modal');
+
+openInvitationBtn.addEventListener('click', () => {
+  invitationModal.style.display = 'flex';
+});
+
+closeInvitationBtn.addEventListener('click', () => {
+  invitationModal.style.display = 'none';
+});
+
+invitationModal.addEventListener('click', (e) => {
+  if (e.target === invitationModal) {
+    invitationModal.style.display = 'none';
+  }
+});
