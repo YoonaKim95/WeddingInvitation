@@ -70,6 +70,17 @@
     height: 40px;
   }
   
+  .account {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .account h2 {
+    color: #D4AF37;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  
   .account-cards {
     display: flex;
     flex-direction: column;
@@ -92,16 +103,13 @@
     padding: 15px 20px;
     border-radius: 8px;
     font-weight: bold;
-    font-size: 1.2em;
     cursor: pointer;
     width: 100%;
+    font-size: 1.2em;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-  }
-  
-  .account-toggle .label, .account-toggle .name {
     white-space: nowrap;
   }
   
@@ -109,8 +117,13 @@
     display: none;
     margin-top: 12px;
     font-size: 1.1em;
+    color: #444;
   }
   
+  .account-info p {
+    margin: 5px 0;
+  }
+    
   #music-toggle {
     position: fixed;
     top: 20px;
