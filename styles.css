@@ -354,7 +354,7 @@
   .account-card[data-target="groom"] {
     width: 90%;
     max-width: 400px;
-    background-color: #b8e5ff; /* 신랑측 파스텔 블루 */
+    background-color: #dcf1fd; /* 신랑측 파스텔 블루 */
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     padding: 18px 20px;
@@ -363,7 +363,7 @@
   .account-card[data-target="bride"] {
     width: 90%;
     max-width: 400px;
-    background-color: #ffe3fc; /* 신부측 파스텔 핑크 */
+    background-color: #feeefe; /* 신부측 파스텔 핑크 */
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     padding: 18px 20px;
@@ -427,6 +427,17 @@
     vertical-align: middle;
   }
   
+  .account-info p span.kakao-pay {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 8px;
+  }
+  
+  .account-info p span.kakao-pay img {
+    width: 14px;  /* 사이즈 축소 */
+    height: 14px;
+    margin-left: 4px;
+  }
   /* Footer */
   footer {
     background: #f7f7f7;
