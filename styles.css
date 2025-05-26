@@ -164,6 +164,14 @@
     max-height: 80%;
     border-radius: 8px;
   }
+
+  .footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }  
   
   .nav-btn {
     position: absolute;

@@ -89,10 +89,10 @@
     </div>
   </section>
 
-  <section class="video">
+  <!-- <section class="video">
     <h2>우리의 순간</h2>
     <iframe width="100%" height="215" src="https://www.instagram.com/p/DKBcUPQT_vt/" frameborder="0" allowfullscreen></iframe>
-  </section>
+  </section> -->
 
   <section class="map">
     <h2>오시는 길</h2>
@@ -155,26 +155,29 @@
     </div>
   </section>
 
-  <section class="kakao-share">
+  <!-- <section class="kakao-share">
     <button id="kakaotalk-sharing-btn" class="kakao-btn">
       카카오톡으로 공유 하기
     </button>
-  </section>
-
+  </section> -->
+  
   <footer>
     <p>저희의 첫걸음을 맹세하는 자리에 귀한 증인이 되어 자리를 빛내 주실 모든 여러분께 진심으로 감사드립니다.</p>
-    <button id="open-invitation" class="invitation-btn">종이청첩장 구경하기</button>
+    
+    <div class="footer-buttons">
+      <button id="open-invitation" class="invitation-btn">종이청첩장 구경하기</button>
+      <button id="kakaotalk-sharing-btn" class="kakao-btn">카카오톡으로 공유하기</button>
+    </div>
   
     <!-- 종이청첩장 모달 -->
     <div id="invitation-modal" class="invitation-modal">
       <div class="invitation-modal-content">
-        <img src="invitation.jpg" alt="종이청첩장">
+        <img src="invitation.png" alt="종이청첩장">
         <button id="close-invitation" class="close-invitation-btn">닫기</button>
       </div>
     </div>
   </footer>
   
-
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
