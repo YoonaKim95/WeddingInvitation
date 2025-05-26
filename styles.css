@@ -154,6 +154,23 @@
     font-size: 1.1em;
   }
 
+  .kakao-btn {
+    background-color: #FEE500; /* 카카오 노란색 */
+    color: #3C1E1E; /* 카카오톡 로고 컬러 */
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .kakao-btn:hover {
+    background-color: #FFD900;
+  }
+  
   .kakao-share {
     padding: 40px 0;
   }
