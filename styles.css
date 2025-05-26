@@ -1,5 +1,4 @@
-
-/* Unified styles.css for Wedding Invitation Website */
+/* Unified styles.css for Wedding Invitation Website - Updated Fonts */
 
 /* Reset and Base */
 * {
@@ -9,18 +8,22 @@
   }
   
   body {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Sans KR', 'Montserrat', sans-serif;
     background-color: #FFFFFF;
     color: #444444;
     line-height: 1.6;
     text-align: center;
   }
   
-  h1, h2 {
-    font-family: 'Playfair Display', serif;
+  h1, h2, .hero h1, section h2 {
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
     font-weight: 700;
-    margin-bottom: 10px;
     color: #7a4c5b;
+    letter-spacing: 0.05em;
+  }
+  
+  p, li, button, .account-info p {
+    font-family: 'Noto Sans KR', sans-serif;
   }
   
   /* Hero Section */
@@ -61,8 +64,7 @@
   }
   
   section h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4em;
+    font-size: 1.5em;
     margin-bottom: 20px;
     color: #7a4c5b;
   }
@@ -134,6 +136,7 @@
     border-radius: 8px;
     padding: 10px 16px;
     font-size: 1em;
+    font-family: 'Noto Sans KR', sans-serif;
     cursor: pointer;
     transition: background-color 0.3s;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -229,6 +232,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Noto Sans KR', sans-serif;
   }
   
   .account-toggle .arrow {
@@ -266,6 +270,12 @@
     flex-wrap: wrap;
   }
   
+  .footer-btn {
+    flex: 1 1 auto;
+    max-width: 160px;
+    text-align: center;
+  }
+  
   /* Music Toggle */
   #music-toggle {
     position: fixed;
@@ -281,3 +291,4 @@
     width: 40px;
     height: 40px;
   }
+  
