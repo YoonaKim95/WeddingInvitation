@@ -1,3 +1,4 @@
+/* 공통 스타일 */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +9,8 @@
     font-family: 'Noto Sans KR', sans-serif;
     background-color: #FFFFFF;
     color: #444444;
-    line-height: 1.6;
     text-align: center;
+    line-height: 1.6;
   }
   
   h1, h2 {
@@ -18,39 +19,21 @@
     margin-bottom: 10px;
   }
   
-  .hero, .countdown, .invitation, .gallery, .video, .map, .map-links, .rsvp, .account, .music-player {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .hero, .countdown, .invitation, .gallery, .video, .map, .map-links, .account {
     padding: 60px 20px;
     border-bottom: 1px solid #f4c6d0;
   }
   
-  h1, h2, p, form, .map-links a {
-    text-align: center;
-  }
-  
   .hero {
     background: linear-gradient(to bottom, #FADADD 0%, #FFFFFF 100%);
-    color: #444;
   }
   
   .hero h1 {
     font-size: 2.8em;
-    margin-bottom: 15px;
-    letter-spacing: 2px;
   }
   
   .hero .date, .hero .venue {
     font-size: 1.2em;
-    margin: 5px 0;
-  }
-  
-  .countdown {
-    background-color: #FADADD;
-    color: #444;
-    font-weight: bold;
   }
   
   #timer {
@@ -58,12 +41,7 @@
     margin-top: 15px;
     display: flex;
     gap: 10px;
-  }
-  
-  .invitation p {
-    font-size: 1.2em;
-    line-height: 1.8;
-    max-width: 600px;
+    justify-content: center;
   }
   
   .gallery .swiper {
@@ -76,50 +54,20 @@
     max-width: 350px;
     height: auto;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     object-fit: cover;
     margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
   
-  .directions p {
-    font-size: 0.95em;
-    margin: 5px 0;
-  }
-  
-  .map-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 20px;
-  }
-  
-  .map-links h2 {
-    color: #D4AF37;
-    font-size: 1.8em;
-    margin-bottom: 20px;
-  }
-  
-  .map-links .map-icons {
+  .map-icons {
     display: flex;
     justify-content: center;
     gap: 20px;
   }
   
-  .map-links a img {
+  .map-icons img {
     width: 40px;
     height: 40px;
-    margin: 5px 0;
-  }
-
-  .account {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .account h2 {
-    color: #D4AF37;
-    font-size: 1.8em;
-    margin-bottom: 20px;
   }
   
   .account-cards {
@@ -144,9 +92,9 @@
     padding: 15px 20px;
     border-radius: 8px;
     font-weight: bold;
+    font-size: 1.2em;
     cursor: pointer;
     width: 100%;
-    font-size: 1.2em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,40 +109,27 @@
     display: none;
     margin-top: 12px;
     font-size: 1.1em;
-    color: #444;
   }
   
-  .account-info p {
-    margin: 5px 0;
-  }
-
-  .music-player audio {
-    width: 80%;
-    max-width: 300px;
+  #music-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
   }
   
-  .music-player h2 {
-    color: #D4AF37;
-    font-size: 1.8em;
-    margin-bottom: 20px;
+  #music-toggle img {
+    width: 40px;
+    height: 40px;
   }
   
   footer {
-    background-color: #F7F7F7;
+    background: #f7f7f7;
     color: #777;
     padding: 30px;
     font-size: 14px;
-  }
-  
-  @media (min-width: 768px) {
-    .hero h1 {
-      font-size: 3.5em;
-    }
-    .gallery img {
-      width: 60%;
-    }
-    .invitation p {
-      font-size: 1.4em;
-    }
   }
   

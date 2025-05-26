@@ -9,7 +9,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
-  <audio id="bg-music" src="music.mp3" autoplay loop controls style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index: 1000; background: rgba(255, 255, 255, 0.7); border-radius: 8px; padding: 5px;"></audio>
+  <audio id="bg-music" src="your-music.mp3" autoplay loop style="display: none;"></audio>
+  <button id="music-toggle">
+    <img src="music_01_on.png" alt="음악 재생" id="music-icon" style="width:40px; height:40px;">
+  </button>
 
   <header class="hero">
     <h1>안병진 💗 김윤아</h1>
@@ -51,30 +54,26 @@
 
   <section class="map">
     <h2>오시는 길</h2>
-    <img src="simplified-snu-map.png" alt="서울대 연구공원 웨딩홀 약도" style="width:90%; max-width:500px; border-radius:12px; margin-top:20px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+    <img src="simplified-snu-map.png" alt="서울대 연구공원 웨딩홀 약도">
     <div class="directions">
       <p>주소: 서울시 관악구 봉천7동 산 4-2 서울대학교 연구공원 본관 1층</p>
       <p>연락처: 02-878-0465 / 0467</p>
-      <p><strong>대중교통 이용시</strong></p>
-      <p>- 지하철 2호선 낙성대역 4번 출구 → 첫 번째 골목 좌회전 → GS칼텍스 주유소 옆 마을버스 관악02 승차 → 호암교수회관/서울대 교수아파트 후문 하차 (21번 정류장) → 건너 샛길 연구공원 방향 도보로 100m, 검은색 유리건물</p>
-      <p>- 버스: 간선(파란) 461, 641 / 지선(초록) 5413, 5524, 5528 (낙성대역 인근 하차 후 마을버스 관악02번 환승)</p>
-      <p><strong>승용차 이용시</strong></p>
-      <p>- 남부순환로(강남부터)/신림부터/우(신림부터)회전 → 서울대 후문 방향 약 1.6km 직진 → 후문 직전 좌회전 → 샛길 100m 진입, 검은색 유리건물</p>
-      <p style="font-size:0.9em; color:#777; margin-top:10px;">※ 서울대 정·후문 통과 차량은 통행료 2,000원이 부과됩니다.</p>
     </div>
   </section>
 
   <section class="map-links">
     <h2>길찾기 바로가기</h2>
-    <a href="https://tmap.life/0a2e4a39" target="_blank">
-      <img src="tmap.png" alt="T Map" style="width:40px; height:40px;">
-    </a>
-    <a href="https://kko.kakao.com/E2D_w2uhKT" target="_blank">
-      <img src="kakaomap_basic.png" alt="카카오맵" style="width:40px; height:40px;">
-    </a>
-    <a href="https://naver.me/5UTgmZM2" target="_blank">
-      <img src="navermap.png" alt="네이버 지도" style="width:40px; height:40px;">
-    </a>
+    <div class="map-icons">
+      <a href="https://tmap.life/0a2e4a39" target="_blank">
+        <img src="tmap.png" alt="T Map">
+      </a>
+      <a href="https://kko.kakao.com/E2D_w2uhKT" target="_blank">
+        <img src="kakaomap_basic.png" alt="카카오맵">
+      </a>
+      <a href="https://naver.me/5UTgmZM2" target="_blank">
+        <img src="navermap.png" alt="네이버 지도">
+      </a>
+    </div>
   </section>
 
 
@@ -82,7 +81,7 @@
     <h2>마음 전하시는 곳</h2>
     <div class="account-cards">
       <div class="account-card">
-        <button class="account-toggle" onclick="toggleAccount('groom')">
+        <button class="account-toggle" data-target="groom">
           <span class="label">👨‍💼</span> <span class="name">안병진</span>
         </button>
         <div class="account-info" id="groom">
@@ -90,7 +89,7 @@
         </div>
       </div>
       <div class="account-card">
-        <button class="account-toggle" onclick="toggleAccount('bride')">
+        <button class="account-toggle" data-target="bride">
           <span class="label">👰‍♀️</span> <span class="name">김윤아</span>
         </button>
         <div class="account-info" id="bride">
@@ -104,46 +103,7 @@
     <p>안병진 & 김윤아의 결혼식에 초대합니다.</p>
   </footer>
 
+  <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const weddingDate = new Date("2025-10-18T13:00:00").getTime();
-    const timer = setInterval(function() {
-      const now = new Date().getTime();
-      const distance = weddingDate - now;
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      document.getElementById("days").innerText = days;
-      document.getElementById("hours").innerText = hours;
-      document.getElementById("minutes").innerText = minutes;
-      document.getElementById("seconds").innerText = seconds;
-      if (distance < 0) {
-        clearInterval(timer);
-        document.getElementById("timer").innerHTML = "오늘은 결혼식 날입니다!";
-      }
-    }, 1000);
-
-    const swiper = new Swiper(".mySwiper", {
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-
-    function toggleAccount(id) {
-      const element = document.getElementById(id);
-      element.style.display = (element.style.display === 'block') ? 'none' : 'block';
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const audio = document.getElementById('bg-music');
-      if (audio) {
-        audio.play().catch(() => {
-          console.log('자동 재생은 사용자의 상호작용 후에 시작될 수 있습니다.');
-        });
-      }
-    });
-  </script>
 </body>
 </html>
