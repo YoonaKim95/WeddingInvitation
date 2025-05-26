@@ -160,6 +160,46 @@
     display: block;
   }
 
+  .notice {
+    padding: 40px 20px;
+    border-bottom: 1px solid #f4c6d0;
+    background-color: #fffafc;
+  }
+  
+  .notice h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    color: #7a4c5b;
+  }
+  
+  .notice-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .notice-list li {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    line-height: 1.5;
+  }
+  
+  .notice-list li strong {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #f4c6d0;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 0.95em;
+  }
   
   /* 라이트박스 스타일 */
   .lightbox {
