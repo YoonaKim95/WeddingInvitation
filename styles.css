@@ -5,6 +5,21 @@
     box-sizing: border-box;
   }
   
+  /* 전체 기본 폰트 색상 (진한 검정) */
+body, p, li, strong, .day, .day-name, .guide-item, .account-info, .account-toggle {
+    color: #333333;
+  }
+  
+  /* h2, h3: 흐린 검정 */
+  h2, h3 {
+    color: #666666;
+  }
+  
+  /* h1: 진한 검정 유지 */
+  h1 {
+    color: #333333;
+  }
+  
   body, h1, h2, h3, p, li, .hero, .countdown, .gallery, .account, .parents-info, .calendar, .map-links, .notice, .footer {
     text-align: center;
   }
@@ -12,13 +27,11 @@
   body {
     font-family: 'Noto Sans KR', sans-serif;
     background-color: #FFFFFF;
-    color: #333333;
     line-height: 1.6;
   }
   
   h1, h2, h3 {
     font-family: 'Playfair Display', serif;
-    color: #7a4c5b;
     font-weight: 700;
   }
   
