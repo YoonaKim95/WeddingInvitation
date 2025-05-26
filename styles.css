@@ -257,24 +257,26 @@
     margin: 0 auto;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
+
   .directions-guide {
     padding: 40px 20px;
     background-color: #fffafc;
     border-radius: 12px;
     max-width: 600px;
     margin: 40px auto;
+    text-align: left;  /* ✅ 왼쪽 정렬 */
   }
   
   .directions-guide h2 {
     font-family: 'Playfair Display', serif;
     font-size: 1.4em;
     margin-bottom: 20px;
-    text-align: center;
     color: #7a4c5b;
+    text-align: center;  /* 🔸 제목(h2)은 가운데 정렬 유지 (선택사항) */
   }
   
   .guide-item {
-    text-align: left;
+    text-align: left;  /* ✅ 개별 항목도 왼쪽 정렬 */
     margin-bottom: 20px;
   }
   
@@ -307,7 +309,20 @@
     cursor: pointer;
     color: #7a4c5b;
     font-weight: bold;
+    text-decoration: underline;
   }
+  
+  
+  .guide-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  
+
   
   .copy-address:hover {
     text-decoration: underline;
