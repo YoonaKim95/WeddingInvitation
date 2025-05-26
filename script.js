@@ -142,6 +142,7 @@ copyAddress.addEventListener('click', () => {
   });
 });
 
+
 // KakaoMap 생성
 window.onload = function() {
     const container = document.getElementById('kakao-map');

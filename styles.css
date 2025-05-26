@@ -41,12 +41,31 @@ body, p, li, strong, .day, .day-name, .guide-item, .account-info, .account-toggl
   
   p, li {
     font-size: 1em;
-    color: #444444;
   }
   
   strong {
-    color: #7a4c5b;
     font-weight: bold;
+  }
+  
+
+  .parents-info p {
+    margin: 10px 0;
+  }
+  
+  .parents-info .parents-line {
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: 400;
+  }
+  
+  .parents-info .relation {
+    font-size: 0.7em;
+    font-weight: normal;
+  }
+  
+  .parents-info strong {
+    font-weight: bold;
+    font-size: 1em;
   }
   
   /* 공통 최대 너비 */
@@ -357,3 +376,16 @@ body, p, li, strong, .day, .day-name, .guide-item, .account-info, .account-toggl
     display: none;
   }
   
+  .copy-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f4c6d0;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    display: none;
+    z-index: 9999;
+  }  
