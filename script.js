@@ -57,7 +57,9 @@ const galleryContainer = document.getElementById('gallery-thumbnails');
 const loadMoreBtn = document.getElementById('load-more');
 let currentIndex = 0;
 
-// 처음 9장 로드
+// 선택자 추가
+const showLessBtn = document.getElementById('show-less');
+
 function loadThumbnails() {
   const nextImages = imageList.slice(currentIndex, currentIndex + 9);
   nextImages.forEach((src, index) => {
@@ -68,12 +70,25 @@ function loadThumbnails() {
     galleryContainer.appendChild(img);
   });
   currentIndex += 9;
-  if (currentIndex >= imageList.length) loadMoreBtn.style.display = 'none';
+
+  if (currentIndex >= imageList.length) {
+    loadMoreBtn.style.display = 'none';
+    showLessBtn.style.display = 'block';
+  }
 }
 
 loadThumbnails();
 
 loadMoreBtn.addEventListener('click', loadThumbnails);
+
+// 줄이기 버튼
+showLessBtn.addEventListener('click', () => {
+  galleryContainer.innerHTML = ''; // 모든 썸네일 제거
+  currentIndex = 0;
+  loadThumbnails(); // 처음 9개만 다시 로드
+  loadMoreBtn.style.display = 'block';
+  showLessBtn.style.display = 'none';
+});
 
 // 라이트박스
 const lightbox = document.getElementById('lightbox');

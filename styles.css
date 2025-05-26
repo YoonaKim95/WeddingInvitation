@@ -147,6 +147,20 @@
     font-size: 1.1em;
   }
   
+  .show-less {
+    background-color: #f4c6d0;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: bold;
+    margin: 10px auto;
+    display: block;
+  }
+
+  
   /* 라이트박스 스타일 */
   .lightbox {
     display: none;
