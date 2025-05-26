@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <!-- Open Graph 메타태그: 카카오톡 미리보기용 -->
   <meta property="og:title" content="안병진 💗 김윤아 결혼합니다">
   <meta property="og:description" content="2025년 10월 18일 토요일 오후 1시, 서울대학교 연구공원 웨딩홀">
   <meta property="og:image" content="https://yoonakim95.github.io/WeddingInvitation/thumbnail.png">
@@ -15,6 +14,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 </head>
 
 <body>
@@ -45,7 +45,7 @@
   </section>
 
   <section class="parents">
-    <h2>신랑 · 신부 부모님</h2>
+    <h2></h2>
     <div class="parents-info">
       <p><span class="parents-line">안창모 · 지영주의 <span class="relation">장남</span> <strong>병진</strong></span></p>
       <p><span class="parents-line">김태인 · 고가연의 <span class="relation">장녀</span> <strong>윤아</strong></span></p>
@@ -53,7 +53,7 @@
   </section>
 
   <section class="gallery">
-    <h2>우리의 이야기</h2>
+    <h2>우리의 순간</h2>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="thumbnail.png" alt=""></div>
@@ -99,7 +99,7 @@
     <div class="account-cards">
       <div class="account-card">
         <button class="account-toggle" data-target="groom">
-          <span class="label">👨‍💼 신랑측 👨‍💼</span>
+          <span class="label">👨‍💼 신랑측 </span>
         </button>
         <div class="account-info" id="groom">
           <p>안창모 국민은행 9999-999-9999</p>
@@ -109,7 +109,7 @@
       </div>
       <div class="account-card">
         <button class="account-toggle" data-target="bride">
-          <span class="label">👰‍♀️ 신부측 👰‍♀️</span>
+          <span class="label">👰‍♀️ 신부측 </span>
         </button>
         <div class="account-info" id="bride">
           <p>김태인 국민은행 9999-999-9999</p>
@@ -120,11 +120,19 @@
     </div>
   </section>
 
+  <section class="kakao-share">
+    <h2>카카오톡으로 초대장 공유</h2>
+    <button id="kakaotalk-sharing-btn">
+      <img src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png" alt="카카오톡 공유 버튼">
+    </button>
+  </section>
+
   <footer>
     <p>안병진 & 김윤아의 결혼식에 초대합니다.</p>
   </footer>
 
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </body>
 </html>
