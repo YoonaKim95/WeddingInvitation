@@ -53,7 +53,7 @@ for (let d = 1; d <= 31; d++) {
 window.onload = function() {
     const container = document.getElementById('kakao-map');
     const options = {
-      center: new kakao.maps.LatLng(37.464007, 126.950019),
+      center: new kakao.maps.LatLng(37.465642, 126.9594921),
       level: 3
     };
   
@@ -61,7 +61,7 @@ window.onload = function() {
   
     // 마커
     new kakao.maps.Marker({
-      position: new kakao.maps.LatLng(37.464007, 126.950019),
+      position: new kakao.maps.LatLng(37.465642, 126.9594921),
       map: map
     });
   };
