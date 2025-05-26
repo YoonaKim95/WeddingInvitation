@@ -124,6 +124,42 @@
   .map-links a:hover {
     background-color: #f4c6d0;
   }
+
+  .account {
+    padding: 50px 20px;
+  }
+  
+  .account h2 {
+    color: #D4AF37;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  
+  .account-item {
+    margin: 10px 0;
+  }
+  
+  .account-item button {
+    padding: 10px 20px;
+    background-color: #FADADD;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .account-item button:hover {
+    background-color: #f4c6d0;
+  }
+  
+  .account-info {
+    display: none;
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #555;
+  }
+  
   
   @media (min-width: 768px) {
     .hero h1 {

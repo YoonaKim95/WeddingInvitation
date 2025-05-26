@@ -15,7 +15,7 @@
   </audio>
 
   <header class="hero">
-    <h1>김윤아 💗 안병진</h1>
+    <h1>안병진 💗 김윤아</h1>
     <p class="date">2025년 10월 18일 토요일 오후 1시</p>
     <p class="venue">서울대학교 연구공원 웨딩홀</p>
   </header>
@@ -65,8 +65,25 @@
     <a href="https://map.naver.com/p/search/서울대학교 연구공원 웨딩홀" target="_blank">네이버 지도</a>
   </section>
 
+
+  <section class="account">
+    <h2>마음 전하시는 곳</h2>
+    <div class="account-item">
+      <button onclick="toggleAccount('groom')">신랑</button>
+      <div id="groom" class="account-info">
+        안병진 - (국민은행) 9999-999-9999
+      </div>
+    </div>
+    <div class="account-item">
+      <button onclick="toggleAccount('bride')">신부</button>
+      <div id="bride" class="account-info">
+        김윤아 - (신한은행) 8888-888-8888
+      </div>
+    </div>
+  </section>
+  
   <footer>
-    <p>김윤아 & 안병진의 결혼식에 초대합니다.</p>
+    <p>안병진 & 김윤아의 결혼식에 초대합니다.</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -97,6 +114,12 @@
         el: ".swiper-pagination",
       },
     });
+
+    function toggleAccount(id) {
+    const element = document.getElementById(id);
+    element.style.display = element.style.display === 'block' ? 'none' : 'block';
+    }
+
   </script>
 </body>
 </html>
