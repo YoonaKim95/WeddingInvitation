@@ -351,15 +351,6 @@
     align-items: center;
   }
   
-  .account-card {
-    width: 90%;
-    max-width: 400px;
-    background-color: #FADADD;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    padding: 18px 20px;
-  }
-  
   .account-card#groom{
     width: 90%;
     max-width: 400px;
