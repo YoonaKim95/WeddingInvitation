@@ -64,7 +64,7 @@
   .hero-image {
     display: block;
     margin: 25px auto;
-    width: 90%;
+    width: 100%;
     max-width: 250px;
     height: auto;
     border-radius: 12px;
