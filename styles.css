@@ -165,25 +165,7 @@
     border-radius: 8px;
   }
 
-  .footer-btn {
-    background-color: #f4c6d0;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.1em;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    min-width: 150px;
-    text-align: center;
-  }
-  
-  .footer-btn:hover {
-    background-color: #e9b8c6;
-  }
-    
+     
   .nav-btn {
     position: absolute;
     top: 50%;
@@ -396,6 +378,33 @@
     color: #777;
     padding: 30px;
     font-size: 14px;
+  }
+  
+  .footer-btn {
+    background-color: #f4c6d0;
+    color: white;
+    border: none;
+    padding: 8px 12px; /* 패딩 줄이기 */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95em; /* 글씨 크기 줄이기 */
+    font-weight: bold;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    flex: 1 1 auto;
+    max-width: 160px; /* 최대 너비 제한 */
+    text-align: center;
+  }
+  
+  .footer-btn:hover {
+    background-color: #e9b8c6;
+  }
+  
+  .footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px; /* 버튼 사이 간격 */
+    flex-wrap: wrap; /* 필요 시 줄바꿈 */
   }
   
   .invitation-modal {
