@@ -117,6 +117,24 @@ document.getElementById('next').addEventListener('click', () => {
   lightboxImage.src = imageList[currentLightboxIndex];
 });
 
+// 주소 복사 기능
+const copyAddress = document.getElementById('copy-address');
+
+// Toast 메시지 요소 생성
+const copyToast = document.createElement('div');
+copyToast.classList.add('copy-toast');
+copyToast.innerText = '주소가 복사되었습니다!';
+document.body.appendChild(copyToast);
+
+copyAddress.addEventListener('click', () => {
+  const addressText = copyAddress.innerText.replace('주소: ', '');
+  navigator.clipboard.writeText(addressText).then(() => {
+    copyToast.style.display = 'block';
+    setTimeout(() => {
+      copyToast.style.display = 'none';
+    }, 1500);
+  });
+});
 
 // KakaoMap 생성
 window.onload = function() {

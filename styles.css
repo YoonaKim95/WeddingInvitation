@@ -258,6 +258,32 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
   
+  .copy-address {
+    cursor: pointer;
+    color: #7a4c5b;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .copy-address:hover {
+    text-decoration: underline;
+  }
+  
+  .copy-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f4c6d0;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    display: none;
+    z-index: 9999;
+  }
+  
   .map-icons {
     display: flex;
     justify-content: center;
