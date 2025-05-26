@@ -1,7 +1,6 @@
+/* styles.css */
 
-/* Unified styles.css for Wedding Invitation Website */
-
-/* Reset and Base */
+/* Reset and base */
 * {
     margin: 0;
     padding: 0;
@@ -12,21 +11,39 @@
     font-family: 'Noto Sans KR', sans-serif;
     background-color: #FFFFFF;
     color: #444444;
-    line-height: 1.6;
     text-align: center;
+    line-height: 1.6;
   }
   
   h1, h2 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     margin-bottom: 10px;
-    color: #7a4c5b;
+  }
+
+.hero-image {
+  width: 90%;
+  max-width: 250px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) {
+  .hero-image {
+    width: 100%;
+    max-width: 220px; /* PC에서 너무 커지지 않게 고정 */
+  }
+}
+  .hero, .countdown, .invitation, .gallery, .video, .map, .map-links, .account, .parents {
+    padding: 60px 20px;
+    border-bottom: 1px solid #f4c6d0;
   }
   
-  /* Hero Section */
   .hero {
     background: linear-gradient(to bottom, #FADADD 0%, #FFFFFF 100%);
-    padding: 60px 20px;
   }
   
   .hero h1 {
@@ -37,45 +54,14 @@
     font-size: 1.2em;
   }
   
-  .hero-image {
-    width: 90%;
-    max-width: 250px;
-    height: auto;
-    margin: 20px auto;
-    display: block;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  
-  @media (min-width: 768px) {
-    .hero-image {
-      width: 100%;
-      max-width: 220px;
-    }
-  }
-  
-  /* Sections */
-  section {
-    padding: 60px 20px;
-    border-bottom: 1px solid #f4c6d0;
-  }
-  
-  section h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4em;
-    margin-bottom: 20px;
-    color: #7a4c5b;
-  }
-  
-  /* Countdown */
   #timer {
     font-size: 1.6em;
+    margin-top: 15px;
     display: flex;
     gap: 10px;
     justify-content: center;
   }
-  
-  /* Calendar */
+
   .calendar {
     width: 300px;
     background: #fff;
@@ -89,7 +75,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Playfair Display', serif;
     color: #7a4c5b;
+    margin-bottom: 10px;
+  }
+  
+  .calendar-header .month {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+  
+  .calendar-header .time {
+    font-size: 1em;
   }
   
   .calendar-grid {
@@ -98,9 +95,21 @@
     gap: 10px;
   }
   
-  .day-name, .day {
+  .day-name {
     text-align: center;
     font-weight: bold;
+    color: #a7a7a7;
+  }
+  
+  .day {
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .day.sat, .day.sun {
+    color: #d16d85;
   }
   
   .day.today {
@@ -108,7 +117,6 @@
     color: white;
   }
   
-  /* Gallery */
   .gallery-thumbnails {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -127,23 +135,73 @@
     transform: scale(1.05);
   }
   
-  .load-more, .show-less, .map-button, .footer-btn {
+  .load-more {
     background-color: #f4c6d0;
     color: white;
     border: none;
+    padding: 12px 20px;
     border-radius: 8px;
-    padding: 10px 16px;
-    font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    display: block;
+    font-size: 1.1em;
   }
   
-  .load-more:hover, .show-less:hover, .map-button:hover, .footer-btn:hover {
-    background-color: #e9b8c6;
+  .show-less {
+    background-color: #f4c6d0;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: bold;
+    margin: 10px auto;
+    display: block;
+  }
+
+  .notice {
+    padding: 40px 20px;
+    border-bottom: 1px solid #f4c6d0;
+    background-color: #fffafc;
   }
   
-  /* Lightbox */
+  .notice h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    color: #7a4c5b;
+  }
+  
+  .notice-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .notice-list li {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    line-height: 1.5;
+  }
+  
+  .notice-list li strong {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #f4c6d0;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 0.95em;
+  }
+  
+  /* 라이트박스 스타일 */
   .lightbox {
     display: none;
     position: fixed;
@@ -152,6 +210,7 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    flex-direction: column;
   }
   
   .lightbox img {
@@ -159,7 +218,8 @@
     max-height: 80%;
     border-radius: 8px;
   }
-  
+
+     
   .nav-btn {
     position: absolute;
     top: 50%;
@@ -183,16 +243,40 @@
     cursor: pointer;
   }
   
-  /* Directions */
+  .gallery .swiper {
+    width: 90%;
+    padding: 40px 0;
+  }
+  
+  .gallery img {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
   .directions-guide {
+    padding: 40px 20px;
     background-color: #fffafc;
     border-radius: 12px;
     max-width: 600px;
     margin: 40px auto;
-    text-align: left;
+    text-align: left;  /* ✅ 왼쪽 정렬 */
+  }
+  
+  .directions-guide h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    color: #7a4c5b;
+    text-align: center;  /* 🔸 제목(h2)은 가운데 정렬 유지 (선택사항) */
   }
   
   .guide-item {
+    text-align: left;  /* ✅ 개별 항목도 왼쪽 정렬 */
     margin-bottom: 20px;
   }
   
@@ -201,9 +285,22 @@
     align-items: center;
     gap: 10px;
     font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  
+  .guide-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .guide-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
   }
   
   .guide-divider {
+    border: none;
     border-top: 1px solid #f4c6d0;
     margin: 20px 0;
   }
@@ -215,7 +312,139 @@
     text-decoration: underline;
   }
   
-  /* Account Section */
+  
+  .guide-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  
+
+  
+  .copy-address:hover {
+    text-decoration: underline;
+  }
+  
+
+  .copy-address {
+    cursor: pointer;
+    color: #7a4c5b;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .copy-address:hover {
+    text-decoration: underline;
+  }
+  
+  .copy-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f4c6d0;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    display: none;
+    z-index: 9999;
+  }
+  
+  .map-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .map-icons img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .map-image {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .parents-info p {
+    margin: 10px 0;
+  }
+  
+  .parents-info .parents-line {
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: 400;
+  }
+  
+  .parents-info .relation {
+    font-size: 0.7em;
+    font-weight: normal;
+  }
+  
+  .parents-info strong {
+    font-weight: bold;
+    font-size: 1em;
+  }
+  
+  .map-container {
+    width: 90%;
+    max-width: 500px;
+    height: 300px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .map-container {
+      height: 250px;
+    }
+  }
+  .map-image-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  .map-image-container.open {
+    max-height: 500px; /* 최대 높이 지정 (반응형으로 충분한 높이) */
+  }
+  
+  .map-image {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px auto;
+    display: block;
+  }
+  
+  .map-button {
+    background-color: #f4c6d0;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 20px 0;
+    font-size: 1.1em;
+  }
+  
+  .account-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
   .account-card {
     width: 90%;
     max-width: 400px;
@@ -226,13 +455,16 @@
   }
   
   .account-toggle {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
   }
   
   .account-toggle .arrow {
     font-size: 1em;
+    transition: transform 0.3s;
+  }
+  
+  .account-toggle.open .arrow {
+    transform: rotate(180deg);
   }
   
   .copy-account {
@@ -244,29 +476,46 @@
   .copy-account:hover {
     text-decoration: underline;
   }
-  
+    
   .account-info {
     display: none;
     margin-top: 12px;
     font-size: 1.1em;
   }
-  
-  /* Footer */
-  footer {
-    background: #f7f7f7;
-    color: #777;
-    padding: 30px;
-    font-size: 14px;
+
+  .kakao-btn {
+    background-color: #ffdaef; /* 카카오 노란색 */
+    color: #787878c9; /* 카카오톡 로고 컬러 */
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
   
-  .footer-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
+  .kakao-btn:hover {
+    background-color: #ffdaef;
   }
   
-  /* Music Toggle */
+  .kakao-share {
+    padding: 40px 0;
+  }
+  
+  .kakao-share h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+  
+  .kakao-share img {
+    width: 45px;
+    height: auto;
+    cursor: pointer;
+  }
+  
   #music-toggle {
     position: fixed;
     top: 20px;
@@ -281,3 +530,73 @@
     width: 40px;
     height: 40px;
   }
+  
+  footer {
+    background: #f7f7f7;
+    color: #777;
+    padding: 30px;
+    font-size: 14px;
+  }
+  
+  .footer-btn {
+    background-color: #f4c6d0;
+    color: white;
+    border: none;
+    padding: 8px 12px; /* 패딩 줄이기 */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95em; /* 글씨 크기 줄이기 */
+    font-weight: bold;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    flex: 1 1 auto;
+    max-width: 160px; /* 최대 너비 제한 */
+    text-align: center;
+  }
+  
+  .footer-btn:hover {
+    background-color: #e9b8c6;
+  }
+  
+  .footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px; /* 버튼 사이 간격 */
+    flex-wrap: wrap; /* 필요 시 줄바꿈 */
+  }
+  
+  .invitation-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .invitation-modal-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+  }
+  
+  .invitation-modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .close-invitation-btn {
+    margin-top: 15px;
+    background: #f4c6d0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
