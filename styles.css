@@ -106,17 +106,27 @@
     width: 80%;
     max-width: 350px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 10px;
   }
   
-  .account-card p {
-    margin: 5px 0;
-    font-size: 1.1em;
-  }
-  
-  .account-card .role {
+  .account-toggle {
+    background-color: #f4c6d0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
     font-weight: bold;
-    font-size: 1.2em;
-    color: #D4AF37;
+    cursor: pointer;
+  }
+  
+  .account-info {
+    display: none;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #444;
+  }
+  
+  .account-info p {
+    margin: 5px 0;
   }
   
   .music-player audio {
