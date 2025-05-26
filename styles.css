@@ -172,6 +172,21 @@
     font-size: 1em;
   }
   
+  .map-container {
+    width: 90%;
+    max-width: 500px;
+    height: 300px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .map-container {
+      height: 250px;
+    }
+  }
+  
   .account-cards {
     display: flex;
     flex-direction: column;

@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=2f6bea57641d1dd00d85e80a5fb8ba78"></script>
 </head>
 
 <body>
@@ -45,10 +46,9 @@
       <div class="day-name">T</div>
       <div class="day-name">F</div>
       <div class="day-name">S</div>
-      <!-- Days: JS로 생성 -->
+      <!-- 날짜는 JS로 생성 -->
     </div>
   </section>
-  
 
   <section class="countdown">
     <h2>우리의 결혼식까지</h2>
@@ -93,6 +93,7 @@
 
   <section class="map">
     <h2>오시는 길</h2>
+    <div id="kakao-map" class="map-container"></div>
     <img src="snu_weddinghall_map.jpg" alt="서울대 연구공원 웨딩홀 약도" class="map-image">
     <div class="directions">
       <p>주소: 서울시 관악구 봉천7동 산 4-2 서울대학교 연구공원 본관 1층</p>
@@ -140,7 +141,6 @@
       </div>
     </div>
   </section>
-
 
   <section class="kakao-share">
     <button id="kakaotalk-sharing-btn" class="kakao-btn">

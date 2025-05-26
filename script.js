@@ -49,7 +49,23 @@ for (let d = 1; d <= 31; d++) {
   grid.appendChild(day);
 }
 
-
+// KakaoMap 생성
+window.onload = function() {
+    const container = document.getElementById('kakao-map');
+    const options = {
+      center: new kakao.maps.LatLng(37.464007, 126.950019),
+      level: 3
+    };
+  
+    const map = new kakao.maps.Map(container, options);
+  
+    // 마커
+    new kakao.maps.Marker({
+      position: new kakao.maps.LatLng(37.464007, 126.950019),
+      map: map
+    });
+  };
+  
 // Music Toggle
 function toggleMusic() {
   const audio = document.getElementById('bg-music');
