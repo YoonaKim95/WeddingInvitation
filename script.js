@@ -2,19 +2,24 @@ function toggleAccount(id) {
     const element = document.getElementById(id);
     element.style.display = (element.style.display === 'block') ? 'none' : 'block';
   }
-  
+
   function toggleMusic() {
     const audio = document.getElementById('bg-music');
     const icon = document.getElementById('music-icon');
     if (audio.paused) {
-      audio.play();
+      audio.play().catch(() => {
+        console.log('자동 재생은 상호작용 후에만 가능합니다.');
+      });
       icon.src = 'music_01_on.png';
     } else {
       audio.pause();
       icon.src = 'music_01_off.png';
     }
   }
-  
+
+  document.getElementById('music-toggle').addEventListener('click', toggleMusic);
+
+
   document.querySelectorAll('.account-toggle').forEach(button => {
     button.addEventListener('click', () => {
       const target = button.getAttribute('data-target');
