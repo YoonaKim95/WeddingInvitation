@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>우리 결혼합니다 💍</title>
+  <title>We are getting married! 💍</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
@@ -15,7 +15,7 @@
   </audio>
 
   <header class="hero">
-    <h1>김윤아 💗 안병진</h1>
+    <h1>안병진 💗 김윤아</h1>
     <p class="date">2025년 10월 18일 토요일 오후 1시</p>
     <p class="venue">서울대학교 연구공원 웨딩홀</p>
   </header>
@@ -82,12 +82,11 @@
   </section>
 
   <footer>
-    <p>김윤아 & 안병진의 결혼식에 초대합니다.</p>
+    <p>안병진 & 김윤아의 결혼식에 초대합니다.</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    // 카운트다운 타이머
     const weddingDate = new Date("2025-10-18T13:00:00").getTime();
     const timer = setInterval(function() {
       const now = new Date().getTime();
@@ -106,7 +105,6 @@
       }
     }, 1000);
 
-    // Swiper 슬라이드
     const swiper = new Swiper(".mySwiper", {
       loop: true,
       pagination: {
@@ -114,7 +112,6 @@
       },
     });
 
-    // 계좌번호 토글
     function toggleAccount(id) {
       const element = document.getElementById(id);
       element.style.display = element.style.display === 'block' ? 'none' : 'block';
