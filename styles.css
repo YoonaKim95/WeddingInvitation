@@ -61,6 +61,62 @@
     gap: 10px;
     justify-content: center;
   }
+
+  .calendar {
+    width: 300px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    color: #7a4c5b;
+    margin-bottom: 10px;
+  }
+  
+  .calendar-header .month {
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+  
+  .calendar-header .time {
+    font-size: 1em;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+  }
+  
+  .day-name {
+    text-align: center;
+    font-weight: bold;
+    color: #a7a7a7;
+  }
+  
+  .day {
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .day.sat, .day.sun {
+    color: #d16d85;
+  }
+  
+  .day.today {
+    background-color: #a2677b;
+    color: white;
+  }
+  
   
   .gallery .swiper {
     width: 90%;
@@ -155,8 +211,8 @@
   }
 
   .kakao-btn {
-    background-color: #FEE500; /* 카카오 노란색 */
-    color: #f9f5f5; /* 카카오톡 로고 컬러 */
+    background-color: #ffdaef; /* 카카오 노란색 */
+    color: #787878c9; /* 카카오톡 로고 컬러 */
     border: none;
     border-radius: 8px;
     padding: 12px 20px;

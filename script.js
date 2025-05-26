@@ -22,6 +22,34 @@ const countdownInterval = setInterval(function() {
   }
 }, 1000);
 
+
+const grid = document.querySelector('.calendar-grid');
+
+// 1일 위치 맞추기 (2025년 10월 1일은 수요일 → index 3)
+const firstDayIndex = 3;
+for (let i = 0; i < firstDayIndex; i++) {
+  const empty = document.createElement('div');
+  grid.appendChild(empty);
+}
+
+// 10월 날짜 채우기 (1~31)
+for (let d = 1; d <= 31; d++) {
+  const day = document.createElement('div');
+  day.classList.add('day');
+
+  // 토요일/일요일 강조
+  const dayOfWeek = (firstDayIndex + d - 1) % 7;
+  if (dayOfWeek === 0) day.classList.add('sun');
+  if (dayOfWeek === 6) day.classList.add('sat');
+
+  // 18일 강조
+  if (d === 18) day.classList.add('today');
+
+  day.textContent = d;
+  grid.appendChild(day);
+}
+
+
 // Music Toggle
 function toggleMusic() {
   const audio = document.getElementById('bg-music');
