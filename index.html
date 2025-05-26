@@ -96,28 +96,56 @@
     <iframe width="100%" height="215" src="https://www.instagram.com/p/DKBcUPQT_vt/" frameborder="0" allowfullscreen></iframe>
   </section> -->
 
-  <section class="map">
+  <section class="directions-guide">
     <h2>오시는 길</h2>
+  
     <div id="kakao-map" class="map-container"></div>
     <button id="toggle-map-image" class="map-button">약도 확인하기</button>
     <div id="map-image-container" class="map-image-container">
       <img src="snu_weddinghall_map.jpg" alt="서울대 연구공원 웨딩홀 약도" class="map-image">
     </div>
-    <div class="directions">
-      <p id="copy-address" class="copy-address">
-        주소: 서울시 관악구 봉천7동 산 4-2 서울대학교 연구공원 본관 1층
-      </p>      
-      <p>연락처: 02-878-0465 / 0467</p>
-      <p><strong>대중교통 이용시</strong></p>
-      <p>- 지하철 2호선 낙성대역 4번 출구 → 첫 번째 골목 좌회전 → GS칼텍스 주유소 옆 마을버스 관악02 승차 → 호암교수회관/서울대 교수아파트 후문 하차 (21번 정류장) → 건너 샛길 연구공원 방향 도보로 100m, 검은색 유리건물</p>
-      <p>- 버스: 간선(파란) 461, 641 / 지선(초록) 5413, 5524, 5528 (낙성대역 인근 하차 후 마을버스 관악02번 환승)</p>
-      <p><strong>승용차 이용시</strong></p>
-      <p>- 남부순환로(강남부터)/신림부터/우(신림부터)회전 → 서울대 후문 방향 약 1.6km 직진 → 후문 직전 좌회전 → 샛길 100m 진입, 검은색 유리건물</p>
-      <p style="font-size:0.9em; color:#777; margin-top:10px;">※ 서울대 정·후문 통과 차량은 통행료 2,000원이 부과됩니다.</p>
-
+  
+    <div class="guide-item">
+      <div class="guide-header">
+        📍 <span>주소</span>
+      </div>
+      <p id="copy-address" class="copy-address">서울시 관악구 봉천7동 산 4-2 서울대학교 연구공원 본관 1층</p>
+    </div>
+  
+    <hr class="guide-divider">
+  
+    <div class="guide-item">
+      <div class="guide-header">
+        📞 <span>연락처</span>
+      </div>
+      <p>02-878-0465 / 0467</p>
+    </div>
+  
+    <hr class="guide-divider">
+  
+    <div class="guide-item">
+      <div class="guide-header">
+        🚌 <span>대중교통 이용</span>
+      </div>
+      <ul class="guide-list">
+        <li><strong>지하철 2호선 (낙성대역 4번 출구)</strong><br>→ 첫 번째 골목 좌회전 → GS칼텍스 옆 관악02 마을버스 승차 → 호암교수회관/서울대 교수아파트 후문 하차 → 건너 샛길 연구공원 방향 도보 100m</li>
+        <li><strong>버스</strong><br>간선: 461, 641 / 지선: 5413, 5524, 5528 (낙성대역 하차 후 관악02 환승)</li>
+      </ul>
+    </div>
+  
+    <hr class="guide-divider">
+  
+    <div class="guide-item">
+      <div class="guide-header">
+        🚗 <span>승용차 이용</span>
+      </div>
+      <p>남부순환로(강남/신림방향) → 서울대 후문 방향 약 1.6km 직진 → 후문 직전 좌회전 → 샛길 100m 진입, 검은색 유리건물</p>
+      <p style="font-size:0.9em; color:#777;">※ 서울대 정·후문 통과 차량은 통행료 2,000원이 부과됩니다.</p>
     </div>
   </section>
   
+  
+
   <section class="map-links">
     <h2>길찾기 바로가기</h2>
     <div class="map-icons">

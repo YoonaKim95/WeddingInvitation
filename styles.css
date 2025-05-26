@@ -257,7 +257,63 @@
     margin: 0 auto;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
+  .directions-guide {
+    padding: 40px 20px;
+    background-color: #fffafc;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 40px auto;
+  }
   
+  .directions-guide h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #7a4c5b;
+  }
+  
+  .guide-item {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .guide-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+  
+  .guide-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .guide-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .guide-divider {
+    border: none;
+    border-top: 1px solid #f4c6d0;
+    margin: 20px 0;
+  }
+  
+  .copy-address {
+    cursor: pointer;
+    color: #7a4c5b;
+    font-weight: bold;
+  }
+  
+  .copy-address:hover {
+    text-decoration: underline;
+  }
+  
+
   .copy-address {
     cursor: pointer;
     color: #7a4c5b;

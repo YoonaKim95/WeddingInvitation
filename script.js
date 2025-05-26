@@ -117,8 +117,14 @@ document.getElementById('next').addEventListener('click', () => {
   lightboxImage.src = imageList[currentLightboxIndex];
 });
 
+
 // 주소 복사 기능
 const copyAddress = document.getElementById('copy-address');
+copyAddress.addEventListener('click', () => {
+  navigator.clipboard.writeText(copyAddress.innerText).then(() => {
+    alert('주소가 복사되었습니다!');
+  });
+});
 
 // Toast 메시지 요소 생성
 const copyToast = document.createElement('div');
