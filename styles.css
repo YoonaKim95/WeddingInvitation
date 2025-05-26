@@ -20,16 +20,23 @@
     font-weight: 700;
     margin-bottom: 10px;
   }
-  
-  .hero-image {
-    width: 80%;
-    max-width: 400px;
-    height: auto;
-    margin: 20px 0;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
 
+.hero-image {
+  width: 90%;
+  max-width: 250px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) {
+  .hero-image {
+    width: 100%;
+    max-width: 220px; /* PC에서 너무 커지지 않게 고정 */
+  }
+}
   .hero, .countdown, .invitation, .gallery, .video, .map, .map-links, .account, .parents {
     padding: 60px 20px;
     border-bottom: 1px solid #f4c6d0;
