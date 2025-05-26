@@ -58,14 +58,15 @@
   /* Hero Section */
   .hero {
     background: linear-gradient(to bottom, #FADADD 0%, #FFFFFF 100%);
+    text-align: center;
+
   }
-  
   .hero-image {
+    display: block;
+    margin: 25px auto;
     width: 90%;
     max-width: 250px;
-    text-align: center;
     height: auto;
-    margin: 25px auto;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
@@ -154,6 +155,21 @@
   
   .gallery-thumbnails img:hover {
     transform: scale(1.05);
+  }
+  
+/* Centering Utility */
+.hero, .gallery-thumbnails, .load-more, .show-less, .footer-buttons, .map-icons {
+    text-align: center;
+  }
+  
+  .gallery-thumbnails, .load-more, .show-less {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .load-more, .show-less {
+    display: block;
+    margin-top: 20px;
   }
   
   .load-more, .show-less {
@@ -255,6 +271,14 @@
     border-radius: 12px;
     margin: 20px auto;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .map-image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    border-radius: 12px;
+    margin: 0 auto;
   }
   
   .map-image-container {
