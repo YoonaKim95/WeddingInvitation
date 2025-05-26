@@ -65,7 +65,28 @@ window.onload = function() {
       map: map
     });
   };
-  
+
+
+  // 약도 모달 열기/닫기
+const openMapBtn = document.getElementById('open-map-modal');
+const closeMapBtn = document.getElementById('close-map-modal');
+const mapModal = document.getElementById('map-modal');
+
+openMapBtn.addEventListener('click', () => {
+  mapModal.style.display = 'flex';
+});
+
+closeMapBtn.addEventListener('click', () => {
+  mapModal.style.display = 'none';
+});
+
+// 모달 바깥 클릭 시 닫기
+mapModal.addEventListener('click', (e) => {
+  if (e.target === mapModal) {
+    mapModal.style.display = 'none';
+  }
+});
+
 // Music Toggle
 function toggleMusic() {
   const audio = document.getElementById('bg-music');
