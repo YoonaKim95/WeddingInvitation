@@ -153,8 +153,8 @@
     gap: 10px;
   }
   
-  .account-toggle .icon {
-    font-size: 1.5em;
+  .account-toggle .label, .account-toggle .name {
+    white-space: nowrap;
   }
   
   .account-info {
@@ -167,7 +167,7 @@
   .account-info p {
     margin: 5px 0;
   }
-    
+
   .music-player audio {
     width: 80%;
     max-width: 300px;
