@@ -455,21 +455,28 @@
   }
   
   .account-toggle {
-    background-color: #f4c6d0;
-    border: none;
-    padding: 15px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 1.2em;
-    cursor: pointer;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    white-space: nowrap;
+    justify-content: space-between;
   }
   
+  .account-toggle .arrow {
+    font-size: 1em;
+    transition: transform 0.3s;
+  }
+  
+  .account-toggle.open .arrow {
+    transform: rotate(180deg);
+  }
+  
+  .copy-account {
+    color: #7a4c5b;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .copy-account:hover {
+    text-decoration: underline;
+  }
+    
   .account-info {
     display: none;
     margin-top: 12px;

@@ -187,14 +187,6 @@ function toggleMusic() {
 
 document.getElementById('music-toggle').addEventListener('click', toggleMusic);
 
-document.querySelectorAll('.account-toggle').forEach(button => {
-  button.addEventListener('click', () => {
-    const target = button.getAttribute('data-target');
-    const element = document.getElementById(target);
-    element.style.display = (element.style.display === 'block') ? 'none' : 'block';
-  });
-});
-
 // Kakao Share
 Kakao.init('2f6bea57641d1dd00d85e80a5fb8ba78'); // Replace with your own JavaScript key
 
@@ -219,6 +211,26 @@ document.getElementById('kakaotalk-sharing-btn').addEventListener('click', funct
         },
       },
     ],
+  });
+});
+
+// Toggle 계좌 펼치기 + 화살표 변경
+document.querySelectorAll('.account-toggle').forEach(button => {
+  button.addEventListener('click', () => {
+    const targetId = button.getAttribute('data-target');
+    const element = document.getElementById(targetId);
+    element.style.display = (element.style.display === 'block') ? 'none' : 'block';
+    button.classList.toggle('open');
+  });
+});
+
+// 계좌번호 복사 (하이픈 제거)
+document.querySelectorAll('.copy-account').forEach(span => {
+  span.addEventListener('click', () => {
+    let accountNum = span.dataset.account.replace(/-/g, ''); // 하이픈 제거
+    navigator.clipboard.writeText(accountNum).then(() => {
+      alert('계좌번호가 복사되었습니다!');
+    });
   });
 });
 
