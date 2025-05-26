@@ -9,7 +9,7 @@
     font-family: 'Noto Sans KR', sans-serif;
     background-color: #FFFFFF;
     color: #333333;
-    line-height: 1.6;
+    line-height: 1.8;
   }
   
   h1, h2, h3 {
@@ -19,9 +19,9 @@
     text-align: center;
   }
   
-  h1 { font-size: 2.5em; }
-  h2 { font-size: 2em; }
-  h3 { font-size: 1.5em; }
+  h1 { font-size: 2.5em; margin-bottom: 10px; }
+  h2 { font-size: 2em; margin-bottom: 20px; }
+  h3 { font-size: 1.5em; margin-bottom: 15px; }
   
   p, li {
     font-size: 1em;
@@ -34,44 +34,42 @@
     font-weight: bold;
   }
   
-  /* Container */
-  .container {
+  /* Layout */
+  section {
     max-width: 700px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 90%;
+    margin: 0 auto 80px;
+    padding: 40px 20px;
+    background-color: #fffafc;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   }
   
-  /* Section Spacing */
-  section {
-    margin: 80px 0;
+  .directions-guide, .directions-guide p, .directions-guide li, .directions-guide .guide-header, .directions-guide .guide-item {
+    text-align: left;
+  }
+  
+  hr.guide-divider {
+    border: none;
+    border-top: 1px solid #f4c6d0;
+    margin: 40px 0;
   }
   
   /* Hero Section */
   .hero {
     background: linear-gradient(to bottom, #FADADD 0%, #FFFFFF 100%);
-    text-align: center;
-    padding: 60px 20px;
   }
   
   .hero-image {
     width: 90%;
     max-width: 250px;
     height: auto;
+    margin: 25px auto;
     border-radius: 12px;
-    margin: 20px auto;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
   
-  .hero .date, .hero .venue {
-    font-size: 1.2em;
-  }
-  
   /* Countdown */
-  .countdown {
-    text-align: center;
-    padding: 60px 20px;
-  }
-  
   #timer {
     display: flex;
     justify-content: center;
@@ -82,22 +80,12 @@
   }
   
   /* Calendar */
-  .calendar {
-    width: 100%;
-    max-width: 700px;
-    background: #fffafc;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 20px auto;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  
   .calendar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Playfair Display', serif;
     color: #7a4c5b;
+    font-weight: bold;
     margin-bottom: 10px;
   }
   
@@ -130,16 +118,10 @@
   }
   
   /* Gallery */
-  .gallery {
-    text-align: center;
-    padding: 60px 20px;
-  }
-  
   .gallery-thumbnails {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    padding: 20px;
   }
   
   .gallery-thumbnails img {
@@ -157,13 +139,14 @@
     background-color: #f4c6d0;
     color: white;
     border: none;
-    padding: 10px 18px;
+    padding: 12px 20px;
     border-radius: 8px;
     cursor: pointer;
-    margin: 15px auto;
+    margin: 20px auto 0;
     font-size: 1em;
     font-weight: bold;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
   }
   
   .load-more:hover, .show-less:hover {
@@ -210,29 +193,17 @@
     cursor: pointer;
   }
   
-  /* Directions Guide */
-  .directions-guide {
-    background-color: #fffafc;
-    border-radius: 12px;
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 40px 20px;
-    text-align: left;
-  }
-  
+  /* Directions */
   .guide-header {
     display: flex;
     align-items: center;
     gap: 10px;
     font-weight: bold;
-    font-size: 1.1em;
     margin-bottom: 10px;
   }
   
-  .guide-divider {
-    border: none;
-    border-top: 1px solid #f4c6d0;
-    margin: 20px 0;
+  .guide-list {
+    padding-left: 15px;
   }
   
   .copy-address, .copy-account {
@@ -256,13 +227,12 @@
     z-index: 9999;
   }
   
-  /* Map Section */
+  /* Map */
   .map-container {
-    width: 90%;
-    max-width: 700px;
+    width: 100%;
     height: 300px;
-    margin: 20px auto;
     border-radius: 12px;
+    margin: 20px auto;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
   
@@ -290,8 +260,8 @@
   }
   
   .map-icons img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
   
   .map-button {
@@ -301,11 +271,32 @@
     padding: 10px 18px;
     border-radius: 8px;
     cursor: pointer;
-    margin: 15px 0;
+    margin: 20px auto;
     font-weight: bold;
+    display: block;
   }
   
-  /* Account Section */
+  /* Notice */
+  .notice-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+  }
+  
+  .notice-list strong {
+    display: inline-block;
+    background: #f4c6d0;
+    color: white;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    font-size: 0.85em;
+    margin-right: 10px;
+  }
+  
+  /* Account */
   .account-cards {
     display: flex;
     flex-direction: column;
@@ -315,7 +306,7 @@
   
   .account-card {
     width: 90%;
-    max-width: 700px;
+    max-width: 400px;
     background-color: #FADADD;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -370,9 +361,9 @@
     cursor: pointer;
     text-align: center;
     flex: 1 1 auto;
-    max-width
-  ::contentReference[oaicite:0]{index=0}
-   
+    max-width: 160px;
+  }
+  
   .footer-btn:hover {
     background-color: #e9b8c6;
   }
@@ -393,21 +384,8 @@
     height: 40px;
   }
   
-  /* Modal 기본 숨김 */
+  /* Modal */
   #invitation-modal {
     display: none;
   }
   
-  .copy-toast {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #f4c6d0;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 0.9em;
-    display: none;
-    z-index: 9999;
-  }  
