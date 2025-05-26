@@ -156,7 +156,7 @@
 
   .kakao-btn {
     background-color: #FEE500; /* 카카오 노란색 */
-    color: #3C1E1E; /* 카카오톡 로고 컬러 */
+    color: #f9f5f5; /* 카카오톡 로고 컬러 */
     border: none;
     border-radius: 8px;
     padding: 12px 20px;
@@ -168,7 +168,7 @@
   }
   
   .kakao-btn:hover {
-    background-color: #FFD900;
+    background-color: #ffdaef;
   }
   
   .kakao-share {
