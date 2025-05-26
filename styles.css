@@ -351,22 +351,25 @@
     align-items: center;
   }
   
-  .account-card#groom{
+  .account-card[data-target="groom"] {
     width: 90%;
     max-width: 400px;
-    background-color: #b8e5ff;
+    background-color: #b8e5ff; /* 신랑측 파스텔 블루 */
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     padding: 18px 20px;
   }
-  .account-card#bride{
+  
+  .account-card[data-target="bride"] {
     width: 90%;
     max-width: 400px;
-    background-color: #ffe3fc;
+    background-color: #ffe3fc; /* 신부측 파스텔 핑크 */
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     padding: 18px 20px;
   }
+  
+  
   .account-toggle {
     display: flex;
     justify-content: space-between;
