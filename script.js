@@ -214,15 +214,23 @@ document.getElementById('kakaotalk-sharing-btn').addEventListener('click', funct
   });
 });
 
-// Toggle 계좌 펼치기 + 화살표 변경
+// Toggle 계좌 펼치기 + 화살표 전환
 document.querySelectorAll('.account-toggle').forEach(button => {
   button.addEventListener('click', () => {
     const targetId = button.getAttribute('data-target');
     const element = document.getElementById(targetId);
-    element.style.display = (element.style.display === 'block') ? 'none' : 'block';
-    button.classList.toggle('open');
+    const arrow = button.querySelector('.arrow');
+
+    if (element.style.display === 'block') {
+      element.style.display = 'none';
+      arrow.textContent = '▼';
+    } else {
+      element.style.display = 'block';
+      arrow.textContent = '▲';
+    }
   });
 });
+
 
 // 계좌번호 복사 (하이픈 제거)
 document.querySelectorAll('.copy-account').forEach(span => {
