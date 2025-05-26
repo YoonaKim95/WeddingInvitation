@@ -5,7 +5,7 @@
     box-sizing: border-box;
   }
   
-  body, h1, h2, h3, p, li, .hero, .countdown, .gallery, .account, .footer, .parents-info, .calendar, .map-links, .notice {
+  body, h1, h2, h3, p, li, .hero, .countdown, .gallery, .account, .parents-info, .calendar, .map-links, .notice, .footer {
     text-align: center;
   }
   
@@ -34,6 +34,13 @@
   strong {
     color: #7a4c5b;
     font-weight: bold;
+  }
+  
+  /* 공통 최대 너비 */
+  .hero, .countdown, .calendar, .gallery, .account, .parents-info, .directions-guide, .notice, .footer {
+    max-width: 700px;
+    width: 90%;
+    margin: 0 auto;
   }
   
   /* 오시는 길만 왼쪽 정렬 */
@@ -80,11 +87,9 @@
   
   /* Calendar */
   .calendar {
-    width: 300px;
     background: #fffafc;
     border-radius: 12px;
     padding: 20px;
-    margin: 20px auto;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
   
@@ -204,11 +209,9 @@
   
   /* Map */
   .map-container {
-    width: 90%;
-    max-width: 500px;
     height: 300px;
-    margin: 20px auto;
     border-radius: 12px;
+    margin: 20px auto;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
   
@@ -260,8 +263,7 @@
   }
   
   .account-card {
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
     background-color: #FADADD;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -302,7 +304,6 @@
     justify-content: center;
     gap: 12px;
     flex-wrap: nowrap;
-    flex-direction: row;
   }
   
   .footer-btn {
