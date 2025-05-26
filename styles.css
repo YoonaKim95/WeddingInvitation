@@ -1,0 +1,92 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #FFFFFF;
+    color: #444444;
+    line-height: 1.6;
+  }
+  
+  h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .hero {
+    background: #FADADD;
+    color: #444;
+    padding: 80px 20px 50px;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .hero .date, .hero .venue {
+    font-size: 1.1em;
+    margin: 5px 0;
+  }
+  
+  .invitation, .gallery, .rsvp {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .invitation h2, .gallery h2, .rsvp h2 {
+    color: #D4AF37;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  
+  .gallery .images img {
+    width: 80%;
+    max-width: 350px;
+    margin: 10px auto;
+    border-radius: 10px;
+    display: block;
+  }
+  
+  form input, form select, form button {
+    width: 80%;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  form button {
+    background-color: #FADADD;
+    border: none;
+    color: #444;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #f4c6d0;
+  }
+  
+  footer {
+    background-color: #F7F7F7;
+    color: #777;
+    padding: 20px;
+    font-size: 14px;
+  }
+  
+  @media (min-width: 768px) {
+    .gallery .images img {
+      width: 45%;
+    }
+  }
+  
