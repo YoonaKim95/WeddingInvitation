@@ -383,7 +383,6 @@
   .account-toggle.open .arrow {
     transform: rotate(180deg);
   }
-  
   .account-info {
     display: none;
     background-color: #fff;
@@ -393,8 +392,6 @@
     margin-top: 10px;
   }
   
-
-
   .account-info p {
     display: flex;
     flex-direction: column;
@@ -415,41 +412,23 @@
     border-radius: 8px;
     width: 100%;
     justify-content: space-between;
-    margin-top: 6px;
   }
   
   .account-info p .bank .account-number {
     font-size: 0.95em;
     color: #555;
   }
-
-  .account-info p .bank {
-    display: flex;
-    align-items: center;
-    background-color: #f5f5f5;
-    padding: 8px 12px;
-    border-radius: 8px;
-    width: 100%;
-    justify-content: space-between;
-  }
   
-  
-
   .copy-account {
     display: inline-flex;
     align-items: center;
     cursor: pointer;
   }
-
-  .copy-account {
-    cursor: pointer;
-  }  
- 
+  
   .copy-account::after {
     content: '📋';
     margin-left: 4px;
   }
-  
   
   .kakao-pay a {
     display: inline-flex;
@@ -457,7 +436,7 @@
   }
   
   .kakao-pay img {
-    width: 17px;
+    width: 17px;  /* (요구한 대로) 살짝 키움 */
     height: 17px;
     margin-left: 6px;
     vertical-align: middle;
