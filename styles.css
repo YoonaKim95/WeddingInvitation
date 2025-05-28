@@ -37,7 +37,23 @@ p, li {
   letter-spacing: 0.5px;
 }
 
+.guide-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
 
+.guide-item:last-child {
+  border-bottom: none;
+}
+
+.guide-header {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.guide-item p {
+  margin: 5px 0;
+}
 
   p, li {
     font-size: 1em;
