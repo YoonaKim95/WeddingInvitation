@@ -5,37 +5,53 @@
     box-sizing: border-box;
   }
   
-  body {
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: #FFFFFF;
-    color: #333333;
-    line-height: 1.8;
-  }
-  
-  h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
-    color: #666666;
-    font-weight: 700;
-    text-align: center;
-  }
-  
-  h1 { font-size: 2.5em; margin-bottom: 10px; }
-  h2 { font-size: 2em; margin-bottom: 20px; }
-  h3 { font-size: 1.5em; margin-bottom: 15px; }
-  h4 { font-size: 0.85em; margin-bottom: 10px; }
+/* Font Definitions */
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+}
 
-  
+p, li, .guide-header, .guide-item, .parents-line, .venue, .date, .account-info p .name, .account-info p .bank .account-number {
+  font-family: 'Pretendard', sans-serif;
+}
+
+.btn, .load-more, .show-less, .footer-btn, .account-toggle, .copy-address, .copy-account, .map-button {
+  font-family: 'Outfit', sans-serif;
+}
+
+h1 { font-size: 2.8em; font-weight: 700; }
+h2 { font-size: 2.2em; font-weight: 700; }
+h3 { font-size: 1.6em; font-weight: 700; }
+h4 { font-size: 1.2em; font-weight: 700; }
+
+p, li {
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.btn, .load-more, .show-less, .footer-btn, .account-toggle, .map-button {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+  /* Color Palette (unchanged for now) */
+  body {
+    background-color: #fffafc;
+    color: #333333;
+  }
+
   p, li {
     font-size: 1em;
     color: #333333;
     text-align: center;
   }
   
-  strong {
-    color: #7a4c5b;
-    font-weight: bold;
-  }
   
+  /* Strong */
+    strong {
+      color: #000000;
+      font-weight: bold;
+    }
+    
   /* Layout */
   section {
     max-width: 700px;
@@ -87,12 +103,7 @@
     color: #999;
   }
   
-  /* Strong */
-  strong {
-    color: #000000;
-    font-weight: bold;
-  }
-  
+
   /* Countdown */
   #timer {
     display: flex;
