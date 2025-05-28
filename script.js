@@ -24,9 +24,7 @@ const countdownInterval = setInterval(function() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const textElement = document.getElementById('typing-text');
-  const text = textElement.dataset.text;
-  textElement.innerHTML = '';
-
+  const text = "We're getting\nMarried!"; // 여기서 텍스트 정의
   let i = 0;
   const typing = () => {
     if (i < text.length) {
@@ -36,9 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(typing, 120);
     }
   };
-
   typing();
 });
+
 
 const grid = document.querySelector('.calendar-grid');
 
