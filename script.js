@@ -157,19 +157,20 @@ document.getElementById('next').addEventListener('click', () => {
 });
 
 
-// Toast 메시지 요소 생성
-const copyToast = document.createElement('div');
-copyToast.classList.add('copy-toast');
-copyToast.innerText = '주소가 복사되었습니다!';
-document.body.appendChild(copyToast);
 
+const copyAddress = document.getElementById('copy-address');
 copyAddress.addEventListener('click', () => {
-  const addressText = copyAddress.innerText.replace('주소: ', '');
-  navigator.clipboard.writeText(addressText).then(() => {
-    copyToast.style.display = 'block';
-    setTimeout(() => {
-      copyToast.style.display = 'none';
-    }, 1500);
+  navigator.clipboard.writeText(copyAddress.innerText).then(() => {
+    const existingToast = document.querySelector('.copy-toast');
+    if (!existingToast) {
+      const toast = document.createElement('div');
+      toast.className = 'copy-toast';
+      toast.textContent = '주소가 복사되었습니다!';
+      document.body.appendChild(toast);
+      setTimeout(() => {
+        toast.remove();
+      }, 1500);
+    }
   });
 });
 
