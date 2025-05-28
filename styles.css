@@ -510,13 +510,13 @@ p, li {
   
   .copy-account::after {
     content: '📋';
-    font-size: 14px;
+    font-size: 22px;
     margin-left: 4px;
   }
   
   .kakao-pay img {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
     vertical-align: middle;
   }
   
