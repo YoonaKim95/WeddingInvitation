@@ -31,12 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const char = text[i] === '\n' ? '<br>' : text[i];
       textElement.innerHTML += char;
       i++;
-      setTimeout(typing, 120);
+      setTimeout(typing, 80);
     }
   };
   typing();
 });
-
 
 const grid = document.querySelector('.calendar-grid');
 
