@@ -156,16 +156,30 @@ document.getElementById('next').addEventListener('click', () => {
   lightboxImage.src = imageList[currentLightboxIndex];
 });
 
+ 
+// 복사 기능 통일 - 토스트만 표시
+let copyToast = document.querySelector('.copy-toast');
+if (!copyToast) {
+  copyToast = document.createElement('div');
+  copyToast.className = 'copy-toast';
+  copyToast.textContent = '복사되었습니다!';
+  document.body.appendChild(copyToast);
+}
 
-    // 주소 복사 기능 - 토스트만 표시
-    const copyAddress = document.getElementById('copy-address');
-    let copyToast = document.querySelector('.copy-toast');
-    if (!copyToast) {
-      copyToast = document.createElement('div');
-      copyToast.className = 'copy-toast';
-      copyToast.textContent = '주소가 복사되었습니다!';
-      document.body.appendChild(copyToast);
-    }
+document.querySelectorAll('.copy').forEach(element => {
+  element.addEventListener('click', () => {
+    const valueToCopy = element.dataset.account;
+    navigator.clipboard.writeText(valueToCopy).then(() => {
+      copyToast.style.display = 'block';
+      copyToast.style.opacity = '1';
+      copyToast.style.transition = 'opacity 0.5s ease';
+      setTimeout(() => {
+        copyToast.style.opacity = '0';
+      }, 1500);
+    });
+  });
+});
+
 
     copyAddress.addEventListener('click', () => {
       navigator.clipboard.writeText(copyAddress.innerText).then(() => {

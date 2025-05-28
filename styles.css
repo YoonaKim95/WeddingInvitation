@@ -327,7 +327,7 @@ p, li {
     padding-left: 15px;
   }
   
-  .copy-address, .copy-account {
+  .copy .copy-address, .copy-account {
     cursor: pointer;
     color: #7a4c5b;
     font-weight: bold;
@@ -335,7 +335,6 @@ p, li {
   }
   
   .copy-toast {
-
     display: none;
     position: fixed;
     bottom: 20px;
