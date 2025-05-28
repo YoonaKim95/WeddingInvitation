@@ -22,6 +22,23 @@ const countdownInterval = setInterval(function() {
   }
 }, 1000);
 
+document.addEventListener('DOMContentLoaded', () => {
+  const textElement = document.getElementById('typing-text');
+  const text = textElement.dataset.text;
+  textElement.innerHTML = '';
+
+  let i = 0;
+  const typing = () => {
+    if (i < text.length) {
+      const char = text[i] === '\n' ? '<br>' : text[i];
+      textElement.innerHTML += char;
+      i++;
+      setTimeout(typing, 120);
+    }
+  };
+
+  typing();
+});
 
 const grid = document.querySelector('.calendar-grid');
 
