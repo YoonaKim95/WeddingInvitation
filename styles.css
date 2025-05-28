@@ -83,47 +83,46 @@ p, li {
   .hero {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100vh;
+    max-width: 420px;
+    margin: 0 auto;
     overflow: hidden;
   }
-
-  .hero-background img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-  }
-
+  
   .hero-overlay {
-    position: relative;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
     z-index: 2;
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
   }
-
+  
+  .hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
   .hero-text {
     font-family: 'Parisienne', cursive;
-    font-size: 3.6em;
+    font-size: 4.5em;
     color: rgba(255, 255, 255, 0.95);
     text-shadow: 0 4px 12px rgba(0,0,0,0.5);
     line-height: 1.2;
+    white-space: pre-line;
   }
-
+  
   .hero-subtext {
     font-family: 'Pretendard', sans-serif;
     font-size: 1.1em;
     color: rgba(255,255,255,0.85);
-    margin-top: 20px;
+    margin-top: 40px;
   }
+  
 
   section, footer {
     width: 100%;
