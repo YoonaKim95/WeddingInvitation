@@ -233,17 +233,6 @@ document.querySelectorAll('.account-toggle').forEach(button => {
 });
 
 
-// 계좌번호 복사 (하이픈 제거)
-document.querySelectorAll('.copy-account').forEach(span => {
-  span.addEventListener('click', () => {
-    let accountNum = span.dataset.account.replace(/-/g, ''); // 하이픈 제거
-    navigator.clipboard.writeText(accountNum).then(() => {
-      alert('계좌번호가 복사되었습니다!');
-    });
-  });
-});
-
-
 // 복사 버튼 클릭
 document.querySelectorAll('.copy-account').forEach(span => {
   span.addEventListener('click', () => {
