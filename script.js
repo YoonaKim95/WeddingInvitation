@@ -157,22 +157,24 @@ document.getElementById('next').addEventListener('click', () => {
 });
 
 
-
-const copyAddress = document.getElementById('copy-address');
-copyAddress.addEventListener('click', () => {
-  navigator.clipboard.writeText(copyAddress.innerText).then(() => {
-    const existingToast = document.querySelector('.copy-toast');
-    if (!existingToast) {
-      const toast = document.createElement('div');
-      toast.className = 'copy-toast';
-      toast.textContent = '주소가 복사되었습니다!';
-      document.body.appendChild(toast);
-      setTimeout(() => {
-        toast.remove();
-      }, 1500);
+    // 주소 복사 기능 - 토스트만 표시
+    const copyAddress = document.getElementById('copy-address');
+    let copyToast = document.querySelector('.copy-toast');
+    if (!copyToast) {
+      copyToast = document.createElement('div');
+      copyToast.className = 'copy-toast';
+      copyToast.textContent = '주소가 복사되었습니다!';
+      document.body.appendChild(copyToast);
     }
-  });
-});
+
+    copyAddress.addEventListener('click', () => {
+      navigator.clipboard.writeText(copyAddress.innerText).then(() => {
+        copyToast.style.display = 'block';
+        setTimeout(() => {
+          copyToast.style.display = 'none';
+        }, 1500);
+      });
+    });
 
 
 // KakaoMap 생성

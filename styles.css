@@ -335,6 +335,8 @@ p, li {
   }
   
   .copy-toast {
+
+    display: none;
     position: fixed;
     bottom: 20px;
     left: 50%;
@@ -344,8 +346,8 @@ p, li {
     padding: 8px 16px;
     border-radius: 8px;
     font-size: 0.9em;
-    display: none;
     z-index: 9999;
+  
   }
   
   /* Map */
