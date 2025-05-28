@@ -157,7 +157,6 @@ document.getElementById('next').addEventListener('click', () => {
 });
 
  
-// 복사 기능 통일 - 토스트만 표시
 let copyToast = document.querySelector('.copy-toast');
 if (!copyToast) {
   copyToast = document.createElement('div');
@@ -166,10 +165,25 @@ if (!copyToast) {
   document.body.appendChild(copyToast);
 }
 
-document.querySelectorAll('.copy').forEach(element => {
+// 주소 복사
+const copyAddress = document.getElementById('copy-address');
+copyAddress.addEventListener('click', () => {
+  navigator.clipboard.writeText(copyAddress.innerText).then(() => {
+    copyToast.style.display = 'block';
+    copyToast.style.opacity = '1';
+    copyToast.style.transition = 'opacity 0.5s ease';
+    setTimeout(() => {
+      copyToast.style.opacity = '0';
+    }, 1500);
+  });
+});
+
+// 계좌 복사
+const accountCopies = document.querySelectorAll('.copy-account');
+accountCopies.forEach(element => {
   element.addEventListener('click', () => {
-    const valueToCopy = element.dataset.account;
-    navigator.clipboard.writeText(valueToCopy).then(() => {
+    const accountNum = element.dataset.account.replace(/-/g, '');
+    navigator.clipboard.writeText(accountNum).then(() => {
       copyToast.style.display = 'block';
       copyToast.style.opacity = '1';
       copyToast.style.transition = 'opacity 0.5s ease';
