@@ -97,6 +97,12 @@ p, li {
     height: 100%;
     object-fit: cover;
     z-index: 1;
+    filter: blur(10px);
+    transition: filter 0.5s ease-out;
+  }
+
+  .hero-background img.loaded {
+    filter: blur(0);
   }
 
   .hero-overlay {
@@ -111,7 +117,7 @@ p, li {
     align-items: center;
     justify-content: center;
     text-align: center;
-    pointer-events: none; /* 스크롤 따라가기 방지 */
+    pointer-events: none;
   }
 
   .hero-text {
@@ -121,7 +127,7 @@ p, li {
     text-shadow: 0 4px 12px rgba(0,0,0,0.5);
     line-height: 1.2;
     white-space: pre-line;
-    pointer-events: auto; /* 텍스트 선택 가능 */
+    pointer-events: auto;
   }
 
   .hero-subtext {
@@ -523,8 +529,8 @@ p, li {
   }
   
   .kakao-pay img {
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
     vertical-align: middle;
   }
   

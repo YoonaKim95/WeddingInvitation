@@ -24,19 +24,44 @@ const countdownInterval = setInterval(function() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const textElement = document.getElementById('typing-text');
-  const text = "We're Getting Married!"; // 여기서 텍스트 정의
+  const text = "We're Getting Married!";
   let i = 0;
   const typing = () => {
     if (i < text.length) {
       const char = text[i] === '\n' ? '<br>' : text[i];
       textElement.innerHTML += char;
       i++;
-      setTimeout(typing, 80);
+      setTimeout(typing, 120);
     }
   };
   typing();
-});
 
+  const lazyImg = document.querySelector('.lazyload');
+  const highResSrc = lazyImg.dataset.src;
+
+  const loadImage = () => {
+    const img = new Image();
+    img.src = highResSrc;
+    img.onload = () => {
+      lazyImg.src = highResSrc;
+      lazyImg.classList.add('loaded');
+    };
+  };
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          loadImage();
+          observer.unobserve(lazyImg);
+        }
+      });
+    });
+    observer.observe(lazyImg);
+  } else {
+    loadImage();
+  }
+});
 const grid = document.querySelector('.calendar-grid');
 
 // 1일 위치 맞추기 (2025년 10월 1일은 수요일 → index 3)
