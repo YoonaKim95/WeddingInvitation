@@ -226,15 +226,17 @@ p, li {
   
   .countdown-number {
     font-family: 'Pretendard', sans-serif;
-    font-size: 2.2em;
+    font-size: 2em; /* 폰트 줄임 */
     font-weight: 700;
-    color: #7a4c5b;
+    color: #373737;
+    text-align: center;
   }
   
   .countdown-label {
     font-family: 'Pretendard', sans-serif;
     font-size: 0.8em;
     color: #777;
+    text-align: center;
     margin-top: 4px;
   }
   
@@ -242,7 +244,7 @@ p, li {
     text-align: center;
     font-size: 1em;
     margin-top: 20px;
-    color: #7a4c5b;
+    color: #373737;
   }
   
   /* Calendar */
@@ -250,7 +252,7 @@ p, li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #684954;
+    color: #373737;
     font-weight: bold;
     margin-bottom: 10px;
   }
