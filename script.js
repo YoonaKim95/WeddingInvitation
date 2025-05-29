@@ -1,7 +1,10 @@
 /* script.js */
 
 // D-Day Countdown
+// D-Day Countdown
 const weddingDate = new Date("2025-10-18T13:00:00").getTime();
+const message = document.getElementById("countdown-message");
+
 const countdownInterval = setInterval(function() {
   const now = new Date().getTime();
   const distance = weddingDate - now;
@@ -11,16 +14,42 @@ const countdownInterval = setInterval(function() {
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("days").innerText = days;
-  document.getElementById("hours").innerText = hours;
-  document.getElementById("minutes").innerText = minutes;
-  document.getElementById("seconds").innerText = seconds;
+  document.getElementById("days").innerText = Math.abs(days);
+  document.getElementById("hours").innerText = Math.abs(hours);
+  document.getElementById("minutes").innerText = Math.abs(minutes);
+  document.getElementById("seconds").innerText = Math.abs(seconds);
 
-  if (distance < 0) {
-    clearInterval(countdownInterval);
-    document.getElementById("timer").innerHTML = "오늘은 결혼식 날입니다!";
+  if (distance > 0) {
+    message.innerHTML = `병진 💗 윤아의 결혼식이 ${days}일 남았습니다.`;
+  } else if (Math.abs(days) === 0) {
+    message.innerHTML = `오늘은 병진 💗 윤아의 결혼식 입니다!`;
+  } else {
+    message.innerHTML = `병진 💗 윤아의 결혼식이 ${Math.abs(days)}일 지났습니다.`;
   }
 }, 1000);
+
+
+// const weddingDate = new Date("2025-10-18T13:00:00").getTime();
+// const countdownInterval = setInterval(function() {
+//   const now = new Date().getTime();
+//   const distance = weddingDate - now;
+
+//   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+//   document.getElementById("days").innerText = days;
+//   document.getElementById("hours").innerText = hours;
+//   document.getElementById("minutes").innerText = minutes;
+//   document.getElementById("seconds").innerText = seconds;
+
+//   if (distance < 0) {
+//     clearInterval(countdownInterval);
+//     document.getElementById("timer").innerHTML = "오늘은 결혼식 날입니다!";
+//   }
+// }, 1000);
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const textElement = document.getElementById('typing-text');
