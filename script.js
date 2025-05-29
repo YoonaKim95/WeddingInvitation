@@ -84,6 +84,15 @@ for (let d = 1; d <= 31; d++) {
   // 18일 강조
   if (d === 18) day.classList.add('today');
 
+
+  // 10월 공휴일 메뉴얼 추가.. 
+  if (d === 3) day.classList.add('holiday');
+  if (d === 6) day.classList.add('holiday');
+  if (d === 7) day.classList.add('holiday');
+  if (d === 8) day.classList.add('holiday');
+  if (d === 9) day.classList.add('holiday');
+  
+
   day.textContent = d;
   grid.appendChild(day);
 }

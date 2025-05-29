@@ -236,7 +236,7 @@ p, li {
     transition: background-color 0.3s;
   }
   
-  .day.sun, .day.sat {
+  .day.sun, .day.sat .day.holiday{
     color: #d16d85;
   }
   
