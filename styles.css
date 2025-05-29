@@ -283,7 +283,7 @@ p, li {
 
   .day.today {
     position: relative;
-    color: white;
+    color: rgb(247, 63, 228);
     font-weight: bold;
     z-index: 0;
   }
