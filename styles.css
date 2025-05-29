@@ -78,14 +78,17 @@ p, li {
   section {
     max-width: 700px;
     width: 90%;
-    margin: 0 auto 40px;  /* ✅ 간격 줄임 */
-    padding: 30px 20px;  /* ✅ padding도 조금 줄임 */
+    margin: 0;  /* ✅ 간격 줄임 */
+    padding: 20px;  /* ✅ padding도 조금 줄임 */
     background-color: #fffafc;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   }
   
-  
+  section + section {
+  margin-top: 0;  /* 섹션 간 간격 완전히 제거 */
+}
+
   .directions-guide, .directions-guide p, .directions-guide li, .directions-guide .guide-header, .directions-guide .guide-item {
     text-align: left;
   }
@@ -207,7 +210,16 @@ p, li {
     font-weight: bold;
     margin-top: 15px;
   }
-  
+
+.countdown-container, .countdown-message, .notice, .calendar {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.container, .box, .wrapper {
+  margin: 0;
+  padding: 0;
+}
 
   .countdown-container {
     display: flex;
