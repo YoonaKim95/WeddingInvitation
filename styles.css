@@ -285,6 +285,7 @@ p, li {
     position: relative;
     color: white;
     font-weight: bold;
+    z-index: 0;
   }
   
   .day.today::before {
@@ -300,8 +301,9 @@ p, li {
     background-position: center;
     transform: translate(-50%, -50%);
     z-index: -1;
+    pointer-events: none;
   }
-  
+    
     
   /* Gallery */
   .gallery-thumbnails {
