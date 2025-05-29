@@ -236,7 +236,7 @@ p, li {
     transition: background-color 0.3s;
   }
   
-  .day.sun, .day.sat {
+  .day.sun, .day.sat, .day.holiday{
     color: #d16d85;
   }
 
@@ -250,13 +250,6 @@ p, li {
   background-position: center;
   border-radius: 0;
 }
-
-/* 공휴일 색상 */
-.day.holiday {
-  color: #ff86ae !important;
-  font-weight: bold;
-}
-
   
   /* .day.today {
     background-color: #ff86ae;
