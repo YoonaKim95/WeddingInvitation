@@ -11,8 +11,11 @@
 /* Font Definitions */
 h1, h2, h3, h4 {
   font-family: 'Pretendard', serif;
-  text-align: center;
-  
+}
+
+h3, h4 {
+  text-align: center !important;
+  margin-bottom: 20px; /* 아래 여백 추가 */
 }
 
 p, li, .guide-header, .guide-item, .parents-line, .venue, .date, .account-info p .name, .account-info p .bank .account-number {
