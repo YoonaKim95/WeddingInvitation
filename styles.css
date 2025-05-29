@@ -490,24 +490,55 @@ p, li {
   }
   
   /* Notice */
-  .notice-list {
-    list-style: none;
-    padding-left: 0;
-    text-align: left;
-  }
-  
-  .notice-list strong {
-    display: inline-block;
-    background: #f4c6d0;
-    color: white;
-    border-radius: 50%;
-    width: 28px;
-    height: 28px;
-    text-align: center;
-    line-height: 28px;
-    font-size: 0.85em;
-    margin-right: 10px;
-  }
+.notice {
+  margin-top: 40px;
+}
+
+.notice h3 {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.notice-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.notice-list li {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.notice-list li:last-child {
+  border-bottom: none;
+}
+
+.notice-list strong {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4c6d0;
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 0.85em;
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.notice-list li p, .notice-list li span, .notice-list li {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 1em;
+  color: #333;
+  line-height: 1.5;
+}
+
   .account-cards {
     display: flex;
     flex-direction: column;
