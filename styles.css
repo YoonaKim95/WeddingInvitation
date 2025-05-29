@@ -640,6 +640,7 @@ p, li {
     font-size: 0.95em;
     color: #555;
     flex: 1;
+    text-align: left;
   }
   
   .account-info p .actions {
