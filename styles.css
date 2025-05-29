@@ -11,6 +11,8 @@
 /* Font Definitions */
 h1, h2, h3, h4 {
   font-family: 'Pretendard', serif;
+  text-align: center;
+  
 }
 
 p, li, .guide-header, .guide-item, .parents-line, .venue, .date, .account-info p .name, .account-info p .bank .account-number {
@@ -61,10 +63,8 @@ p, li {
     text-align: center;
   }
   
-  h3, h4 {
-    text-align: center;
-  }
-  
+
+
   /* Strong */
     strong {
       color: #000000;
