@@ -5,12 +5,12 @@
     box-sizing: border-box;
   }
   
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Outfit:wght@400;700&family=Parisienne&display=swap');
+  
   @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
 
 /* Font Definitions */
 h1, h2, h3, h4 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Pretendard', serif;
 }
 
 p, li, .guide-header, .guide-item, .parents-line, .venue, .date, .account-info p .name, .account-info p .bank .account-number {
@@ -18,7 +18,7 @@ p, li, .guide-header, .guide-item, .parents-line, .venue, .date, .account-info p
 }
 
 .btn, .load-more, .show-less, .footer-btn, .account-toggle, .copy-address, .copy-account, .map-button {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Pretendard', sans-serif;
 }
 
 h1 { font-size: 2.8em; font-weight: 700; }
@@ -136,7 +136,7 @@ p, li {
   }
   
   .hero-text {
-    font-family: 'Parisienne', cursive;
+    font-family: 'Pretendard', cursive;
     font-size: 4.5em;
     color: rgba(255, 255, 255, 0.95);
     text-shadow: 0 4px 12px rgba(0,0,0,0.5);
