@@ -253,7 +253,7 @@ window.onload = function() {
     const container = document.getElementById('kakao-map');
     const options = {
       center: new kakao.maps.LatLng(37.465642, 126.9594921),
-      level: 3
+      level: 6
     };
   
     const map = new kakao.maps.Map(container, options);
