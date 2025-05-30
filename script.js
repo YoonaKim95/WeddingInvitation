@@ -249,21 +249,35 @@ accountCopies.forEach(element => {
 
 
 // KakaoMap 생성
-window.onload = function() {
-    const container = document.getElementById('kakao-map');
-    const options = {
-      center: new kakao.maps.LatLng(37.465642, 126.9594921),
-      level: 6
-    };
-  
-    const map = new kakao.maps.Map(container, options);
-  
-    // 마커
-    new kakao.maps.Marker({
-      position: new kakao.maps.LatLng(37.465642, 126.9594921),
-      map: map
-    });
+
+  window.onload = function() {
+  const container = document.getElementById('kakao-map');
+  const options = {
+    center: new kakao.maps.LatLng(37.465642, 126.9594921),
+    level: 5,
+    draggable: false,    // 기본 잠금
+    scrollwheel: false
   };
+
+  const map = new kakao.maps.Map(container, options);
+
+  // 마커
+  new kakao.maps.Marker({
+    position: new kakao.maps.LatLng(37.465642, 126.9594921),
+    map: map
+  });
+
+  // 잠금 버튼
+  const mapToggle = document.getElementById('map-toggle');
+  let isLocked = true;
+
+  mapToggle.addEventListener('click', () => {
+    isLocked = !isLocked;
+    map.setDraggable(!isLocked);
+    map.setZoomable(!isLocked);
+    mapToggle.innerText = isLocked ? '🔒' : '🔓';
+  });
+};
 
 
 // 약도 토글 버튼 기능
