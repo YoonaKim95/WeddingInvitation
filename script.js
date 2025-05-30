@@ -248,36 +248,92 @@ accountCopies.forEach(element => {
     });
 
 
-// KakaoMap 생성
+// // KakaoMap 생성
+document.addEventListener("DOMContentLoaded", function() {
+  const mapSection = document.getElementById("kakao-map");
+  let mapLoaded = false;
 
-  window.onload = function() {
-  const container = document.getElementById('kakao-map');
-  const options = {
-    center: new kakao.maps.LatLng(37.465642, 126.9594921),
-    level: 6,
-    draggable: false,    // 기본 잠금
-    scrollwheel: false
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !mapLoaded) {
+      loadKakaoMap();
+      mapLoaded = true;
+    }
+  });
+
+  observer.observe(mapSection);
+});
+
+function loadKakaoMap() {
+  const script = document.createElement("script");
+  script.src = "https://dapi.kakao.com/v2/maps/sdk.js?appkey=2f6bea57641d1dd00d85e80a5fb8ba78&autoload=false";
+  script.onload = () => {
+    kakao.maps.load(() => {
+      const container = document.getElementById("kakao-map");
+      const options = {
+        center: new kakao.maps.LatLng(37.465642, 126.9594921),
+        level: 6,
+        draggable: false,
+        scrollwheel: false
+      };
+
+      const map = new kakao.maps.Map(container, options);
+
+      new kakao.maps.Marker({
+        position: new kakao.maps.LatLng(37.465642, 126.9594921),
+        map: map
+      });
+
+      // 컨트롤 제거
+      var mapTypeControl = new kakao.maps.MapTypeControl();
+      map.removeControl(mapTypeControl);
+
+      var zoomControl = new kakao.maps.ZoomControl();
+      map.removeControl(zoomControl);
+
+
+      // 잠금 버튼
+      const mapToggle = document.getElementById('map-toggle');
+      let isLocked = true;
+
+      mapToggle.addEventListener('click', () => {
+        isLocked = !isLocked;
+        map.setDraggable(!isLocked);
+        map.setZoomable(!isLocked);
+        mapToggle.innerText = isLocked ? '🔒' : '🔓';
+      });
+    });
   };
+  document.head.appendChild(script);
+}
 
-  const map = new kakao.maps.Map(container, options);
+//   window.onload = function() {
+//   const container = document.getElementById('kakao-map');
+//   const options = {
+//     center: new kakao.maps.LatLng(37.465642, 126.9594921),
+//     level: 6,
+//     draggable: false,    // 기본 잠금
+//     scrollwheel: false
+//   };
 
-  // 마커
-  new kakao.maps.Marker({
-    position: new kakao.maps.LatLng(37.465642, 126.9594921),
-    map: map
-  });
+//   const map = new kakao.maps.Map(container, options);
 
-  // 잠금 버튼
-  const mapToggle = document.getElementById('map-toggle');
-  let isLocked = true;
+//   // 마커
+//   new kakao.maps.Marker({
+//     position: new kakao.maps.LatLng(37.465642, 126.9594921),
+//     map: map
+//   });
 
-  mapToggle.addEventListener('click', () => {
-    isLocked = !isLocked;
-    map.setDraggable(!isLocked);
-    map.setZoomable(!isLocked);
-    mapToggle.innerText = isLocked ? '🔒' : '🔓';
-  });
-};
+//   // 잠금 버튼
+//   const mapToggle = document.getElementById('map-toggle');
+//   let isLocked = true;
+
+//   mapToggle.addEventListener('click', () => {
+//     isLocked = !isLocked;
+//     map.setDraggable(!isLocked);
+//     map.setZoomable(!isLocked);
+//     mapToggle.innerText = isLocked ? '🔒' : '🔓';
+//   });
+// };
 
 
 // 약도 토글 버튼 기능
