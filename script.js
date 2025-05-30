@@ -250,11 +250,11 @@ accountCopies.forEach(element => {
 
 // KakaoMap 생성
 
-  window.onload = function() {
+window.onload = function() {
   const container = document.getElementById('kakao-map');
   const options = {
     center: new kakao.maps.LatLng(37.465642, 126.9594921),
-    level: 5,
+    level: 6,
     draggable: false,    // 기본 잠금
     scrollwheel: false
   };
@@ -278,6 +278,7 @@ accountCopies.forEach(element => {
     mapToggle.innerText = isLocked ? '🔒' : '🔓';
   });
 };
+
 
 
 // 약도 토글 버튼 기능
