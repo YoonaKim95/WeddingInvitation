@@ -1,35 +1,35 @@
 /* script.js */
 
 // D-Day Countdown
-// D-Day Countdown
-const weddingDate = new Date("2025-10-18T13:00:00").getTime();
+const weddingDate = new Date("2025-10-18"); // ✅ 자정 기준
+weddingDate.setHours(0, 0, 0, 0);           // ✅ 00:00:00 자정 고정
+
 const message = document.getElementById("countdown-message");
 
 const countdownInterval = setInterval(function() {
-  const now = new Date().getTime();
+  const now = new Date();
+  now.setHours(0, 0, 0, 0); // ✅ 현재도 자정 고정
+
   const distance = weddingDate - now;
+  const dayDiff = Math.floor(distance / (1000 * 60 * 60 * 24)); // ✅ 정확한 '일' 계산
 
-  // 실제 남은 날: 박스용
-  const rawDays = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const hours = new Date().getHours();
+  const minutes = new Date().getMinutes();
+  const seconds = new Date().getSeconds();
 
-  // 박스에 표시되는 값 (실제 남은 시간)
-  document.getElementById("days").innerText = Math.abs(rawDays);
-  document.getElementById("hours").innerText = Math.abs(hours);
-  document.getElementById("minutes").innerText = Math.abs(minutes);
-  document.getElementById("seconds").innerText = Math.abs(seconds);
+  // 박스 숫자 업데이트 (시간 단위는 실시간)
+  document.getElementById("days").innerText = Math.abs(dayDiff);
+  document.getElementById("hours").innerText = hours;
+  document.getElementById("minutes").innerText = minutes;
+  document.getElementById("seconds").innerText = seconds;
 
-  // 메세지용: +1 처리 (D-Day 강조용)
-  const displayDays = (distance > 0) ? rawDays + 1 : Math.abs(rawDays);
-
-  if (distance > 0) {
-    message.innerHTML = `병진 💗 윤아의 결혼식이 ${displayDays}일 남았습니다.`;
-  } else if (Math.abs(rawDays) === 0 || rawDays === 0) {
+  // 메세지 처리
+  if (dayDiff > 0) {
+    message.innerHTML = `병진 💗 윤아의 결혼식이 ${dayDiff}일 남았습니다.`;
+  } else if (dayDiff === 0) {
     message.innerHTML = `오늘은 병진 💗 윤아의 결혼식 입니다!`;
   } else {
-    message.innerHTML = `병진 💗 윤아의 결혼식이 ${displayDays}일 지났습니다.`;
+    message.innerHTML = `병진 💗 윤아의 결혼식이 ${Math.abs(dayDiff)}일 지났습니다.`;
   }
 }, 1000);
 
