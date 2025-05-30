@@ -1,30 +1,41 @@
 /* script.js */
 
 // D-Day Countdown
-const weddingDate = new Date("2025-10-18"); // ✅ 자정 기준
-weddingDate.setHours(0, 0, 0, 0);           // ✅ 00:00:00 자정 고정
 
+// 정확한 날짜 계산 로직
+function getDayDiff(targetDate) {
+  const today = new Date();
+  const target = new Date(targetDate);
+
+  // 시간 정보 제거 (자정 기준으로 계산)
+  today.setHours(0, 0, 0, 0);
+  target.setHours(0, 0, 0, 0);
+
+  // 밀리초 → 일 계산
+  const diffTime = target.getTime() - today.getTime();
+  return Math.round(diffTime / (1000 * 60 * 60 * 24));
+}
+
+const weddingDate = "2025-10-18"; // 문자열로 지정
 const message = document.getElementById("countdown-message");
 
 const countdownInterval = setInterval(function() {
+  const dayDiff = getDayDiff(weddingDate);
+
+  // 박스에는 정확한 실시간 시간 카운트 표시
   const now = new Date();
-  now.setHours(0, 0, 0, 0); // ✅ 현재도 자정 고정
-
-  const nowExact = new Date().getTime();     // ✅ 실제 현재 시간 (초,분 계산용)
-  const distance = weddingDate.getTime() - nowExact;
-
-  const dayDiff = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const target = new Date(weddingDate + "T00:00:00");
+  const distance = target.getTime() - now.getTime();
   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // 카운트다운 박스 값 업데이트
   document.getElementById("days").innerText = Math.abs(dayDiff);
   document.getElementById("hours").innerText = Math.abs(hours);
   document.getElementById("minutes").innerText = Math.abs(minutes);
   document.getElementById("seconds").innerText = Math.abs(seconds);
 
-  // 메세지 처리 (기존대로 유지)
+  // 메세지
   if (dayDiff > 0) {
     message.innerHTML = `병진 💗 윤아의 결혼식이 ${dayDiff}일 남았습니다.`;
   } else if (dayDiff === 0) {
