@@ -586,15 +586,23 @@ p, li {
     max-width: 400px;
   }
   
-  .account-toggle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 15px;
-  }
-  
+.account-toggle {
+  all: unset; /* (선택) 기본 스타일 초기화 */
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;  /* ✅ 버튼 전체 폭 터치 가능 */
+  padding: 15px; /* ✅ 클릭 영역 확보 */
+  z-index: 10; /* ✅ 다른 요소에 가려지지 않게 */
+  position: relative; /* ✅ 클릭 충돌 방지 */
+}
+
+.account-card, .account-info {
+  position: relative;
+  z-index: 5;
+}
+
   .account-toggle .arrow {
     transition: transform 0.3s;
   }
@@ -602,7 +610,7 @@ p, li {
   .account-toggle.open .arrow {
     transform: rotate(180deg);
   }
-  
+
   .account-info {
     display: none;
     background-color: #fff;
