@@ -10,20 +10,21 @@ const countdownInterval = setInterval(function() {
   const now = new Date();
   now.setHours(0, 0, 0, 0); // ✅ 현재도 자정 고정
 
-  const distance = weddingDate - now;
-  const dayDiff = Math.floor(distance / (1000 * 60 * 60 * 24)); // ✅ 정확한 '일' 계산
+  const nowExact = new Date().getTime();     // ✅ 실제 현재 시간 (초,분 계산용)
+  const distance = weddingDate.getTime() - nowExact;
 
-  const hours = new Date().getHours();
-  const minutes = new Date().getMinutes();
-  const seconds = new Date().getSeconds();
+  const dayDiff = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // 박스 숫자 업데이트 (시간 단위는 실시간)
+  // 카운트다운 박스 값 업데이트
   document.getElementById("days").innerText = Math.abs(dayDiff);
-  document.getElementById("hours").innerText = hours;
-  document.getElementById("minutes").innerText = minutes;
-  document.getElementById("seconds").innerText = seconds;
+  document.getElementById("hours").innerText = Math.abs(hours);
+  document.getElementById("minutes").innerText = Math.abs(minutes);
+  document.getElementById("seconds").innerText = Math.abs(seconds);
 
-  // 메세지 처리
+  // 메세지 처리 (기존대로 유지)
   if (dayDiff > 0) {
     message.innerHTML = `병진 💗 윤아의 결혼식이 ${dayDiff}일 남았습니다.`;
   } else if (dayDiff === 0) {
