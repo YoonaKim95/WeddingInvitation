@@ -2,23 +2,23 @@
 
 // D-Day Countdown
 
-// 정확한 날짜 계산 로직
-function getDayDiff(targetDate) {
+const weddingDate = "2025-10-18";
+const message = document.getElementById("countdown-message");
+
+function getDayDiffForMessage(targetDate) {
   const today = new Date();
   const target = new Date(targetDate);
 
-  // 시간 정보 제거 (자정 기준으로 계산)
   today.setHours(0, 0, 0, 0);
   target.setHours(0, 0, 0, 0);
 
-  // 밀리초 → 일 계산
   const diffTime = target.getTime() - today.getTime();
   return Math.round(diffTime / (1000 * 60 * 60 * 24));
 }
 
 function getCountdown(targetDate) {
   const now = new Date().getTime();
-  const target = new Date(targetDate + "T13:00:00").getTime();  // 오후 1시도 고려 원하면 여기에 넣으면 됨!
+  const target = new Date(targetDate + "T00:00:00").getTime();
   const distance = target - now;
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -27,6 +27,7 @@ function getCountdown(targetDate) {
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   return {
+    distance,
     days: Math.max(days, 0),
     hours: Math.max(hours, 0),
     minutes: Math.max(minutes, 0),
@@ -34,11 +35,8 @@ function getCountdown(targetDate) {
   };
 }
 
-const weddingDate = "2025-10-18";
-const message = document.getElementById("countdown-message");
-
 const countdownInterval = setInterval(function() {
-  // 1. 메세지용 Day 계산 (날짜만 고려)
+  // 메시지용 날짜 계산 (날짜 기준)
   const dayDiffMessage = getDayDiffForMessage(weddingDate);
 
   if (dayDiffMessage > 0) {
@@ -49,12 +47,22 @@ const countdownInterval = setInterval(function() {
     message.innerHTML = `병진 💗 윤아의 결혼식이 ${Math.abs(dayDiffMessage)}일 지났습니다.`;
   }
 
-  // 2. Countdown 박스용 Day 계산 (시간까지 고려)
+  // 카운트다운 박스 계산 (시간까지 고려)
   const countdown = getCountdown(weddingDate);
+
   document.getElementById("days").innerText = countdown.days;
   document.getElementById("hours").innerText = countdown.hours;
   document.getElementById("minutes").innerText = countdown.minutes;
   document.getElementById("seconds").innerText = countdown.seconds;
+
+  // ✅ 카운트다운 종료 처리
+  if (countdown.distance <= 0) {
+    clearInterval(countdownInterval);
+    document.getElementById("days").innerText = 0;
+    document.getElementById("hours").innerText = 0;
+    document.getElementById("minutes").innerText = 0;
+    document.getElementById("seconds").innerText = 0;
+  }
 
 }, 1000);
 
