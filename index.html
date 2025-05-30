@@ -111,8 +111,12 @@
   <section class="directions-guide">
     <h3>DIRECTIONS</h3>
 
-    <button id="map-toggle" class="map-toggle">🔒</button>
-    <div id="kakao-map" class="map-container"></div>
+    <div class="map-wrapper">
+      <div id="kakao-map" class="map-container"></div>
+      <button id="map-toggle" class="map-toggle locked">
+        🔒
+      </button>
+    </div>
 
     <button id="toggle-map-image" class="map-button">약도 확인하기</button>
     <div id="map-image-container" class="map-image-container">
