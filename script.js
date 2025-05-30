@@ -16,33 +16,46 @@ function getDayDiff(targetDate) {
   return Math.round(diffTime / (1000 * 60 * 60 * 24));
 }
 
-const weddingDate = "2025-10-18"; // 문자열로 지정
-const message = document.getElementById("countdown-message");
+function getCountdown(targetDate) {
+  const now = new Date().getTime();
+  const target = new Date(targetDate + "T13:00:00").getTime();  // 오후 1시도 고려 원하면 여기에 넣으면 됨!
+  const distance = target - now;
 
-const countdownInterval = setInterval(function() {
-  const dayDiff = getDayDiff(weddingDate);
-
-  // 박스에는 정확한 실시간 시간 카운트 표시
-  const now = new Date();
-  const target = new Date(weddingDate + "T00:00:00");
-  const distance = target.getTime() - now.getTime();
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  document.getElementById("days").innerText = Math.abs(dayDiff);
-  document.getElementById("hours").innerText = Math.abs(hours);
-  document.getElementById("minutes").innerText = Math.abs(minutes);
-  document.getElementById("seconds").innerText = Math.abs(seconds);
+  return {
+    days: Math.max(days, 0),
+    hours: Math.max(hours, 0),
+    minutes: Math.max(minutes, 0),
+    seconds: Math.max(seconds, 0)
+  };
+}
 
-  // 메세지
-  if (dayDiff > 0) {
-    message.innerHTML = `병진 💗 윤아의 결혼식이 ${dayDiff}일 남았습니다.`;
-  } else if (dayDiff === 0) {
+const weddingDate = "2025-10-18";
+const message = document.getElementById("countdown-message");
+
+const countdownInterval = setInterval(function() {
+  // 1. 메세지용 Day 계산 (날짜만 고려)
+  const dayDiffMessage = getDayDiffForMessage(weddingDate);
+
+  if (dayDiffMessage > 0) {
+    message.innerHTML = `병진 💗 윤아의 결혼식이 ${dayDiffMessage}일 남았습니다.`;
+  } else if (dayDiffMessage === 0) {
     message.innerHTML = `오늘은 병진 💗 윤아의 결혼식 입니다!`;
   } else {
-    message.innerHTML = `병진 💗 윤아의 결혼식이 ${Math.abs(dayDiff)}일 지났습니다.`;
+    message.innerHTML = `병진 💗 윤아의 결혼식이 ${Math.abs(dayDiffMessage)}일 지났습니다.`;
   }
+
+  // 2. Countdown 박스용 Day 계산 (시간까지 고려)
+  const countdown = getCountdown(weddingDate);
+  document.getElementById("days").innerText = countdown.days;
+  document.getElementById("hours").innerText = countdown.hours;
+  document.getElementById("minutes").innerText = countdown.minutes;
+  document.getElementById("seconds").innerText = countdown.seconds;
+
 }, 1000);
 
 
