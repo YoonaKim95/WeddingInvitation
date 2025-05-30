@@ -602,6 +602,7 @@ p, li {
   .account-toggle.open .arrow {
     transform: rotate(180deg);
   }
+  
   .account-info {
     display: none;
     background-color: #fff;
