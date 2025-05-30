@@ -80,7 +80,7 @@ p, li {
     width: 90%;
     margin: 0;  /* ✅ 간격 줄임 */
     padding: 20px;  /* ✅ padding도 조금 줄임 */
-    background-color: #fffafc;
+    background-color: #fffbff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   }
