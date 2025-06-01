@@ -11,18 +11,18 @@
 
 /* 전체 기본 글꼴 (한국어 + 영어) */
 body, p, li, span, .guide-header, .guide-item {
-  font-family: 'Gamja Flower', 'Dancing Script', cursive;
+  font-family: 'Gamja Flower', 'Pacifico', cursive;
 }
 
 /* 제목은 강조된 느낌으로 */
 h1, h2, h3, h4 {
-  font-family: 'Dancing Script', 'Gamja Flower', cursive;
+  font-family: 'Pacifico', 'Gamja Flower', cursive;
 }
 
 
 /* Font Definitions */
 h1, h2, h3, h4 {
-  font-family: 'Gamja Flower', serif;
+  font-family: 'Gamja Flower', 'Pacifico';
 }
 
 h3, h4 {
@@ -31,11 +31,11 @@ h3, h4 {
 }
 
 p, li, .guide-header, .guide-item, .parents-line, .venue, .date, .account-info p .name, .account-info p .bank .account-number {
-  font-family: 'Gamja Flower', sans-serif;
+  font-family: 'Gamja Flower', 'Pacifico';
 }
 
 .btn, .load-more, .show-less, .footer-btn, .account-toggle, .copy-address, .copy-account, .map-button {
-  font-family: 'Gamja Flower', sans-serif;
+  font-family: 'Gamja Flower', 'Pacifico';
 }
 
 h1 { font-size: 2.8em; font-weight: 700; }
@@ -169,7 +169,7 @@ p, li {
   }
   
     .hero-subtext {
-    font-family: 'Gamja Flower', sans-serif;
+    font-family: 'Gamja Flower', 'Pacifico';
     font-size: 1.1em;
     pointer-events: auto;
     color: rgba(255,255,255,0.85);
@@ -245,7 +245,7 @@ p, li {
   }
   
   .countdown-number {
-    font-family: 'Gamja Flower', sans-serif;
+    font-family: 'Gamja Flower', 'Pacifico';
     font-size: 2em; /* 폰트 줄임 */
     font-weight: 700;
     color: #373737;
@@ -253,7 +253,7 @@ p, li {
   }
   
   .countdown-label {
-    font-family: 'Gamja Flower', sans-serif;
+    font-family: 'Gamja Flower', 'Pacifico';
     font-size: 0.8em;
     color: #777;
     text-align: center;
@@ -562,7 +562,7 @@ p, li {
 }
 
 .notice-list li p, .notice-list li span, .notice-list li {
-  font-family: 'Gamja Flower', sans-serif;
+  font-family: 'Gamja Flower', 'Pacifico';
   font-size: 1em;
   color: #333;
   line-height: 1.5;
