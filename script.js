@@ -383,7 +383,7 @@ document.getElementById('kakaotalk-sharing-btn').addEventListener('click', funct
     content: {
       title: '안병진 💗 김윤아 결혼합니다',
       description: '2025년 10월 18일 토요일 오후 1시, 서울대학교 연구공원 웨딩홀',
-      imageUrl: 'https://yoonakim95.github.io/WeddingInvitation/thumbnail.png',
+      imageUrl: 'https://yoonakim95.github.io/WeddingInvitation/thumbnail.jpg',
       link: {
         mobileWebUrl: 'https://yoonakim95.github.io/WeddingInvitation/',
         webUrl: 'https://yoonakim95.github.io/WeddingInvitation/',
