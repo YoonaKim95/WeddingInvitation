@@ -603,7 +603,7 @@ p, li {
   border-bottom: none;
 }
 
-.notice-list strong {
+.notice-list .number {
   display: inline-flex;
   justify-content: center;
   align-items: center;
