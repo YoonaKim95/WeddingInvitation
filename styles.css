@@ -207,6 +207,30 @@ p, li {
     color: #999;
   }
   
+.parents-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* 좌우 간격 */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* 모바일 대응 */
+}
+
+.parent-block {
+  text-align: center;
+  min-width: 140px;
+}
+
+.parent-names {
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.child-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #7a4c5b;
+}
 
   /* Countdown */
   #timer {
