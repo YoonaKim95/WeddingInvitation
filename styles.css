@@ -214,39 +214,45 @@ p, li {
     color: #999;
   }
   
+/* 상단 부모 소개 문장 - 줄바꿈 방지 및 스크롤 대응 */
+.nowrap-line {
+  white-space: nowrap;
+  overflow-x: auto;
+  display: block;
+  text-align: center;
+  font-size: 1.1em;
+  padding: 0 10px;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 10px;
+}
+
+/* 모바일에서 폰트 살짝 축소 */
+@media (max-width: 420px) {
+  .nowrap-line {
+    font-size: 1em;
+  }
+}
+
+/* 병진 윤아 이름 줄 */
 .parents-container {
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  flex-wrap: wrap; /* ✅ 너무 좁을 때 자동 줄바꿈 */
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .parent-block {
   text-align: center;
-  min-width: 140px;
-  flex: 1 1 150px;  /* ✅ 줄바꿈 방지를 위한 최소폭 보장 */
-}
-
-/* ✅ 모바일일 경우에도 좌우 배치 유지 */
-@media (max-width: 420px) {
-  .parents-container {
-    flex-wrap: nowrap;  /* ✅ 강제로 한 줄 유지 */
-    overflow-x: auto;   /* ✅ 좁은 화면에서는 가로 스크롤 허용 */
-  }
-}
-
-.parent-names {
-  font-size: 1em;
-  margin-bottom: 5px;
+  min-width: 100px;
 }
 
 .child-name {
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: bold;
   color: #7a4c5b;
 }
+
 
   /* Countdown */
   #timer {
@@ -409,7 +415,7 @@ p, li {
   }
 
   .baby-photo {
-  width: 95%;
+  width: 100%;
   max-width: 700px;  /* 청첩장 전체 max-width에 맞춤 */
   height: auto;
   display: block;
