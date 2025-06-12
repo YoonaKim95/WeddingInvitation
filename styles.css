@@ -603,6 +603,7 @@ p, li {
   border-bottom: none;
 }
 
+
 .notice-list .number {
   display: inline-flex;
   justify-content: center;
@@ -616,6 +617,11 @@ p, li {
   flex-shrink: 0;
   margin-right: 12px;
 }
+
+.notice-list strong {
+  font-weight: bold; /* 일반 strong에는 기본 bold만 적용 */
+}
+
 
 .notice-list li p, .notice-list li span, .notice-list li {
   font-family: 'Gamja Flower', 'Pacifico';
