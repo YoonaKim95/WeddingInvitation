@@ -114,7 +114,7 @@ p, li {
   body {
     font-family: 'Gamja Flower', 'Pacifico', cursive;
     
-    font-size: 18px; /* 기존보다 약간 큼 */
+    font-size: 20px; /* 기존보다 약간 큼 */
     line-height: 1.7;
     
     background-color: #fffafc;
@@ -400,7 +400,7 @@ p, li {
   }
 
   .baby-photo {
-  width: 80%;
+  width: 95%;
   max-width: 700px;  /* 청첩장 전체 max-width에 맞춤 */
   height: auto;
   display: block;
@@ -635,16 +635,19 @@ p, li {
   }
   
 .account-toggle {
-  all: unset; /* (선택) 기본 스타일 초기화 */
+  all: unset;
   cursor: pointer;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;  /* ✅ 버튼 전체 폭 터치 가능 */
-  padding: 15px; /* ✅ 클릭 영역 확보 */
-  z-index: 10; /* ✅ 다른 요소에 가려지지 않게 */
-  position: relative; /* ✅ 클릭 충돌 방지 */
+  justify-content: flex-start; /* ✅ 왼쪽 정렬로 변경 */
+  gap: 8px;                     /* ✅ 아이콘과 텍스트 간 간격 */
+  width: 100%;
+  padding: 15px;
+  z-index: 10;
+  position: relative;
 }
+
+
 
 .account-card, .account-info {
   position: relative;
