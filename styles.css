@@ -801,21 +801,6 @@ p, li {
     background-color: #e9b8c6;
   }
   
-  /* Music */
-  #music-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 1000;
-  }
-  
-  #music-toggle img {
-    width: 40px;
-    height: 40px;
-  }
 
 
 /* 인라인 스타일 대체 */
