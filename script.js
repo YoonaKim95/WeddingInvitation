@@ -401,22 +401,37 @@ document.getElementById('kakaotalk-sharing-btn').addEventListener('click', funct
   });
 });
 
-// // Toggle 계좌 펼치기 + 화살표 전환
+// // // Toggle 계좌 펼치기 + 화살표 전환
+// document.querySelectorAll('.account-toggle').forEach(button => {
+//   button.addEventListener('click', () => {
+//     const targetId = button.getAttribute('data-target');
+//     const element = document.getElementById(targetId);
+//     const arrow = button.querySelector('.arrow');
+
+//     if (element.style.display === 'block') {
+//       element.style.display = 'none';
+//       arrow.textContent = '▼';
+//     } else {
+//       element.style.display = 'block';
+//       arrow.textContent = '▲';
+//     }
+//   });
+// });
+
 document.querySelectorAll('.account-toggle').forEach(button => {
   button.addEventListener('click', () => {
     const targetId = button.getAttribute('data-target');
     const element = document.getElementById(targetId);
     const arrow = button.querySelector('.arrow');
 
-    if (element.style.display === 'block') {
-      element.style.display = 'none';
-      arrow.textContent = '▼';
-    } else {
-      element.style.display = 'block';
-      arrow.textContent = '▲';
-    }
+    const isOpen = element.classList.contains('open');
+    element.classList.toggle('open');
+    button.classList.toggle('open'); // for rotating arrow
+
+    arrow.textContent = isOpen ? '▼' : '▲';
   });
 });
+
 
 // document.querySelectorAll('.account-toggle').forEach(button => {
 //   const targetId = button.getAttribute('data-target');

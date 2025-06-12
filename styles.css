@@ -671,44 +671,50 @@ p, li {
 
 
 
-.account-card, .account-info {
+.account-card {
   position: relative;
   z-index: 5;
 }
 
-  .account-toggle .arrow {
-    transition: transform 0.3s;
-  }
-  
-  .account-toggle.open .arrow {
-    transform: rotate(180deg);
-  }
+.account-toggle .arrow {
+  transition: transform 0.3s;
+}
 
-  .account-info {
-    display: none;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    margin-top: 10px;
-    overflow: hidden;  /* ✅ 이 줄 추가 */
-    position: relative;
-    z-index: auto;     /* ✅ z-index 제거 또는 auto */
-  }
-  
-  .account-info p {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0;
-  }
-  
-  .account-info p .name {
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 4px;
-  }
-  
-  
+.account-toggle.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* 수정된 account-info */
+.account-info {
+  max-height: 0;               /* ✅ display: none 제거 */
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 15px;             /* ✅ 닫힌 상태일 때 padding 0 */
+  margin-top: 10px;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  position: relative;
+  z-index: auto;
+}
+
+.account-info.open {
+  max-height: 1000px;          /* ✅ 열렸을 때 충분한 공간 */
+  padding: 15px;
+}
+
+.account-info p {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.account-info p .name {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 4px;
+}
+
   .copy-account {
     display: inline-flex;
     align-items: center;
