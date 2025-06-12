@@ -401,27 +401,11 @@ document.getElementById('kakaotalk-sharing-btn').addEventListener('click', funct
   });
 });
 
-// // // Toggle 계좌 펼치기 + 화살표 전환
-// document.querySelectorAll('.account-toggle').forEach(button => {
-//   button.addEventListener('click', () => {
-//     const targetId = button.getAttribute('data-target');
-//     const element = document.getElementById(targetId);
-//     const arrow = button.querySelector('.arrow');
-
-//     if (element.style.display === 'block') {
-//       element.style.display = 'none';
-//       arrow.textContent = '▼';
-//     } else {
-//       element.style.display = 'block';
-//       arrow.textContent = '▲';
-//     }
-//   });
-// });
 
 document.querySelectorAll('.account-toggle').forEach(button => {
   button.addEventListener('click', () => {
     const targetId = button.getAttribute('data-target');
-    const content = document.getElementById(targetId);
+    const content = document.getElementById(targetId); // 이 ID가 정확히 존재하는지
     const arrow = button.querySelector('.arrow');
 
     const isOpen = content.classList.contains('open');
@@ -430,33 +414,6 @@ document.querySelectorAll('.account-toggle').forEach(button => {
     arrow.textContent = isOpen ? '▼' : '▲';
   });
 });
-
-
-
-// document.querySelectorAll('.account-toggle').forEach(button => {
-//   const targetId = button.getAttribute('data-target');
-//   const element = document.getElementById(targetId);
-//   const arrow = button.querySelector('.arrow');
-
-//   // 초기화: 열린 상태 반영
-//   if (element.style.display === 'block') {
-//     arrow.textContent = '▲';
-//   }
-
-//   // 토글 동작
-//   button.addEventListener('click', () => {
-//     if (element.style.display === 'block') {
-//       element.style.display = 'none';
-//       arrow.textContent = '▼';
-//     } else {
-//       element.style.display = 'block';
-//       arrow.textContent = '▲';
-//     }
-//   });
-// });
-
- 
-// 카카오페이 링크는 <a href>에 직접 송금 링크를 넣으면 됨 (별도 JS 코드 필요 없음)
 
 
 // 종이청첩장 모달
