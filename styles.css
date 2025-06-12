@@ -691,6 +691,9 @@ p, li {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 15px;
     margin-top: 10px;
+    overflow: hidden;  /* ✅ 이 줄 추가 */
+    position: relative;
+    z-index: auto;     /* ✅ z-index 제거 또는 auto */
   }
   
   .account-info p {
@@ -761,6 +764,8 @@ p, li {
     padding: 30px;
     font-size: 0.8em;
     text-align: center;
+    z-index: 10;
+    position: relative;
   }
   
   .footer-buttons {
