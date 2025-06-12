@@ -365,10 +365,10 @@ function toggleMusic() {
     audio.play().catch(() => {
       console.log('자동 재생은 상호작용 후에만 가능합니다.');
     });
-    icon.src = 'music_01_on.png';
+    icon.src = 'gallery/music_01_on.png';
   } else {
     audio.pause();
-    icon.src = 'music_01_off.png';
+    icon.src = 'gallery/music_01_off.png';
   }
 }
 
