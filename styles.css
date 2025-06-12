@@ -367,9 +367,9 @@ p, li {
     display: block;
     margin-top: 20px;
   }
-  
+
   .baby-photo {
-  width: 160px;              /* 적절히 조절 가능 */
+  width: 100%;              /* 적절히 조절 가능 */
   height: auto;
   display: block;
   margin: 20px auto 10px;    /* 상단 여백 20px, 하단 10px, 가운데 정렬 */
