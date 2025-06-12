@@ -114,7 +114,7 @@ p, li {
   body {
     font-family: 'Gamja Flower', 'Pacifico', cursive;
     
-    font-size: 20px; /* 기존보다 약간 큼 */
+    font-size: 19px; /* 기존보다 약간 큼 */
     line-height: 1.7;
     
     background-color: #fffafc;
@@ -217,15 +217,24 @@ p, li {
 .parents-container {
   display: flex;
   justify-content: center;
-  gap: 40px; /* 좌우 간격 */
+  gap: 40px;
   margin-top: 20px;
   margin-bottom: 20px;
-  flex-wrap: wrap; /* 모바일 대응 */
+  flex-wrap: wrap; /* ✅ 너무 좁을 때 자동 줄바꿈 */
 }
 
 .parent-block {
   text-align: center;
   min-width: 140px;
+  flex: 1 1 150px;  /* ✅ 줄바꿈 방지를 위한 최소폭 보장 */
+}
+
+/* ✅ 모바일일 경우에도 좌우 배치 유지 */
+@media (max-width: 420px) {
+  .parents-container {
+    flex-wrap: nowrap;  /* ✅ 강제로 한 줄 유지 */
+    overflow-x: auto;   /* ✅ 좁은 화면에서는 가로 스크롤 허용 */
+  }
 }
 
 .parent-names {
