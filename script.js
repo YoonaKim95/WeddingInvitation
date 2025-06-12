@@ -421,16 +421,16 @@ document.getElementById('kakaotalk-sharing-btn').addEventListener('click', funct
 document.querySelectorAll('.account-toggle').forEach(button => {
   button.addEventListener('click', () => {
     const targetId = button.getAttribute('data-target');
-    const element = document.getElementById(targetId);
+    const content = document.getElementById(targetId);
     const arrow = button.querySelector('.arrow');
 
-    const isOpen = element.classList.contains('open');
-    element.classList.toggle('open');
-    button.classList.toggle('open'); // for rotating arrow
-
+    const isOpen = content.classList.contains('open');
+    content.classList.toggle('open');
+    button.classList.toggle('open');
     arrow.textContent = isOpen ? '▼' : '▲';
   });
 });
+
 
 
 // document.querySelectorAll('.account-toggle').forEach(button => {
