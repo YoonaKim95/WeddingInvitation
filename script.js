@@ -144,7 +144,7 @@ for (let d = 1; d <= 31; d++) {
 
 
 // 갤러리 이미지 배열 (파일명 1~30.jpg로 가정)
-const imageList = Array.from({ length: 30 }, (_, i) => `gallery/${i+1}.jpg`);
+const imageList = Array.from({ length: 36 }, (_, i) => `gallery/${i+1}.jpg`);
 
 const galleryContainer = document.getElementById('gallery-thumbnails');
 const loadMoreBtn = document.getElementById('load-more');
@@ -231,7 +231,7 @@ copyAddress.addEventListener('click', () => {
     }, 1500);
   });
 });
-
+     
 // 계좌 복사
 const accountCopies = document.querySelectorAll('.copy-account');
 accountCopies.forEach(element => {
@@ -249,14 +249,7 @@ accountCopies.forEach(element => {
 });
 
 
-    copyAddress.addEventListener('click', () => {
-      navigator.clipboard.writeText(copyAddress.innerText).then(() => {
-        copyToast.style.display = 'block';
-        setTimeout(() => {
-          copyToast.style.display = 'none';
-        }, 1500);
-      });
-    });
+
 
 
 // // KakaoMap 생성
@@ -361,15 +354,24 @@ toggleBtn.addEventListener('click', () => {
 function toggleMusic() {
   const audio = document.getElementById('bg-music');
   const icon = document.getElementById('music-icon');
-  if (audio.paused) {
-    audio.play().catch(() => {
-      console.log('자동 재생은 상호작용 후에만 가능합니다.');
-    });
-    icon.src = 'gallery/music_01_on.png';
-  } else {
-    audio.pause();
-    icon.src = 'gallery/music_01_off.png';
-  }
+
+  // 아이콘을 서서히 사라지게
+  icon.style.opacity = '0';
+
+  setTimeout(() => {
+    if (audio.paused) {
+      audio.play().catch(() => {
+        console.log('자동 재생은 상호작용 후에만 가능합니다.');
+      });
+      icon.src = 'gallery/music_01_on.png';
+    } else {
+      audio.pause();
+      icon.src = 'gallery/music_01_off.png';
+    }
+
+    // 아이콘을 다시 서서히 나타나게
+    icon.style.opacity = '1';
+  }, 200); // 이미지 교체 후 페이드인
 }
 
 document.getElementById('music-toggle').addEventListener('click', toggleMusic);
