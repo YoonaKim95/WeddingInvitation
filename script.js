@@ -294,12 +294,12 @@ function loadKakaoMap() {
         map: map
       });
 
-      // 컨트롤 제거
-      var mapTypeControl = new kakao.maps.MapTypeControl();
-      map.removeControl(mapTypeControl);
+      // // 컨트롤 제거
+      // var mapTypeControl = new kakao.maps.MapTypeControl();
+      // map.removeControl(mapTypeControl);
 
-      var zoomControl = new kakao.maps.ZoomControl();
-      map.removeControl(zoomControl);
+      // var zoomControl = new kakao.maps.ZoomControl();
+      // map.removeControl(zoomControl);
 
 
       // 잠금 버튼
