@@ -816,6 +816,22 @@ p, li {
     width: 40px;
     height: 40px;
   }
+
+
+/* 인라인 스타일 대체 */
+#bg-music {
+  display: none;
+}
+
+#music-icon {
+  width: 40px;
+  height: 40px;
+}
+
+#show-less {
+  display: none;
+}
+
   
   /* Modal */
   #invitation-modal {
