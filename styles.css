@@ -369,7 +369,8 @@ p, li {
   }
 
   .baby-photo {
-  width: 100%;              /* 적절히 조절 가능 */
+  width: 80%;
+  max-width: 700px;  /* 청첩장 전체 max-width에 맞춤 */
   height: auto;
   display: block;
   margin: 20px auto 10px;    /* 상단 여백 20px, 하단 10px, 가운데 정렬 */
