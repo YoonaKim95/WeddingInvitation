@@ -351,27 +351,34 @@ toggleBtn.addEventListener('click', () => {
 
 
 // Music Toggle
+const audio = document.getElementById('bg-music');
+const icon = document.getElementById('music-icon');
+
+// 음악 자동 재생 시도
+window.addEventListener('load', () => {
+  audio.play().catch((e) => {
+    console.warn('자동 재생 실패. 사용자 상호작용 필요:', e);
+    icon.src = 'gallery/music_01_off.png';  // 실패 시 off 아이콘으로 변경
+  });
+});
+
+// 음악 토글
 function toggleMusic() {
-  const audio = document.getElementById('bg-music');
-  const icon = document.getElementById('music-icon');
-
-  // 아이콘을 서서히 사라지게
   icon.style.opacity = '0';
-
   setTimeout(() => {
     if (audio.paused) {
-      audio.play().catch(() => {
-        console.log('자동 재생은 상호작용 후에만 가능합니다.');
+      audio.play().then(() => {
+        icon.src = 'gallery/music_01_on.png';
+      }).catch((e) => {
+        console.warn('재생 실패:', e);
+        icon.src = 'gallery/music_01_off.png';
       });
-      icon.src = 'gallery/music_01_on.png';
     } else {
       audio.pause();
       icon.src = 'gallery/music_01_off.png';
     }
-
-    // 아이콘을 다시 서서히 나타나게
     icon.style.opacity = '1';
-  }, 200); // 이미지 교체 후 페이드인
+  }, 200);
 }
 
 document.getElementById('music-toggle').addEventListener('click', toggleMusic);
