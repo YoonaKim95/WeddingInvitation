@@ -286,6 +286,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+    // 서울대학교 연구공원 웨딩홀 텍스트 복사 기능
+    const weddingHallElement = document.getElementById('copy-hall-name');
+    if (weddingHallElement) {
+      weddingHallElement.style.cursor = 'pointer';
+      weddingHallElement.addEventListener('click', () => {
+        navigator.clipboard.writeText(weddingHallElement.innerText).then(() => {
+          copyToast.style.display = 'block';
+          copyToast.style.opacity = '1';
+          copyToast.style.transition = 'opacity 0.5s ease';
+          setTimeout(() => {
+            copyToast.style.opacity = '0';
+          }, 1500);
+        });
+      });
+    }
+  
+
   // 계좌 복사
   const accountCopies = document.querySelectorAll('.copy-account');
   accountCopies.forEach(element => {
