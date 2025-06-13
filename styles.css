@@ -175,9 +175,9 @@ p, li {
   
     .hero-subtext {
     font-family: 'Gamja Flower', 'Pacifico';
-    font-size: 1.1em;
+    font-size: 1.3em;
     pointer-events: auto;
-    color: rgba(255,255,255,0.85);
+    color: rgba(0, 0, 0, 0.85);
     margin-top: 20px;
     animation: fadeInUp 1.5s ease-out forwards;
   }
