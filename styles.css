@@ -585,6 +585,42 @@ p, li {
     display: block;
   }
   
+  .map-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+  }
+  
+  .map-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-family: 'Pretendard', sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+  }
+  
+  .map-button:hover {
+    background-color: #f4c6d0; /* pastel highlight */
+  }
+  
+  .map-button img {
+    width: 20px;
+    height: 20px;
+  }
+    
   /* Notice */
 /* .notice {
   margin-top: 40px;
@@ -774,8 +810,6 @@ p, li {
   vertical-align: middle;
 }
 
-  
-
   /* Footer */
   footer {
     background: #f7f7f7;
@@ -806,14 +840,14 @@ p, li {
     text-align: center;
     flex: 1 1 auto;
     max-width: 160px;
+    font-size: 18px; /* ✅ 글씨 크기 키우기 */
+
   }
   
   .footer-btn:hover {
     background-color: #e9b8c6;
   }
   
-
-
 /* 인라인 스타일 대체 */
 #bg-music {
   display: none;
