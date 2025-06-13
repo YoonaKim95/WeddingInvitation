@@ -147,6 +147,7 @@ p, li {
   .hero-background img.loaded {
     filter: blur(0);
   }
+
   .hero-overlay {
     position: absolute;
     top: 0;
@@ -173,14 +174,19 @@ p, li {
     margin-bottom: 20px; /* 추가 */
   }
   
-    .hero-subtext {
-    font-family: 'Gamja Flower', 'Pacifico';
-    font-size: 1.5em;
-    pointer-events: auto;
-    color: rgba(0, 0, 0, 0.85);
-    margin-top: 20px;
-    animation: fadeInUp 1.5s ease-out forwards;
-  }
+.hero-subtext {
+  font-family: 'Gamja Flower', 'Pacifico';
+  font-size: 1.5em;
+  pointer-events: auto;
+  color: rgb(255, 255, 255); /* 글자 색을 검정으로 설정 */
+  margin-top: 20px;
+  animation: fadeInUp 1.5s ease-out forwards;
+  text-shadow:
+    -1px -1px 0 #000000,
+     1px -1px 0 #000000,
+    -1px  1px 0 #000000,
+     1px  1px 0 #000000; /* 흰색 아웃라인 효과 */
+}
   section, footer {
     width: 100%;
     box-sizing: border-box;
