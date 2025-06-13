@@ -172,6 +172,12 @@ p, li {
     white-space: pre-line;
     pointer-events: auto;
     margin-bottom: 20px; /* 추가 */
+      text-shadow:
+    -1px -1px 0 #000000,
+     1px -1px 0 #000000,
+    -1px  1px 0 #000000,
+     1px  1px 0 #000000; /* 흰색 아웃라인 효과 */
+
   }
   
 .hero-subtext {
