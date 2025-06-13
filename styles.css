@@ -914,11 +914,11 @@ p, li {
   
   .close-invitation-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
     background: transparent;
     border: none;
-    font-size: 1.8em;
-    color: #fff;
+    font-size: 1.3em;
+    color: #000000;
     cursor: pointer;
   }
