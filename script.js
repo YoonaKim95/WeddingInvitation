@@ -134,7 +134,7 @@ document.getElementById('next').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
   // 타이핑 텍스트 효과
   const textElement = document.getElementById('typing-text');
-  const text = "안병진 💗 김윤아 \n만개한 행복의 가운데, 저희 결혼합니다.";
+  const text = "안병진 💗 김윤아 \n만개한 행복의 가운데,\n저희 결혼합니다.";
   let i = 0;
   const typing = () => {
     if (i < text.length) {

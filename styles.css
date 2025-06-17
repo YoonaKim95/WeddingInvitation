@@ -9,27 +9,14 @@
   }
 
 /* 전체 기본 글꼴 (한국어 + 영어) */
-body, p, li, span, .guide-header, .guide-item {
-  font-family: 'Gowun Batang', 'Pacifico', cursive;
-}
-
-/* 제목은 강조된 느낌으로 */
-h1, h2, h3, h4 {
-  font-family: 'Pacifico', 'Gowun Batang', cursive;
-}
-
-/* Font Definitions */
-h1, h2, h3, h4 {
+h1, h2, h3, h4, body, p, li, span, .guide-header, .guide-item, .parents-line, .venue, .date, .account-info p .name, .account-info p .bank .account-number {
   font-family: 'Gowun Batang', 'Pacifico';
 }
+
 
 h3, h4 {
   text-align: center !important;
   margin-bottom: 20px; /* 아래 여백 추가 */
-}
-
-p, li, .guide-header, .guide-item, .parents-line, .venue, .date, .account-info p .name, .account-info p .bank .account-number {
-  font-family: 'Gowun Batang', 'Pacifico';
 }
 
 .btn, .load-more, .show-less, .footer-btn, .account-toggle, .copy-address, .copy-account, .map-button {
