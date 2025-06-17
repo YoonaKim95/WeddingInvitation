@@ -181,7 +181,7 @@ p, li {
   font-size: 1.0em;
   pointer-events: auto;
   color: rgb(255, 255, 255); /* 글자 색을 검정으로 설정 */
-  margin-top: 20px;
+  margin-top: 0px;
   animation: fadeInUp 3.5s ease-out forwards;
   text-shadow:
     -1px -1px 0 #000000,
