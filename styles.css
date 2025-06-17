@@ -42,10 +42,13 @@ h3 { font-size: 1.6em; font-weight: 700; }
 h4 { font-size: 1.2em; font-weight: 700; }
 
 p, li {
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: 400;
   letter-spacing: 0.2px;
+  color: #333333;
+  text-align: center;
 }
+
 
 .btn, .load-more, .show-less, .footer-btn, .account-toggle, .map-button {
   font-weight: 600;
@@ -70,11 +73,7 @@ p, li {
   margin: 5px 0;
 }
 
-  p, li {
-    font-size: 0.9em;
-    color: #333333;
-    text-align: center;
-  }
+
   
   /* Strong */
     strong {
@@ -626,7 +625,7 @@ p, li {
 
 .notice h3 {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.0em;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -639,7 +638,7 @@ p, li {
 
 .notice-list li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding: 15px 0;
   border-bottom: 1px solid #e0e0e0;
 }
@@ -658,7 +657,6 @@ p, li {
   border-radius: 50%;
   width: 28px;
   height: 28px;
-  font-size: 0.85em;
   flex-shrink: 0;
   margin-right: 12px;
 }
@@ -670,9 +668,10 @@ p, li {
 
 .notice-list li p, .notice-list li span, .notice-list li {
   font-family: 'Gowun Batang', 'Pacifico';
-  font-size: 1em;
+  font-size: 0.9em;
   color: #333;
   line-height: 1.5;
+  text-align: center;
 }
 
 /* 계좌 카드 전체 정렬 */
@@ -773,7 +772,7 @@ p, li {
 }
 
 .account-info p .bank .account-number {
-  font-size: 0.95em;
+  font-size: 0.85em;
   color: #555;
   flex: 1;
   text-align: left;
