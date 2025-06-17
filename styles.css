@@ -1,0 +1,925 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* 전체 기본 글꼴 (한국어 + 영어) */
+body, p, li, span, .guide-header, .guide-item {
+  font-family: 'Single Day', 'Pacifico', cursive;
+}
+
+/* 제목은 강조된 느낌으로 */
+h1, h2, h3, h4 {
+  font-family: 'Pacifico', 'Single Day', cursive;
+}
+
+/* Font Definitions */
+h1, h2, h3, h4 {
+  font-family: 'Single Day', 'Pacifico';
+}
+
+h3, h4 {
+  text-align: center !important;
+  margin-bottom: 20px; /* 아래 여백 추가 */
+}
+
+p, li, .guide-header, .guide-item, .parents-line, .venue, .date, .account-info p .name, .account-info p .bank .account-number {
+  font-family: 'Single Day', 'Pacifico';
+}
+
+.btn, .load-more, .show-less, .footer-btn, .account-toggle, .copy-address, .copy-account, .map-button {
+  font-family: 'Single Day', 'Pacifico';
+}
+
+h1 { font-size: 2.8em; font-weight: 700; }
+h2 { font-size: 2.2em; font-weight: 700; }
+h3 { font-size: 1.6em; font-weight: 700; }
+h4 { font-size: 1.2em; font-weight: 700; }
+
+p, li {
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.btn, .load-more, .show-less, .footer-btn, .account-toggle, .map-button {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.guide-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.guide-item:last-child {
+  border-bottom: none;
+}
+
+.guide-header {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.guide-item p {
+  margin: 5px 0;
+}
+
+  p, li {
+    font-size: 1em;
+    color: #333333;
+    text-align: center;
+  }
+  
+
+
+  /* Strong */
+    strong {
+      color: #000000;
+      font-weight: bold;
+    }
+    
+  /* Layout */
+  section {
+    max-width: 700px;
+    width: 90%;
+    margin: 0;  /* ✅ 간격 줄임 */
+    padding: 20px;  /* ✅ padding도 조금 줄임 */
+    background-color: #fffbff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  section + section {
+  margin-top: 0;  /* 섹션 간 간격 완전히 제거 */
+}
+
+  .directions-guide, .directions-guide p, .directions-guide li, .directions-guide .guide-header, .directions-guide .guide-item {
+    text-align: left;
+  }
+  
+  hr.guide-divider {
+    border: none;
+    border-top: 1px solid #f4c6d0;
+    margin: 40px 0;
+  }
+  
+  body {
+    font-family: 'Single Day', 'Pacifico', cursive;
+    
+    font-size: 19px; /* 기존보다 약간 큼 */
+    line-height: 1.7;
+    
+    background-color: #fffafc;
+    text-align: center;
+    max-width: 420px;
+    margin: 0 auto;
+    background-color: #FAF8F5;
+    color: #333;
+  }
+
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-width: 420px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .hero-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: blur(10px);
+    transition: filter 0.5s ease-out;
+  }
+
+  .hero-background img.loaded {
+    filter: blur(0);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero-text {
+    font-family: 'Single Day', cursive;
+    font-size: 1.3em;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    line-height: 2.5;
+    white-space: pre-line;
+    pointer-events: auto;
+    margin-bottom: 1cap; /* 추가 */
+      text-shadow:
+    -1px -1px 0 #000000,
+     1px -1px 0 #000000,
+    -1px  1px 0 #000000,
+     1px  1px 0 #000000; /* 흰색 아웃라인 효과 */
+  }
+  
+.hero-subtext {
+  font-family: 'Single Day', 'Pacifico';
+  font-size: 1.3em;
+  pointer-events: auto;
+  color: rgb(255, 255, 255); /* 글자 색을 검정으로 설정 */
+  margin-top: 20px;
+  animation: fadeInUp 1.5s ease-out forwards;
+  text-shadow:
+    -1px -1px 0 #000000,
+     1px -1px 0 #000000,
+    -1px  1px 0 #000000,
+     1px  1px 0 #000000; /* 흰색 아웃라인 효과 */
+}
+
+  section, footer {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  
+  /* Parent Line */
+.parents-line {
+    display: block;
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+  }
+  
+  .parents-line .relation {
+    font-weight: normal;
+    font-size: 0.95em;
+    color: #999;
+  }
+  
+/* 상단 부모 소개 문장 - 줄바꿈 방지 및 스크롤 대응 */
+.nowrap-line {
+  white-space: nowrap;
+  overflow-x: auto;
+  display: block;
+  text-align: center;
+  font-size: 1.1em;
+  padding: 0 10px;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 10px;
+}
+
+/* 모바일에서 폰트 살짝 축소 */
+@media (max-width: 420px) {
+  .nowrap-line {
+    font-size: 1em;
+  }
+}
+
+/* 병진 윤아 이름 줄 */
+.parents-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.parent-block {
+  text-align: center;
+  min-width: 100px;
+}
+
+.child-name {
+  font-size: 1.3em;
+  /* font-weight: bold; */
+  color: #000000;
+}
+
+
+  /* Countdown */
+  #timer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+.countdown-container, .countdown-message, .notice, .calendar {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.container, .box, .wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+  .countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+  }
+  
+  .countdown-box {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    text-align: center;
+    min-width: 60px;
+  }
+  
+  .countdown-number {
+    font-family: 'Single Day', 'Pacifico';
+    font-size: 2em; /* 폰트 줄임 */
+    font-weight: 700;
+    color: #373737;
+    text-align: center;
+  }
+  
+  .countdown-label {
+    font-family: 'Single Day', 'Pacifico';
+    font-size: 0.8em;
+    color: #777;
+    text-align: center;
+    margin-top: 4px;
+  }
+  
+  .countdown-message {
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 20px;
+    color: #373737;
+  }
+  
+  /* Calendar */
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #373737;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+  }
+  
+  .day-name {
+    text-align: center;
+    font-weight: bold;
+    color: #a7a7a7;
+  }
+  
+  .day {
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .day.sun, .day.sat, .day.holiday{
+    color: #d16d85;
+  }
+
+
+  .day.today {
+    position: relative;
+    color: rgb(244, 239, 243);
+    font-weight: bold;
+    z-index: 0;
+  }
+  
+  .day.today::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 80%;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox=\"0 0 32 29.6\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"%23ff86ae\" d=\"M23.6,0c-2.8,0-5.2,1.3-6.6,3.3C15.6,1.3,13.2,0,10.4,0C4.7,0,0,4.7,0,10.4c0,6.7,6.2,12,16,19.2  C25.8,22.4,32,17.1,32,10.4C32,4.7,27.3,0,23.6,0z\"/></svg>');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+  }
+    
+    
+  /* Gallery */
+  .gallery-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .gallery-thumbnails img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .gallery-thumbnails img:hover {
+    transform: scale(1.05);
+  }
+
+  .map-wrapper {
+  position: relative;
+}
+
+
+.map-toggle:hover {
+  background: #e9b8c6;
+}
+
+  
+/* Centering Utility */
+.hero, .gallery-thumbnails, .load-more, .show-less, .footer-buttons, .map-icons {
+    text-align: center;
+  }
+  
+  .gallery-thumbnails, .load-more, .show-less {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .load-more, .show-less {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .baby-photo {
+  width: 100%;
+  max-width: 700px;  /* 청첩장 전체 max-width에 맞춤 */
+  height: auto;
+  display: block;
+  margin: 20px auto 10px;    /* 상단 여백 20px, 하단 10px, 가운데 정렬 */
+  border-radius: 12px;       /* 둥근 모서리 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+}
+
+  .load-more, .show-less {
+    background-color: #f4c6d0;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 20px auto 0;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+  }
+  
+  .load-more:hover, .show-less:hover {
+    background-color: #e9b8c6;
+  }
+  
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: column;
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+  }
+  
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  
+  #prev { left: 20px; }
+  #next { right: 20px; }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Directions */
+  .guide-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .guide-list {
+    padding-left: 15px;
+  }
+  
+  .copy .copy-address, .copy-account {
+    cursor: pointer;
+    color: #7a4c5b;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .copy-toast {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f4c6d0;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    z-index: 9999;
+    pointer-events: none;
+
+  }
+  
+  /* Map */
+  .map-container {
+    width: 100%;
+    height: 450px;
+    border-radius: 12px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .map-image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    border-radius: 12px;
+    margin: 0 auto;
+  }
+  
+  .map-image-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  .map-image-container.open {
+    max-height: 500px;
+  }
+  
+  .map-image {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 12px;
+    margin: 20px auto;
+  }
+  
+  .map-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .map-icons img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .map-button {
+    background-color: #f4c6d0;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 20px auto;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .map-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
+  }
+  
+  .map-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-family: 'Pretendard', sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+  }
+  
+  .map-button:hover {
+    background-color: #f4c6d0; /* pastel highlight */
+  }
+  
+  .map-button img {
+    width: 20px;
+    height: 20px;
+  }
+    
+  /* Notice */
+/* .notice {
+  margin-top: 40px;
+} */
+
+.notice h3 {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.notice-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.notice-list li {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.notice-list li:last-child {
+  border-bottom: none;
+}
+
+
+.notice-list .number {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4c6d0;
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 0.85em;
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.notice-list strong {
+  font-weight: bold; /* 일반 strong에는 기본 bold만 적용 */
+}
+
+
+.notice-list li p, .notice-list li span, .notice-list li {
+  font-family: 'Single Day', 'Pacifico';
+  font-size: 1em;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* 계좌 카드 전체 정렬 */
+.account-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* 신랑/신부 카드 스타일 */
+.account-card[data-target="groom"] {
+  background-color: #dcf1fd;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 18px 20px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.account-card[data-target="bride"] {
+  background-color: #feeefe;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 18px 20px;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* 토글 버튼 */
+.account-toggle {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 100%;
+  padding: 15px;
+  z-index: 10;
+  position: relative;
+}
+
+.account-toggle .arrow {
+  transition: transform 0.3s;
+}
+
+.account-toggle.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* 토글되는 정보 영역 */
+.account-info {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 15px;
+  margin-top: 10px;
+  transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.3s ease;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.account-info.open {
+  display: block;
+  max-height: 1000px;
+  padding: 15px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* 계좌 내역 텍스트 */
+.account-info p {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.account-info p .name {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.account-info p .bank {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+.account-info p .bank .account-number {
+  font-size: 0.95em;
+  color: #555;
+  flex: 1;
+  text-align: left;
+}
+
+.account-info p .actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.copy-account {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.copy-account::after {
+  content: '📋';
+  font-size: 22px;
+  margin-left: 4px;
+}
+
+.kakao-pay a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.kakao-pay img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+  /* Footer */
+  footer {
+    background: #f7f7f7;
+    color: #777;
+    padding: 30px;
+    font-size: 0.8em;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+  }
+  
+  .footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  
+  .footer-btn {
+    background-color: #f4c6d0;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    flex: 1 1 auto;
+    max-width: 160px;
+    font-size: 18px; /* ✅ 글씨 크기 키우기 */
+
+  }
+  
+  .footer-btn:hover {
+    background-color: #e9b8c6;
+  }
+  
+/* 인라인 스타일 대체 */
+#bg-music {
+  display: none;
+}
+
+#music-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#music-icon {
+  width: 40px;
+  height: 40px;
+  transition: opacity 0.4s ease;
+  opacity: 1;
+}
+
+
+#show-less {
+  display: none;
+}
+
+  
+  /* Modal */
+  #invitation-modal {
+    display: none;
+  }
+  
+  .invitation-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .invitation-modal-content {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .invitation-modal-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  .close-invitation-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: #353434;
+    cursor: pointer;
+
+  }

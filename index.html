@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta property="og:title" content="안병진 💗 김윤아 결혼합니다.">
+  <meta property="og:description" content="2025년 10월 18일 토요일 오후 1시, 서울대학교 연구공원 웨딩홀">
+  <meta property="og:image" content="https://yoonakim95.github.io/WeddingInvitation/thumbnail.jpg">
+  <meta property="og:url" content="https://yoonakim95.github.io/WeddingInvitation/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💍 We are getting married! 💍</title>
+  <link rel="stylesheet" href="styles.css?v=2"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css">
+  
+
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=2f6bea57641d1dd00d85e80a5fb8ba78"></script>
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=2f6bea57641d1dd00d85e80a5fb8ba78" async></script>
+</head>
+
+<body>
+  <audio id="bg-music" src="music.mp3" loop preload="auto" style="display: none;"></audio>
+  <button id="music-toggle">
+    <img src="gallery/music_01_on.png" alt="음악 재생" id="music-icon">
+  </button>
+
+
+  <header class="hero">
+     <div class="hero-background">
+      
+      <img src="thumbnail_low.jpg" data-src="thumbnail.jpg" alt="커플 이미지" class="lazyload">
+
+    </div>
+    <div class="hero-overlay">
+      <h1 class="hero-text" id="typing-text"></h1>
+
+      <p class="hero-subtext">2025년 10월 18일 토요일 오후 1시</p>
+      <p class="hero-subtext">서울대학교 연구공원 웨딩홀</p>
+    </div>
+
+  </header>
+
+  <section class="calendar">
+      <h3>WEDDING DAY</h3>
+    <div class="calendar-header">
+      <span class="month">2025년 10월 18일</span>
+      <span class="time">토요일 오후 1시</span>
+    </div>
+    <div class="calendar-grid">
+      <div class="day-name">S</div>
+      <div class="day-name">M</div>
+      <div class="day-name">T</div>
+      <div class="day-name">W</div>
+      <div class="day-name">T</div>
+      <div class="day-name">F</div>
+      <div class="day-name">S</div>
+      <!-- 날짜는 JS로 생성 -->
+    </div>
+    
+    <div class="countdown-container">
+      <div class="countdown-box">
+        <div id="days" class="countdown-number">00</div>
+        <div class="countdown-label">DAYS</div>
+      </div>
+      <div class="countdown-box">
+        <div id="hours" class="countdown-number">00</div>
+        <div class="countdown-label">HOURS</div>
+      </div>
+      <div class="countdown-box">
+        <div id="minutes" class="countdown-number">00</div>
+        <div class="countdown-label">MINUTES</div>
+      </div>
+      <div class="countdown-box">
+        <div id="seconds" class="countdown-number">00</div>
+        <div class="countdown-label">SECONDS</div>
+      </div>
+    </div>
+  
+    <p class="countdown-message" id="countdown-message"></p>
+  
+  </section>
+
+<section class="invitation">
+  <h3>🤵 INVITATION 👰</h3>
+  <h4>초대합니다.</h4>
+  <p>별도의 내가 우리로 연결되어,</p>
+  <p>믿음과 사랑으로</p>
+  <p>서로 배려하며 살아가려 합니다.</p>
+  <br>
+  <p>소중한 분들을 귀히 모시니,<br> 축복의 발걸음 소망합니다.</p>
+  <br>
+  <p>💗</p>
+
+  <img src="gallery/baby.jpg" alt="main photo square" class="baby-photo">
+
+  <!-- 부모 이름 + 자녀 소개 영역 -->
+  <div class="parents-wrapper">
+    <p class="nowrap-line">
+      안창모 · 지영주의 &nbsp;&nbsp;&nbsp;&nbsp;김태인 · 고가연의
+    </p>
+    <div class="parents-container">
+      <div class="parent-block">
+        <p class="child-name">장남 <strong>병진</strong></p>
+      </div>
+      <div class="parent-block">
+        <p class="child-name">장녀 <strong>윤아</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <img src="gallery/main_square_low.jpg" alt="main photo square" class="baby-photo">
+
+</section>
+
+ 
+  <section class="directions-guide">
+    <h4>🚌 오시는 길 🚗</h4>
+    <div class="map-wrapper">
+      <div id="kakao-map" class="map-container"></div>
+    </div>
+
+    <div class="guide-item">
+      <div class="guide-header">
+        🗺️ <span>길찾기 바로가기</span>
+      </div>
+      
+      <div class="map-icons">
+        <a href="https://tmap.life/0a2e4a39" target="_blank" class="map-button">
+          <img src="gallery/tmap.png" alt="T Map" />
+          <span>T map</span>
+        </a>
+        <a href="https://place.map.kakao.com/8634826" target="_blank" class="map-button">
+          <img src="gallery/kakaomap_basic.png" alt="카카오맵" />
+          <span>카카오맵</span>
+        </a>
+        <a href="https://naver.me/5UTgmZM2" target="_blank" class="map-button">
+          <img src="gallery/navermap.png" alt="네이버 지도" />
+          <span>네이버지도</span>
+        </a>
+      </div>
+      
+    </div>
+    
+    
+    </div>
+
+    <div class="guide-item">
+      <div class="guide-header">
+        📍 <span>주소</span>
+      </div>
+      <p id="copy-address" class="copy-address">서울시 관악구 관악로1 서울대학교 연구공원 본관 </p>
+    </div>
+  
+    <div class="guide-item">
+      <div class="guide-header">
+        📞 <span>연락처</span>
+      </div>
+      <p>02 - 878 - 0465</p>
+    </div>
+
+    <div class="guide-item">
+      <div class="guide-header">
+       🚊🚌 <span>대중교통</span>
+      </div>
+        <p>
+        → <strong>2호선 낙성대역</strong> 4번 출구<br> 
+        → 첫 번째 골목 좌회전 <br> 
+        → GS 주유소 옆 마을버스 <strong>관악 02</strong> 승차 <br>  
+        → <strong>"서울대 후문 · 연구공원"</strong> 하차<br>
+        → 길 건너 샛길 연구공원 방향 도보 100m <br>
+        → 검은색 유리건물
+      </p>
+      <img src="gallery/snu_wedding_hall_location.jpg" alt="서울대 연구공원 웨딩홀 약도" class="map-image">
+
+      <!-- <button id="toggle-map-image" class="map-button">약도 확인하기</button>
+    <div id="map-image-container" class="map-image-container">
+      <img src="SNU_Wedding_Hall_Location.png" alt="서울대 연구공원 웨딩홀 약도" class="map-image">
+    </div>
+     -->
+    <div class="guide-item">
+      <div class="guide-header">
+        🚗 <span>자가용</span>
+      </div>
+      <!-- <p>네비게이션: <strong>"서울대학교 연구공원 웨딩홀"</strong> 검색</p> -->
+      <p>네비게이션: "<strong id="copy-hall-name">서울대학교 연구공원 웨딩홀</strong>" 검색</p>
+
+
+      <p><strong>낙성대 입구</strong>로 부터 <strong>서울대 후문 방향</strong>으로<br>오시는게 찾기 수월합니다.</p>
+      <p><br>
+        → <strong>서울대 후문 방향</strong> 약 1.6km 직진 <br>
+        → <strong>후문 직전</strong> 좌회전 <br>
+        → 샛길 100m 진입 검은색 유리건물 <br><br>
+        ※ 주차는 무료입니다.<br>
+        ※ 서울대 정·후문을 차량으로 통과하는 경우<br>통행료 2,000원이 발생합니다.
+
+      </p>
+    </div>
+  
+    </section>
+ 
+
+<section class="notice">
+  <h4>📌 안내드립니다. 📌</h4>
+  <ul class="notice-list">
+    <li>
+      <strong class="number">01</strong>
+      1층에 접수대, 신부대기실, 포토테이블,<br>
+      그리고 웨딩홀이 위치해있습니다.
+    </li>
+
+    <li>
+      <strong class="number">02</strong>
+      지하 1층에는 연회장이 마련되어 있습니다.<br>
+      식사는 뷔페식으로 예식 시작 30분 전인<br>
+      12시 30분 부터 이용 가능합니다.
+    </li>
+
+    <li>
+      <strong class="number">03</strong>
+      주차는 시간 제한 없이 무료입니다. <br>
+      지상 100대 지하 200대의 공간이 있습니다.
+      <br> <br>
+      지하 2층 주차 시 계단을 이용해야 합니다.<br>
+      계단 이용이 불편하신 경우에는<br>
+      지상 혹은 지하 1층에 주차하시기 바랍니다. 
+      <br><br>
+      ※ 서울대 정·후문을<br>차량으로 통과하는 경우<br>통행료 2,000원이 발생하므로<br>착오 없으시기 바랍니다.
+    </li>
+
+    <li>
+      <strong class="number">04</strong>
+      서울대 내 4개의 예식장이 있습니다.<br> 꼭 "연구공원"으로 검색해 주시기 바랍니다.
+    </li>
+  </ul>
+</section>
+
+  <section class="gallery">
+    <h3>📸 GALLERY 📸</h3>
+    <h4>우리의 순간들</h4>
+    <div class="gallery-thumbnails" id="gallery-thumbnails">
+      <!-- JS에서 30장 이미지 추가 -->
+    </div>
+    <button id="load-more" class="load-more">더보기</button>
+    <button id="show-less" class="show-less" style="display: none;">줄이기</button>
+
+  
+    <!-- 라이트박스 뷰어 -->
+    <div id="lightbox" class="lightbox">
+      <span id="close-lightbox" class="close-btn">&times;</span>
+      <img id="lightbox-image" src="" alt="">
+      <button id="prev" class="nav-btn">&#10094;</button>
+      <button id="next" class="nav-btn">&#10095;</button>
+    </div>
+  </section>
+
+  <section class="account">
+    <h4>💗 마음 전하실 곳 💗</h4>
+    <p>참석이 어려우신 분들을 위해 기재했습니다.</p>
+    <p>너그러운 마음으로 양해 부탁드립니다.<br><br></p>
+    <div class="account-cards">
+  
+    <div class="account-card" data-target="groom">
+      <button class="account-toggle" data-target="groom">
+        <span class="label">👨‍💼 신랑측에게</span>
+        <span class="arrow">▼</span>
+      </button>
+        
+        <div class="account-info" id="groom">
+          <p>
+            <span class="name">신랑 아버지 안창모</span>
+            <span class="bank">
+              <span class="account-number">농협은행 <br>747040-52-019040</span>
+              <span class="actions">
+                <span class="copy-account" data-account="747040-52-019040" title="계좌번호 복사"></span>
+                <!-- <span class="kakao-pay">
+                  <a href="https://paylink.kakao.com/아버지송금링크" target="_blank">
+                    <img src="gallery/kakaopay.svg" alt="카카오페이">
+                  </a>
+                </span> -->
+              </span>
+            </span>
+          </p>
+  
+          <p>
+            <span class="name">신랑 어머니 지영주</span>
+            <span class="bank">
+              <span class="account-number">농협은행 <br>747040-52-027044</span>
+              <span class="actions">
+                <span class="copy-account" data-account="747040-52-027044" title="계좌번호 복사"></span>
+                <!-- <span class="kakao-pay">
+                  <a href="https://paylink.kakao.com/어머니송금링크" target="_blank">
+                    <img src="gallery/kakaopay.svg" alt="카카오페이">
+                  </a>
+                </span> -->
+              </span>
+            </span>
+          </p>
+  
+          <p>
+            <span class="name">신랑 안병진</span>
+            <span class="bank">
+              <span class="account-number">토스뱅크 <br>1000-1018-2904</span>
+              <span class="actions">
+                <span class="copy-account" data-account="1000-1018-2904" title="계좌번호 복사"></span>
+                <span class="kakao-pay">
+                  <a href="https://qr.kakaopay.com/FP1PWSkke" target="_blank">
+                    <img src="gallery/kakaopay.svg" alt="카카오페이">
+                  </a>
+                </span>
+              </span>
+            </span>
+          </p>
+        </div>
+      </div>
+  
+      <div class="account-card" data-target="bride">
+        <button class="account-toggle" data-target="bride">
+          <span class="label">👰‍♀️ 신부측에게</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="account-info" id="bride">
+          <p>
+            <span class="name">신부 아버지 김태인</span>
+            <span class="bank">
+              <span class="account-number">하나은행 <br>010-335444-01607</span>
+              <span class="actions">
+                <span class="copy-account" data-account="010-335444-01607" title="계좌번호 복사"></span>
+                <span class="kakao-pay">
+                  <a href="https://qr.kakaopay.com/FYayQSOHV" target="_blank">
+                    <img src="gallery/kakaopay.svg" alt="카카오페이">
+                  </a>
+                </span>
+              </span>
+            </span>
+          </p>
+  
+          <p>
+            <span class="name">신부 어머니 고가연</span>
+            <span class="bank">
+              <span class="account-number">국민은행 <br>350601-04-200786</span>
+              <span class="actions">
+                <span class="copy-account" data-account="350601-04-200786" title="계좌번호 복사"></span>
+                <span class="kakao-pay">
+                  <a href="https://qr.kakaopay.com/FYkLiVwL8" target="_blank">
+                    <img src="gallery/kakaopay.svg" alt="카카오페이">
+                  </a>
+                </span>
+              </span>
+            </span>
+          </p>
+  
+          <p>
+            <span class="name">신부 김윤아</span>
+            <span class="bank">
+              <span class="account-number">토스뱅크 <br>1000-2181-6184</span>
+              <span class="actions">
+                <span class="copy-account" data-account="1000-2181-6184" title="계좌번호 복사"></span>
+                <span class="kakao-pay">
+                  <a href="https://qr.kakaopay.com/Ej7maIyFt" target="_blank">
+                    <img src="gallery/kakaopay.svg" alt="카카오페이">
+                  </a>
+                </span>
+              </span>
+            </span>
+          </p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+    
+  <footer>
+    <p>저희의 첫걸음을 맹세하는 자리에 귀한 증인이 되어<br>자리를 빛내 주실 모든 여러분께<br>진심으로 감사드립니다.<br><br></p>
+    
+    <div class="footer-buttons">
+      <button id="open-invitation" class="footer-btn">종이청첩장 보기</button>
+      <button id="kakaotalk-sharing-btn" class="footer-btn">청첩장 공유하기</button>
+    </div>
+
+    <!-- 종이청첩장 모달 -->
+    <div id="invitation-modal" class="invitation-modal">
+      <div class="invitation-modal-content">
+        <img src="gallery/Invitation.jpg" alt="종이청첩장">
+        <button id="close-invitation" class="close-invitation-btn">   X     </button>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
+</html>
