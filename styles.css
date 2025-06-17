@@ -42,7 +42,7 @@ h3 { font-size: 1.6em; font-weight: 700; }
 h4 { font-size: 1.2em; font-weight: 700; }
 
 p, li {
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: 400;
   letter-spacing: 0.2px;
 }
@@ -76,8 +76,6 @@ p, li {
     text-align: center;
   }
   
-
-
   /* Strong */
     strong {
       color: #000000;
