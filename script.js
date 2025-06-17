@@ -134,7 +134,7 @@ document.getElementById('next').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
   // 타이핑 텍스트 효과
   const textElement = document.getElementById('typing-text');
-  const text = "안병진 💗 김윤아 \n 만개한 행복의 가운데, 저희 결혼합니다.\n\n";
+  const text = "안병진 💗 김윤아 \n만개한 행복의 가운데, 저희 결혼합니다.";
   let i = 0;
   const typing = () => {
     if (i < text.length) {
@@ -253,6 +253,13 @@ document.addEventListener('DOMContentLoaded', () => {
       buttons: [
         {
           title: '모바일 청첩장 보기',
+          link: {
+            mobileWebUrl: 'https://yoonakim95.github.io/WeddingInvitation/',
+            webUrl: 'https://yoonakim95.github.io/WeddingInvitation/',
+          },
+        },
+        {
+          title: '카카오맵 열기',
           link: {
             mobileWebUrl: 'https://yoonakim95.github.io/WeddingInvitation/',
             webUrl: 'https://yoonakim95.github.io/WeddingInvitation/',

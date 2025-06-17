@@ -10,17 +10,17 @@
 
 /* 전체 기본 글꼴 (한국어 + 영어) */
 body, p, li, span, .guide-header, .guide-item {
-  font-family: 'Single Day', 'Pacifico', cursive;
+  font-family: 'Gowun Batang', 'Pacifico', cursive;
 }
 
 /* 제목은 강조된 느낌으로 */
 h1, h2, h3, h4 {
-  font-family: 'Pacifico', 'Single Day', cursive;
+  font-family: 'Pacifico', 'Gowun Batang', cursive;
 }
 
 /* Font Definitions */
 h1, h2, h3, h4 {
-  font-family: 'Single Day', 'Pacifico';
+  font-family: 'Gowun Batang', 'Pacifico';
 }
 
 h3, h4 {
@@ -29,11 +29,11 @@ h3, h4 {
 }
 
 p, li, .guide-header, .guide-item, .parents-line, .venue, .date, .account-info p .name, .account-info p .bank .account-number {
-  font-family: 'Single Day', 'Pacifico';
+  font-family: 'Gowun Batang', 'Pacifico';
 }
 
 .btn, .load-more, .show-less, .footer-btn, .account-toggle, .copy-address, .copy-account, .map-button {
-  font-family: 'Single Day', 'Pacifico';
+  font-family: 'Gowun Batang', 'Pacifico';
 }
 
 h1 { font-size: 2.8em; font-weight: 700; }
@@ -110,7 +110,7 @@ p, li {
   }
   
   body {
-    font-family: 'Single Day', 'Pacifico', cursive;
+    font-family: 'Gowun Batang', 'Pacifico', cursive;
     
     font-size: 19px; /* 기존보다 약간 큼 */
     line-height: 1.7;
@@ -164,14 +164,14 @@ p, li {
   }
   
   .hero-text {
-    font-family: 'Single Day', cursive;
-    font-size: 1.3em;
+    font-family: 'Gowun Batang', cursive;
+    font-size: 1.2em;
     color: rgba(255, 255, 255, 0.95);
     text-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    line-height: 2.5;
+    line-height: 1.5;
     white-space: pre-line;
     pointer-events: auto;
-    margin-bottom: 1cap; /* 추가 */
+    margin-bottom: 5cap; /* 추가 */
       text-shadow:
     -1px -1px 0 #000000,
      1px -1px 0 #000000,
@@ -180,12 +180,12 @@ p, li {
   }
   
 .hero-subtext {
-  font-family: 'Single Day', 'Pacifico';
-  font-size: 1.3em;
+  font-family: 'Gowun Batang', 'Pacifico';
+  font-size: 1.2em;
   pointer-events: auto;
   color: rgb(255, 255, 255); /* 글자 색을 검정으로 설정 */
   margin-top: 20px;
-  animation: fadeInUp 1.5s ease-out forwards;
+  animation: fadeInUp 3.5s ease-out forwards;
   text-shadow:
     -1px -1px 0 #000000,
      1px -1px 0 #000000,
@@ -301,16 +301,16 @@ p, li {
   }
   
   .countdown-number {
-    font-family: 'Single Day', 'Pacifico';
-    font-size: 2em; /* 폰트 줄임 */
+    font-family: 'Gowun Batang', 'Pacifico';
+    font-size: 1.5em; /* 폰트 줄임 */
     font-weight: 700;
     color: #373737;
     text-align: center;
   }
   
   .countdown-label {
-    font-family: 'Single Day', 'Pacifico';
-    font-size: 0.8em;
+    font-family: 'Gowun Batang', 'Pacifico';
+    font-size: 0.7em;
     color: #777;
     text-align: center;
     margin-top: 4px;
@@ -318,7 +318,7 @@ p, li {
   
   .countdown-message {
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.0em;
     margin-top: 20px;
     color: #373737;
   }
@@ -369,8 +369,8 @@ p, li {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
-    height: 80%;
+    width: 115%;
+    height: 90%;
     background-image: url('data:image/svg+xml;utf8,<svg viewBox=\"0 0 32 29.6\" xmlns=\"http://www.w3.org/2000/svg\"><path fill=\"%23ff86ae\" d=\"M23.6,0c-2.8,0-5.2,1.3-6.6,3.3C15.6,1.3,13.2,0,10.4,0C4.7,0,0,4.7,0,10.4c0,6.7,6.2,12,16,19.2  C25.8,22.4,32,17.1,32,10.4C32,4.7,27.3,0,23.6,0z\"/></svg>');
     background-size: cover;
     background-repeat: no-repeat;
@@ -580,7 +580,7 @@ p, li {
     padding: 10px 18px;
     border-radius: 8px;
     cursor: pointer;
-    margin: 20px auto;
+    margin: 10px auto;
     font-weight: bold;
     display: block;
   }
@@ -598,10 +598,10 @@ p, li {
   .map-button {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 1px;
     background-color: #fff;
     border: 1px solid #ddd;
-    padding: 8px 12px;
+    padding: 8px 10px;
     border-radius: 10px;
     text-decoration: none;
     color: #333;
@@ -671,7 +671,7 @@ p, li {
 
 
 .notice-list li p, .notice-list li span, .notice-list li {
-  font-family: 'Single Day', 'Pacifico';
+  font-family: 'Gowun Batang', 'Pacifico';
   font-size: 1em;
   color: #333;
   line-height: 1.5;
@@ -840,7 +840,7 @@ p, li {
     text-align: center;
     flex: 1 1 auto;
     max-width: 160px;
-    font-size: 18px; /* ✅ 글씨 크기 키우기 */
+    font-size: 15px; /* ✅ 글씨 크기 키우기 */
 
   }
   
