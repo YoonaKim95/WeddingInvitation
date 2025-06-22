@@ -73,7 +73,8 @@ for (let d = 1; d <= 31; d++) {
   grid.appendChild(day);
 }
 
-const imageList = Array.from({ length: 36 }, (_, i) => `gallery/${i + 1}.jpg`);
+// 수정된 썸네일 로딩 코드 (빠른 썸네일 + lazyload + lightbox)
+const imageList = Array.from({ length: 45 }, (_, i) => `gallery/${i + 1}.jpeg`);
 const galleryContainer = document.getElementById('gallery-thumbnails');
 const loadMoreBtn = document.getElementById('load-more');
 let currentIndex = 0;
@@ -82,10 +83,14 @@ const showLessBtn = document.getElementById('show-less');
 function loadThumbnails() {
   const nextImages = imageList.slice(currentIndex, currentIndex + 9);
   nextImages.forEach((src, index) => {
+    const lowSrc = src.replace(/\.jpe?g$/, '_low.jpg');
     const img = document.createElement('img');
-    img.src = src;
+    img.src = lowSrc; // 저용량 먼저
+    img.dataset.src = src; // 고화질 대기
     img.alt = `사진 ${currentIndex + index + 1}`;
     img.dataset.index = currentIndex + index;
+    img.loading = 'lazy';
+    img.classList.add('lazyload');
     galleryContainer.appendChild(img);
   });
   currentIndex += 9;
@@ -93,7 +98,26 @@ function loadThumbnails() {
     loadMoreBtn.style.display = 'none';
     showLessBtn.style.display = 'block';
   }
+
+  document.querySelectorAll('.gallery-thumbnails img.lazyload').forEach(img => observer.observe(img));
 }
+
+// 고화질 lazyload observer
+const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      const highSrc = img.dataset.src;
+      const highImg = new Image();
+      highImg.src = highSrc;
+      highImg.onload = () => {
+        img.src = highSrc;
+        img.classList.add('loaded');
+      };
+      obs.unobserve(img);
+    }
+  });
+});
 
 loadThumbnails();
 loadMoreBtn.addEventListener('click', loadThumbnails);
@@ -105,6 +129,7 @@ showLessBtn.addEventListener('click', () => {
   showLessBtn.style.display = 'none';
 });
 
+// 라이트박스 기능
 const lightbox = document.getElementById('lightbox');
 const lightboxImage = document.getElementById('lightbox-image');
 let currentLightboxIndex = 0;
@@ -130,6 +155,7 @@ document.getElementById('next').addEventListener('click', () => {
   currentLightboxIndex = (currentLightboxIndex + 1) % imageList.length;
   lightboxImage.src = imageList[currentLightboxIndex];
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
   // 타이핑 텍스트 효과
