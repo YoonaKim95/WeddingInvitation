@@ -265,7 +265,7 @@ overflow-wrap: break-word;
     display: flex;
     justify-content: center;
     gap: 10px;
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: bold;
     margin-top: 15px;
   }
@@ -298,7 +298,7 @@ overflow-wrap: break-word;
   
   .countdown-number {
     font-family: 'Gowun Batang', 'Pacifico';
-    font-size: 1.5em; /* 폰트 줄임 */
+    font-size: 1.2em; /* 폰트 줄임 */
     font-weight: 700;
     color: #373737;
     text-align: center;
@@ -306,7 +306,7 @@ overflow-wrap: break-word;
   
   .countdown-label {
     font-family: 'Gowun Batang', 'Pacifico';
-    font-size: 0.7em;
+    font-size: 0.5em;
     color: #777;
     text-align: center;
     margin-top: 4px;
@@ -317,6 +317,7 @@ overflow-wrap: break-word;
     font-size: 1.0em;
     margin-top: 20px;
     color: #373737;
+    font-weight: 500;
   }
   
   /* Calendar */
