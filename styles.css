@@ -663,7 +663,7 @@ p, li {
 
 .notice-list li p, .notice-list li span, .notice-list li {
   font-family: 'Gowun Batang', 'Pacifico';
-  font-size: 1.0em;
+  font-size: 0.95em;
   color: #000000;
   line-height: 1.5;
   text-align: center;
@@ -822,8 +822,8 @@ p, li {
   }
   
   .footer-btn {
-    background-color: #f4c6d0;
-    color: white;
+    background-color: #ffdce4;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 10px 18px;
     border-radius: 8px;
