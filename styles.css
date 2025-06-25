@@ -667,6 +667,8 @@ p, li {
   color: #000000;
   line-height: 1.5;
   text-align: left;
+  font-weight: 600;  /* ✅ 글씨 더 굵게 */
+
 }
 
 /* 계좌 카드 전체 정렬 */
