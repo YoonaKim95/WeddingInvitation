@@ -284,13 +284,13 @@ document.addEventListener('DOMContentLoaded', () => {
             webUrl: 'https://yoonakim95.github.io/WeddingInvitation/',
           },
         },
-        {
-          title: '카카오맵 열기',
-          link: {
-            mobileWebUrl: 'https://yoonakim95.github.io/WeddingInvitation/',
-            webUrl: 'https://yoonakim95.github.io/WeddingInvitation/',
-          },
-        },
+        // {
+        //   title: '카카오맵 열기',
+        //   link: {
+        //     mobileWebUrl: 'https://yoonakim95.github.io/WeddingInvitation/',
+        //     webUrl: 'https://yoonakim95.github.io/WeddingInvitation/',
+        //   },
+        // },
       ],
     });
   });
