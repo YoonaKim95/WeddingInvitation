@@ -149,7 +149,7 @@ p, li {
   
   .hero-text {
     font-family: 'Gowun Batang', cursive;
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: rgba(255, 255, 255, 0.95);
     line-height: 1.5;
     white-space: pre-line;
@@ -165,7 +165,7 @@ p, li {
   
 .hero-subtext {
   font-family: 'Gowun Batang', 'Pacifico';
-  font-size: 1.0em;
+  font-size: 1.3em;
   pointer-events: auto;
   color: rgb(255, 255, 255); /* 글자 색을 검정으로 설정 */
   margin-top: 0px;
