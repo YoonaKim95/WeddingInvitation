@@ -373,9 +373,8 @@ function loadKakaoMap() {
       const options = {
         center: new kakao.maps.LatLng(37.465642, 126.9594921),
         level: 6,
-        draggable: true,
+        draggable: false,
         scrollwheel: true
-      
       };
       const map = new kakao.maps.Map(container, options);
       new kakao.maps.Marker({
