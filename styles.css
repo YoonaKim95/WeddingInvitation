@@ -25,11 +25,11 @@ h3, h4 {
 
 h1 { font-size: 2.8em; font-weight: 700; }
 h2 { font-size: 2.2em; font-weight: 700; }
-h3 { font-size: 1.6em; font-weight: 700; }
+h3 { font-size: 1.4em; font-weight: 700; }
 h4 { font-size: 1.2em; font-weight: 700; }
 
 p, li {
-  font-size: 0.9em;
+  font-size: 1.0em;
   font-weight: 400;
   letter-spacing: 0.2px;
   color: #000000;
@@ -616,18 +616,14 @@ p, li {
     width: 20px;
     height: 20px;
   }
-    
-  /* Notice */
-/* .notice {
-  margin-top: 40px;
-} */
 
-.notice h3 {
+
+/* .notice h3 {
   text-align: center;
   font-size: 1.0em;
   font-weight: bold;
   margin-bottom: 20px;
-}
+} */
 
 .notice-list {
   list-style: none;
@@ -667,7 +663,7 @@ p, li {
 
 .notice-list li p, .notice-list li span, .notice-list li {
   font-family: 'Gowun Batang', 'Pacifico';
-  font-size: 0.9em;
+  font-size: 1.0em;
   color: #000000;
   line-height: 1.5;
   text-align: center;
