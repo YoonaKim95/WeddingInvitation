@@ -32,7 +32,7 @@ p, li {
   font-size: 0.9em;
   font-weight: 400;
   letter-spacing: 0.2px;
-  color: #333333;
+  color: #000000;
   text-align: center;
 }
 
@@ -104,7 +104,7 @@ p, li {
     max-width: 420px;
     margin: 0 auto;
     background-color: #FAF8F5;
-    color: #333;
+    color: #000000;
   }
 
   .hero {
@@ -668,7 +668,7 @@ p, li {
 .notice-list li p, .notice-list li span, .notice-list li {
   font-family: 'Gowun Batang', 'Pacifico';
   font-size: 0.9em;
-  color: #333;
+  color: #000000;
   line-height: 1.5;
   text-align: center;
 }
@@ -756,7 +756,7 @@ p, li {
 
 .account-info p .name {
   font-weight: bold;
-  color: #333;
+  color: #000000;
   margin-bottom: 4px;
 }
 
@@ -772,7 +772,7 @@ p, li {
 
 .account-info p .bank .account-number {
   font-size: 0.85em;
-  color: #555;
+  color: #000000;
   flex: 1;
   text-align: left;
 }
