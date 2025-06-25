@@ -35,6 +35,10 @@ p, li {
   letter-spacing: 0.2px;
   color: #000000;
   text-align: center;
+  word-break: keep-all;
+white-space: normal;
+overflow-wrap: break-word;
+
 }
 
 
@@ -640,6 +644,10 @@ p, li {
   align-items: center;
   padding: 15px 0;
   border-bottom: 1px solid #e0e0e0;
+  word-break: keep-all;
+white-space: normal;
+overflow-wrap: break-word;
+
 }
 
 .notice-list li:last-child {
@@ -672,6 +680,11 @@ p, li {
   line-height: 1.5;
   text-align: left;
   font-weight: 600;  /* ✅ 글씨 더 굵게 */
+
+  word-break: keep-all;
+white-space: normal;
+overflow-wrap: break-word;
+
 }
 
 /* 계좌 카드 전체 정렬 */
