@@ -11,6 +11,7 @@
 /* 전체 기본 글꼴 (한국어 + 영어) */
 h1, h2, h3, h4, body, p, li, span, .guide-header, .guide-item, .parents-line, .venue, .date, .account-info p .name, .account-info p .bank .account-number {
   font-family: 'Gowun Batang', 'Pacifico';
+  font-weight: 600;
 }
 
 
@@ -30,7 +31,7 @@ h4 { font-size: 1.2em; font-weight: 700; }
 
 p, li {
   font-size: 1.0em;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.2px;
   color: #000000;
   text-align: center;
@@ -105,6 +106,9 @@ p, li {
     margin: 0 auto;
     background-color: #FAF8F5;
     color: #000000;
+
+    font-weight: 600; 
+
   }
 
   .hero {
@@ -749,12 +753,15 @@ p, li {
   display: flex;
   flex-direction: column;
   margin: 10px 0;
+  font-weight: 600; 
 }
 
 .account-info p .name {
   font-weight: bold;
   color: #000000;
   margin-bottom: 4px;
+  font-weight: 600; 
+
 }
 
 .account-info p .bank {
@@ -765,6 +772,8 @@ p, li {
   padding: 8px 12px;
   border-radius: 8px;
   margin-top: 6px;
+  font-weight: 600; 
+
 }
 
 .account-info p .bank .account-number {
@@ -772,6 +781,8 @@ p, li {
   color: #000000;
   flex: 1;
   text-align: left;
+  font-weight: 600; 
+
 }
 
 .account-info p .actions {
