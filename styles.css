@@ -11,7 +11,7 @@
 /* 전체 기본 글꼴 (한국어 + 영어) */
 h1, h2, h3, h4, body, p, li, span, .guide-header, .guide-item, .parents-line, .venue, .date, .account-info p .name, .account-info p .bank .account-number {
   font-family: 'Gowun Batang', 'Pacifico';
-  font-weight: 500;
+  font-weight: 200;
   word-break: keep-all;
   white-space: normal;
   overflow-wrap: break-word;
@@ -35,7 +35,7 @@ h4 { font-size: 1.2em; font-weight: 700; }
 
 p, li {
   font-size: 1.0em;
-  font-weight: 500;
+  font-weight: 200;
   letter-spacing: 0.2px;
   color: #000000;
   text-align: center;
@@ -47,7 +47,7 @@ overflow-wrap: break-word;
 
 
 .btn, .load-more, .show-less, .footer-btn, .account-toggle, .map-button {
-  font-weight: 500;
+  font-weight: 200;
   letter-spacing: 0.5px;
 }
 
@@ -115,7 +115,7 @@ overflow-wrap: break-word;
     background-color: #FAF8F5;
     color: #000000;
 
-    font-weight: 500; 
+    font-weight: 200; 
 
   }
 
@@ -161,7 +161,7 @@ overflow-wrap: break-word;
   
   .hero-text {
     font-family: 'Gowun Batang', cursive;
-    font-size: 1.2em;
+    font-size: 1.0em;
     color: rgba(255, 255, 255, 0.95);
     line-height: 1.5;
     white-space: pre-line;
@@ -177,7 +177,7 @@ overflow-wrap: break-word;
   
 .hero-subtext {
   font-family: 'Gowun Batang', 'Pacifico';
-  font-size: 1.3em;
+  font-size: 1.0em;
   pointer-events: auto;
   color: rgb(255, 255, 255); /* 글자 색을 검정으로 설정 */
   margin-top: 0px;
@@ -317,7 +317,7 @@ overflow-wrap: break-word;
     font-size: 1.0em;
     margin-top: 20px;
     color: #373737;
-    font-weight: 500;
+    font-weight: 200;
   }
   
   /* Calendar */
@@ -614,7 +614,7 @@ overflow-wrap: break-word;
     border-radius: 10px;
     text-decoration: none;
     color: #333;
-    font-weight: 500;
+    font-weight: 200;
     font-family: 'Pretendard', sans-serif;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     white-space: nowrap;
@@ -684,7 +684,7 @@ overflow-wrap: break-word;
   color: #000000;
   line-height: 1.5;
   text-align: left;
-  font-weight: 500;  /* ✅ 글씨 더 굵게 */
+  font-weight: 200;  /* ✅ 글씨 더 굵게 */
 
   word-break: keep-all;
 white-space: normal;
@@ -771,18 +771,17 @@ overflow-wrap: break-word;
   display: flex;
   flex-direction: column;
   margin: 10px 0;
-  font-weight: 500; 
+  font-weight: 200; 
   word-break: keep-all;
   white-space: normal;
   overflow-wrap: break-word;
-
 }
 
 .account-info p .name {
   font-weight: bold;
   color: #000000;
   margin-bottom: 4px;
-  font-weight: 500; 
+  font-weight: 200; 
 
 }
 
@@ -794,7 +793,7 @@ overflow-wrap: break-word;
   padding: 8px 12px;
   border-radius: 8px;
   margin-top: 6px;
-  font-weight: 500; 
+  font-weight: 200; 
 
 }
 
@@ -803,7 +802,7 @@ overflow-wrap: break-word;
   color: #000000;
   flex: 1;
   text-align: left;
-  font-weight: 500; 
+  font-weight: 200; 
 
 }
 
