@@ -74,7 +74,7 @@ for (let d = 1; d <= 31; d++) {
 }
 
 // 수정된 썸네일 로딩 코드 (빠른 썸네일 + lazyload + lightbox)
-const imageList = Array.from({ length: 45 }, (_, i) => `gallery/${i + 1}.jpeg`);
+const imageList = Array.from({ length: 45 }, (_, i) => `gallery/${i + 1}.jpg`);
 const galleryContainer = document.getElementById('gallery-thumbnails');
 const loadMoreBtn = document.getElementById('load-more');
 let currentIndex = 0;
